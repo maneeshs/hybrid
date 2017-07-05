@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-06-27"
+lastupdated: "2017-07-05"
 
 ---
 
@@ -56,7 +56,7 @@ You can view notifications for your local or dedicated environment to monitor th
 | **Event Type** | **Notification method** |       
 |-----------------|-------------------|
 | Maintenance updates | To see a full list and history of your pending and complete notifications, click **ADMINISTRATION &gt; SYSTEM INFORMATION** &gt; *Number* **pending**. You are also alerted about scheduled disruptive maintenance update events on the Status page. Click **Support** &gt; **Status**. You can extend the notification capability by setting up a subscription that sends an email to recipients of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.|
-| Critical incidents | You are alerted about critical incidents on the Status page. Click **Support** &gt; **Status**. You can extend the notification capability by setting up a notification subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  |  
+| Critical incidents | You are alerted about critical incidents on the Status page. Click **Support** &gt; **Status**. You can extend the notification capability by setting up a notification subscription that sends an email to a recipient of your choice. Or you can set up a subscription that uses webhooks to integrate the notifications from the Administration page with a web service of your choice.  | 
 | Threshold events | You can set up a notification subscription that sends an email to a recipient of your choice when thresholds for organization quota, physical disk, physical memory, reserved disk, or reserved memory are reached in your environment. Or, you can set up a subscription that uses webhooks to integrate the notifications with a web service of your choice.  |  
 | {{site.data.keyword.Bluemix_notm}} Status | You can always view the latest status for the platform, services, and your {{site.data.keyword.Bluemix_notm}} instance on the Status page. Click **Support** &gt; **Status**.  |
 {: caption="Table 2. Event types and notifications methods" caption-side="top"}
@@ -221,7 +221,8 @@ You can view scheduled and pending maintenance updates, if you have the superuse
 
 <dl>
 <dt>Non-disruptive updates</dt>
-<dd>A non-disruptive update does not affect your environment, your running applications, or your users' access to your applications. This update type does not require case-by-case approval and will be applied during the preapproved, available maintenance windows that you set from the System Updates page.</dd>
+<dd>A non-disruptive update does not affect your environment, your running applications, or your users' access to your applications. This update type does not require case-by-case approval and will be applied during the preapproved, available maintenance windows that you set from the System Updates page.
+<p>**Note**: Some platform services might require that at least one non-disruptive change window be defined during a set of predetermined time-slots at the service's discretion. Please check the service description for each dedicated service deployed to your environment.</p></dd>
 <dt>Disruptive updates</dt>
 <dd>A disruptive update might affect your environment, running applications, or your users' access to your applications. You must schedule and approve each of these maintenance updates within the allotted 21-day maintenance window. You can select the suggested deployment date and time, the option for any of your preapproved windows, or you can open the calendar to select three specific dates and times for IBM to choose from when scheduling the update.</dd>
 </dl>
