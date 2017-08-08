@@ -131,16 +131,16 @@ Notifica gli eventi correlati alle operazioni eseguite da un amministratore del 
 <dt>Utente</dt> 
 <dd>Il nome dell'utente che ha eseguito l'operazione. I seguenti sono gli utenti definiti per il database.
 <ul>
-<li>UAADB: vcap, root, backup_user.
-<li>CCDB: vcap, ccadmin, backup_user.
-<li>Un utilizzo che non rientra in quanto sopra indicato richiederà delle indagini per appurare chi ha eseguito l'operazione. Tale operazione può essere eseguita utilizzando i report di sicurezza Gestione sistema operativo e Accesso sistema operativo.
+<li>UAADB: vcap, root, backup_user.</li>
+<li>CCDB: vcap, ccadmin, backup_user.</li>
+<li>Un utilizzo che non rientra in quanto sopra indicato richiederà delle indagini per appurare chi ha eseguito l'operazione. Tale operazione può essere eseguita utilizzando i report di sicurezza Gestione sistema operativo e Accesso sistema operativo.</li>
 </ul>
 </dd>
 <dt>Origine</dt> 
 <dd>L'indirizzo IP dal quale l'utente avvia il comando. I valori previsti sono i seguenti:
 <ul>
-<li>UAADB – VM uaa e VM nfs_WAL_server.
-<li>CCDB – VM api_worker, clock_global, cloud_controller_ng e nsf_WAL_server.
+<li>UAADB – VM uaa e VM nfs_WAL_server.</li>
+<li>CCDB – VM api_worker, clock_global, cloud_controller_ng e nsf_WAL_server.</li>
 </ul>
 </dd>
 <dt>Istruzione_DB</dt>
@@ -162,15 +162,15 @@ Notifica le attività di gestione utente eseguite sulla console di gestione Blue
 <dt>Tipo_di_evento</dt>
 <dd>Il tipo di evento (SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_MGMT_REGISTRY: Aggiungi utente [ID utente]
-<li>SECURITY_MGMT_REGISTRY: Elimina utente [ID utente]
-<li>SECURITY_AUTHN_CREDS_MODIFY: Aggiungi autorizzazione [autorizzazioni] agli utenti [ID utente].
-<li>SECURITY_AUTHN_CREDS_MODIFY: Rimuovi autorizzazione [autorizzazioni] dagli utenti [ID utente].
-<li>SECURITY_MGMT_CONFIG: Crea organizzazione [nome].
-<li>SECURITY_MGMT_CONFIG: Modifica gestori organizzazione, [id].
-<li>SECURITY_MGMT_CONFIG: Rinomina ID organizzazione [id] al nuovo nome [nome].
-<li>SECURITY_MGMT_CONFIG: Elimina ID organizzazione [id].
-<li>SECURITY_MGMT_CONFIG: Aggiorna quota per l'organizzazione [id] alla quota [pianoQuota].
+<li>SECURITY_MGMT_REGISTRY: Aggiungi utente [ID utente]</li>
+<li>SECURITY_MGMT_REGISTRY: Elimina utente [ID utente]</li>
+<li>SECURITY_AUTHN_CREDS_MODIFY: Aggiungi autorizzazione [autorizzazioni] agli utenti [ID utente].</li>
+<li>SECURITY_AUTHN_CREDS_MODIFY: Rimuovi autorizzazione [autorizzazioni] dagli utenti [ID utente].</li>
+<li>SECURITY_MGMT_CONFIG: Crea organizzazione [nome].</li>
+<li>SECURITY_MGMT_CONFIG: Modifica gestori organizzazione, [id].</li>
+<li>SECURITY_MGMT_CONFIG: Rinomina ID organizzazione [id] al nuovo nome [nome].</li>
+<li>SECURITY_MGMT_CONFIG: Elimina ID organizzazione [id].</li>
+<li>SECURITY_MGMT_CONFIG: Aggiorna quota per l'organizzazione [id] alla quota [pianoQuota].</li>
 </ul>
 </dd>
 <dt>Utente</dt> 
@@ -178,17 +178,17 @@ Notifica le attività di gestione utente eseguite sulla console di gestione Blue
 <dt>Messaggio</dt> 
 <dd>Comando eseguito.
 <ul>
-<li>Aggiungi utente [user ID]: Adds a user with the specified ID.
-<li>Elimina utente [user ID]: Deletes a user with the specified ID.
-<li>Aggiungi autorizzazione [autorizzazioni] agli utenti [user ID]: Adds permissions to the specified users. Permissions can include:
-ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.user.write.
-<li>Rimuovi autorizzazione [autorizzazioni] dagli utenti [user ID]: Remove permission - Remove permissions from the specified users. Permissions can include: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.users.write.
-<li>Crea organizzazione [name]: Creates an organization with the specified name.
-<li>Modifica gestori organizzazione [ids]: Configures the managers of an organization to be the specified users.
-<li>Rinomina ID organizzazione [id] al nuovo nome [name]: Renames the specified organization.
-<li>Elimina utente [user ID]: Deletes a user with the specified ID.
-<li>Elimina ID organizzazione [id]: Deletes the specified organization.
-<li>Aggiorna quota per l'organizzazione [id] alla quota [quotaPlan]: Updates the quota plan for the specified organization. Plans can include: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.
+<li>Aggiungi utente [user ID]: Adds un utente con l'ID specificato.</li>
+<li>Elimina utente [user ID]: Deletes un utente con l'ID specificato.</li>
+<li>Aggiungi autorizzazione [autorizzazioni] agli utenti [user ID]: Adds autorizzazioni agli utenti specificati. Le autorizzazioni possono includere:
+ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read e ops.user.write.</li>
+<li>Rimuovi autorizzazione [autorizzazioni] dagli utenti [user ID]: Remove autorizzazione - Rimuove le autorizzazioni dagli utenti specificati. Le autorizzazioni possono includere: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read e ops.users.write.</li>
+<li>Crea organizzazione [name]: Creates un'organizzazione con il nome specificato.</li>
+<li>Modifica gestori organizzazione [ids]: Configures i gestori di un'organizzazione in modo che siano gli utenti specificati.</li>
+<li>Rinomina ID organizzazione [id] nel nuovo nome [name]: Renames l'organizzazione specificata.</li>
+<li>Elimina utente [user ID]: Deletes un utente con l'ID specificato.</li>
+<li>Elimina ID organizzazione [id]: Deletes l'organizzazione specificata.</li>
+<li>Aggiorna quota per l'organizzazione [id] alla quota [quotaPlan]: Updates il piano della quota per un'organizzazione. I piani possono includere: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.</li>
 </ul>
 </dd>
 <dt>Origine log</dt>
@@ -229,8 +229,8 @@ Notifica gli eventi correlati alle attività di gestione dei report di sicurezza
 <dd>Il tipo di evento (SECURITY_RUNTIME).
 <ul>
 <li>SECURITY_DATA_SYNC: Carica report [nome] alla categoria [nome] data [data].
-Elimina report con ID [id]
-<li>SECURITY_RESOURCE_ACCESS: Scarica report [nome].
+Elimina report con ID [id]</li>
+<li>SECURITY_RESOURCE_ACCESS: Scarica report [nome].</li>
 </ul>
 </dd>
 <dt>Utente</dt> 
@@ -238,9 +238,9 @@ Elimina report con ID [id]
 <dt>Messaggio</dt> 
 <dd>Comando eseguito.
 <ul>
-<li>Carica report [nome] alla categoria [nome] data [date]: Upload - Upload a report with the specified file name and date to the specified category. 
-<li>Elimina report con ID [id]: Delete - Delete a report with the specified id.
-<li>Scarica report [name]: Download - A report was downloaded with the specified name.
+<li>Carica report [nome] alla categoria [nome] data [date]: Upload - Carica un report con il nome file e la data specificati nella categoria indicata.</li>
+<li>Elimina report con ID [id]: Delete - Elimina un report con l'ID specificato.</li>
+<li>Scarica report [name]: Download - Viene scaricato un report con il nome specificato.</li>
 </ul>
 </dd>
 <dt>Origine log</dt>
@@ -304,13 +304,13 @@ Notifica gli eventi correlati alla configurazione delle finestre di distribuzion
 <dt>Tipo_di_evento</dt>
 <dd>Il tipo di evento (SECURITY_RUNTIME).
 <ul>
-<li> SECURITY_MGMT_CONFIG: Crea finestra [id].
-<li> SECURITY_MGMT_CONFIG: Aggiorna finestra [id].
-<li> SECURITY_MGMT_CONFIG: Elimina finestra [id].
-<li> SECURITY_MGMT_CONFIG: Crea sottoscrizione [id].
-<li> SECURITY_MGMT_CONFIG: Aggiorna sottoscrizione [id].
-<li> SECURITY_MGMT_CONFIG: Elimina sottoscrizione [id].
-<li> SECURITY_MGMT_CONFIG: Crea risposta argomento [id].
+<li> SECURITY_MGMT_CONFIG: Crea finestra [id].</li>
+<li> SECURITY_MGMT_CONFIG: Aggiorna finestra [id].</li>
+<li> SECURITY_MGMT_CONFIG: Elimina finestra [id].</li>
+<li> SECURITY_MGMT_CONFIG: Crea sottoscrizione [id].</li>
+<li> SECURITY_MGMT_CONFIG: Aggiorna sottoscrizione [id].</li>
+<li> SECURITY_MGMT_CONFIG: Elimina sottoscrizione [id].</li>
+<li> SECURITY_MGMT_CONFIG: Crea risposta argomento [id].</li>
 </ul>
 </dd>
 <dt>Utente</dt> 
@@ -318,13 +318,13 @@ Notifica gli eventi correlati alla configurazione delle finestre di distribuzion
 <dt>Messaggio</dt>
 <dd>Comando eseguito.
 <ul>
-<li>Crea finestra [id]: Creates "creazione" delle finestre di aggiornamento per un ambiente. Le finestre di aggiornamento sono le finestre di blackout e preferite per le distribuzioni. Indica quando i clienti stanno consentendo/non consentendo l'attuazione di distribuzioni che non comportano interruzioni del servizio senza dovere approvarle e pianificarle.
-<li>Aggiorna finestra [id]: Updates a maintenance update window. This event is generated when a user is updating the maintenance update windows for an environment.
-<li>SECURITY_MGMT_CONFIG: Elimina finestra di aggiornamento - questo evento viene generato quando un utente delega le finestre di aggiornamento per un ambiente.
-<li>Crea sottoscrizione [id]: Creates an event subscription. The event subscription audit logs are generated when a user creates a subscription for either update or incident events. This will allow them to be notified when something is going on in their system..
-<li>Aggiorna sottoscrizione [id]: Updates an event subscription. The event is generated when a user updates a subscription for either update or incident events.
-<li>Elimina sottoscrizione [id]: Delete Event Subscription. This event is generated when a user deletes a subscription for either update or incident events.
-<li>Crea risposta argomento [id]: Reply to a Topic The topic reply audit log is generated when the customer approves and schedules disruptive update..
+<li>Crea finestra [id]: Creates una finestra per gli aggiornamenti di manutenzione. I log della finestra di aggiornamento vengono generati quando un utente gestisce (crea) le finestre di aggiornamento per un ambiente. Le finestre di aggiornamento sono le finestre di blackout e preferite per le distribuzioni. Indica quando i clienti stanno consentendo/non consentendo l'attuazione di distribuzioni che non comportano interruzioni del servizio senza dovere approvarle e pianificarle.</li>
+<li>Aggiorna finestra [id]: Updates una finestra di aggiornamento di manutenzione. Questo evento viene generato quando un utente aggiorna le finestre di aggiornamento di manutenzione per un ambiente.</li>
+<li>SECURITY_MGMT_CONFIG: Elimina finestra di aggiornamento - questo evento viene generato quando un utente delega le finestre di aggiornamento per un ambiente.</li>
+<li>Crea sottoscrizione [id]: Creates una sottoscrizione evento. I log di controllo della sottoscrizione evento vengono generati quando un utente crea una sottoscrizione per gli eventi di aggiornamento o incidente. Ciò permetterà di essere avvisati quando succede qualcosa nel sistema.</li>
+<li>Aggiorna sottoscrizione [id]: Updates una sottoscrizione evento. L'evento viene generato quando un utente aggiorna una sottoscrizione per gli eventi di aggiornamento o incidente. </li>
+<li>Elimina sottoscrizione [id]: Delete sottoscrizione evento. Questo evento viene generato quando un utente elimina una sottoscrizione per gli eventi di aggiornamento o incidente. </li>
+<li>Crea risposta argomento [id]: Reply a un argomento. I log di controllo della risposta argomento viene generato quando il cliente approva e pianifica un aggiornamento con interruzione del servizio.</li>
 </ul>
 </dd>
 <dt>Origine log</dt>
@@ -344,11 +344,11 @@ Notifica gli eventi correlati alla piattaforma Bluemix utilizzando la riga di co
 <dt>Tipo_di_evento</dt>
 <dd>Il tipo di evento (SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_AUTH_CREDS_MODIFY: eventi correlati alle modifiche di credenziali per una specifica identità utente.
-<li>SECURITY_MGMT_RESOURCE: eventi di gestione risorse quali la creazione, l'eliminazione e le modifiche per gli attributi di una risorse.
-<li>SECURITY_MGMT_POLICY: evento correlato alla gestione delle politiche di sicurezza quali la creazione di elenchi di controllo accessi.
-<li>SECURITY_RUNTIME: eventi di runtime quali l'avvio e l'arresto di server di sicurezza.
-<li>SECURITY_RESOURCE_ACCESS: eventi che registrano tutti gli accessi a una risorsa. Degli esempi sono tutti gli accessi a un file, tutte le richieste/risposte HTTP a una specifica pagina web, tutti gli accessi a una tabella database critica.
+<li>SECURITY_AUTH_CREDS_MODIFY: eventi correlati alle modifiche di credenziali per una specifica identità utente.</li>
+<li>SECURITY_MGMT_RESOURCE: eventi di gestione risorse quali la creazione, l'eliminazione e le modifiche per gli attributi di una risorse.</li>
+<li>SECURITY_MGMT_POLICY: evento relativo alla gestione delle politiche di sicurezza come la creazione di elenchi di controllo accessi.</li>
+<li>SECURITY_RUNTIME: eventi di runtime quali l'avvio e l'arresto di server di sicurezza.</li>
+<li>SECURITY_RESOURCE_ACCESS: eventi che registrano tutti gli accessi a una risorsa. Degli esempi sono tutti gli accessi a un file, tutte le richieste/risposte HTTP a una specifica pagina web, tutti gli accessi a una tabella database critica.</li>
 </ul>
 </dd>
 <dt>Utente</dt> 
@@ -357,9 +357,9 @@ Notifica gli eventi correlati alla piattaforma Bluemix utilizzando la riga di co
 <dd>Dettagli dell'operazione eseguita, quale l'ID dell'entità e i risultati dell'operazione. Esempi:
 <ul>
 <li>UserCreatedEvent ('["user_id=ca3a811f-1778-4103-9553-537788ed4c4e","username=equaranta"]’). L'utente è stato creato con
-(username=equaranta e id = ca3a811f-1778-4103-9553-537788ed4c4e).
-<li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). Il gruppo con il nome ops.reports.read è stato modificato, con l'appartenenza risultante (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e).
-<li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. L'utente è stato eliminato con il valore id=5cd5f412-4bbb- 4c44-b44b-713a5bc6144.
+(username=equaranta e id = ca3a811f-1778-4103-9553-537788ed4c4e).</li>
+<li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). Il gruppo con il nome ops.reports.read è stato modificato, con l'appartenenza risultante (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e).</li>
+<li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. L'utente è stato eliminato con il valore id=5cd5f412-4bbb- 4c44-b44b-713a5bc6144.</li>
 </ul>
 </dd>
 <dt>Messaggio</dt>
@@ -395,7 +395,7 @@ Notifica gli eventi generati da Bluemix che potrebbero aiutare a diagnosticare g
 <dt>Chiave_exe</dt>
 <dd>Il comando eseguito.</dd>
 <dt>IP origine</dt>
-<dd>L'indirizzo IP dal quale l'utente avvia il comando. </dd>
+<dd>L'indirizzo IP dal quale l'utente avvia il comando.</dd>
 <dt>Origine log</dt>
 <dd>L'origine dell'evento.</dd>
 </dl>

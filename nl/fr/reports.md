@@ -1,4 +1,4 @@
----
+﻿---
 
 copyright:
   years: 2017
@@ -27,15 +27,13 @@ Rend compte des événements de connexion d'administrateur aux unités pare-feu 
 <dt>Heure source du journal</dt>
 <dd>Date à laquelle l'événement s'est produit.</dd>
 <dt>Nom de l’événement</dt>
-<dd>Type d'événement (Echec de la connexion SSH par l'utilisateur - mot de passe incorrect,
-Echec de l'authentification, Session fermée, Mot de passe accepté pour l'utilisateur, Session ouverte par l'utilisateur).</dd>
+<dd>Type d'événement (Echec de la connexion SSH par l'utilisateur - mot de passe incorrect, Echec de l'authentification, Session fermée, Mot de passe accepté pour l'utilisateur, Session ouverte par l'utilisateur).</dd>
 <dt>Catégorie de bas niveau</dt>
-<dd>Détails de l'événement (Echec de la connexion SSH, Session fermée, Réussite de la connexion à l'hôte,
-Session ouverte).</dd>
+<dd>Détails de l'événement (Echec de la connexion SSH, Session fermée, Réussite de la connexion à l'hôte, Session ouverte).</dd>
 <dt>Nom d'utilisateur</dt> 
 <dd>Données d'identification (nom utilisateur) de l'utilisateur ayant lancé la session.</dd>
-<dt>IP source </dt>
-<dd>Adresse IP depuis laquelle l'utilisateur lance la session.
+<dt>IP source</dt>
+<dd>Adresse IP depuis laquelle l'utilisateur lance la session.</dd>
 <dt>IP de destination</dt>
 <dd>Cible de la session.</dd>
 <dt>Source de journal</dt>
@@ -53,21 +51,19 @@ Rend compte des événements générés par les unités pare-feu Vyatta lors du 
 <dt>Heure source du journal</dt>
 <dd>Date et heure auxquelles l'événement s'est produit.</dd>
 <dt>Nom de l’événement</dt>
-<dd>Type d'événement (Echec de la connexion SSH par l'utilisateur - mot de passe incorrect,
-Echec de l'authentification, Session fermée, Mot de passe accepté pour l'utilisateur, Session ouverte par l'utilisateur).</dd>
+<dd>Type d'événement (Echec de la connexion SSH par l'utilisateur - mot de passe incorrect, Echec de l'authentification, Session fermée, Mot de passe accepté pour l'utilisateur, Session ouverte par l'utilisateur).</dd>
 <dt>Catégorie de bas niveau</dt>
 <dd>Détails de l'événement de refus par le pare-feu</dd>
-<dt>IP source </dt> 
+<dt>IP source</dt> 
 <dd>Adresse IP source depuis laquelle la connexion réseau et/ou l'attaque émane.</dd>
 <dt>Port source</dt>
 <dd>Port de destination du protocole.
 <dt>IP de destination</dt>
 <dd>Cible de la session.</dd>
-<dt>Port de destination </dt>
-<dd>Port de destination du protocole.
-</dd>
+<dt>Port de destination</dt>
+<dd>Port de destination du protocole.</dd>
 <dt>Protocole</dt>
-<dd>Protocole de communication (tcp/udp).
+<dd>Protocole de communication (tcp/udp).</dd>
 <dt>Source de journal</dt>
 <dd>Source de l'événement (nom d'hôte du pare-feu qui a généré l'événement).</dd>
 <dt>Nombre d'événements</dt>
@@ -85,11 +81,11 @@ Rend compte des événements générés par le système d'exploitation lorsqu'un
 <dt>Heure source du journal</dt>
 <dd>Date à laquelle l'événement s'est produit.</dd>
 <dt>Nom de l’événement</dt>
-<dd>Type de l'événement (authentification de l'espace utilisateur, échec de l'authentification de l'espace utilisateur)/dd>
+<dd>Type de l'événement (authentification de l'espace utilisateur, échec de l'authentification de l'espace utilisateur)</dd>
 <dt>Nom d'utilisateur</dt> 
 <dd>Nom d'utilisateur de l'utilisateur ayant lancé la procédure d'authentification.</dd>
 <dt>Adresse source</dt>
-<dd>Adresse IP depuis laquelle l'utilisateur lance la session.
+<dd>Adresse IP depuis laquelle l'utilisateur lance la session.</dd>
 <dt>IP de destination</dt>
 <dd>Cible de la session.</dd>
 <dt>Source de journal</dt>
@@ -107,11 +103,11 @@ Rend compte des événements générés par le composant de connexion de la plat
 <dt>Heure source du journal</dt>
 <dd>Date à laquelle l'événement s'est produit.</dd>
 <dt>Nom de l’événement</dt>
-<dd>Type de l'événement (Authentification de l'espace utilisateur, Echec de l'authentification de l'espace utilisateur)/dd>
+<dd>Type de l'événement (Authentification de l'espace utilisateur, Echec de l'authentification de l'espace utilisateur)</dd>
 <dt>Utilisateur</dt> 
 <dd>ID de l'utilisateur ayant lancé la procédure d'authentification.</dd>
 <dt>Composant_plateforme_Bluemix</dt>
-<dd>Composant ayant généré l'événement (serveur_de_connexion).
+<dd>Composant ayant généré l'événement (serveur_de_connexion).</dd>
 <dt>Type du message</dt>
 <dd>Type de l'opération (connexion, déconnexion).</dd>
 <dt>Statut</dt>
@@ -135,15 +131,16 @@ Rend compte des événements associés aux opérations effectuées par un admini
 <dt>Utilisateur</dt> 
 <dd>Nom de l'utilisateur qui a effectué l'opération. Les utilisateurs suivants sont ceux définis dans la base de données.
 <ul>
-<li>UAADB: vcap, root, backup_user.
-<li>CCDB: vcap, ccadmin, backup_user.
-<li>Une utilisation par un autre utilisateur nécessitera d'examiner qui a réalisé l'opération. Ce contrôle peut être effectué depuis le rapport de sécurité de l'administration du système d'exploitation ou depuis le rapport de sécurité de connexion au système d'exploitation.
+<li>UAADB: vcap, root, backup_user.</li>
+<li>CCDB: vcap, ccadmin, backup_user.</li>
+<li>Une utilisation par un autre utilisateur nécessitera d'examiner qui a réalisé l'opération. Ce contrôle peut être effectué depuis le rapport de sécurité de l'administration du système d'exploitation ou depuis le rapport de sécurité de connexion au système d'exploitation.</li>
 </ul>
 </dd>
 <dt>Source</dt> 
-<dd>Adresse IP depuis laquelle l'utilisateur lance la commande. Les valeurs attendues sont les suivantes :<ul>
-<li>UAADB – machines virtuelles uaa et machine virtuelle nfs_WAL_server.
-<li>CCDB – api_worker, clock_global,cloud_controller_ng et machines virtuelles nsf_WAL_server.
+<dd>Adresse IP depuis laquelle l'utilisateur lance la commande. Les valeurs attendues sont les suivantes :
+<ul>
+<li>UAADB – machines virtuelles uaa et machine virtuelle nfs_WAL_server.</li>
+<li>CCDB – api_worker, clock_global,cloud_controller_ng et machines virtuelles nsf_WAL_server.</li>
 </ul>
 </dd>
 <dt>DB_Statement</dt>
@@ -152,7 +149,7 @@ Rend compte des événements associés aux opérations effectuées par un admini
 <dd>Nom de la base de données où l'opération a été effectuée</dd>
 </dl>
 
-## Gestion des utilisateurs de la console d'administration 
+## Gestion des utilisateurs de la console d'administration
 {: #acusermgmt}
 
 Rend compte des activités de gestion des utilisateurs sur la console d'administration Bluemix.
@@ -165,15 +162,15 @@ Rend compte des activités de gestion des utilisateurs sur la console d'administ
 <dt>Event_Type</dt>
 <dd>Type d'événement (SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_MGMT_REGISTRY : Add User [ID utilisateur]
-<li>SECURITY_MGMT_REGISTRY : Delete User [ID utilisateur]
-<li>SECURITY_AUTHN_CREDS_MODIFY : Add permission [autorisations] to users [ID utilisateur].
-<li>SECURITY_AUTHN_CREDS_MODIFY : Remove permission [autorisations] from users [ID utilisateur].
-<li>SECURITY_MGMT_CONFIG : create organization [nom].
-<li>SECURITY_MGMT_CONFIG: Change organization managers, [ID].
-<li>SECURITY_MGMT_CONFIG : Rename organization id [ID] to new name [nom].
-<li>SECURITY_MGMT_CONFIG : Delete organization id [ID].
-<li>SECURITY_MGMT_CONFIG : Update quota for organization [ID] to quota [quotaPlan].
+<li>SECURITY_MGMT_REGISTRY : Add User [user ID]</li>
+<li>SECURITY_MGMT_REGISTRY : Delete User [user ID]</li>
+<li>SECURITY_AUTHN_CREDS_MODIFY : Add permission [permissions] to users [user ID].</li>
+<li>SECURITY_AUTHN_CREDS_MODIFY : Remove permission [permissions] from users [user ID].</li>
+<li>SECURITY_MGMT_CONFIG : Create organization [name].</li>
+<li>SECURITY_MGMT_CONFIG : Change organization managers, [ids].</li>
+<li>SECURITY_MGMT_CONFIG : Rename organization id [id] to new name [name].</li>
+<li>SECURITY_MGMT_CONFIG : Delete organization id [id].</li>
+<li>SECURITY_MGMT_CONFIG : Update quota for organization [id] to quota [quotaPlan].</li>
 </ul>
 </dd>
 <dt>Utilisateur</dt> 
@@ -181,17 +178,16 @@ Rend compte des activités de gestion des utilisateurs sur la console d'administ
 <dt>Message</dt> 
 <dd>La commande a été exécutée.
 <ul>
-<li>Add User [user ID]: Adds a user with the specified ID.
-<li>Delete User [user ID]: Deletes a user with the specified ID.
-<li>Add permission [autorisations] to users [user ID]: Adds permissions to the specified users. Permissions can include:
-ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read et ops.user.write.
-<li>Remove permission [autorisations] from users [user ID]: Remove permission - Remove permissions from the specified users. Permissions can include: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.users.write.
-<li>Create organization [name]: Creates an organization with the specified name.
-<li>Change organization managers [ids]: Configures the managers of an organization to be the specified users.
-<li>Rename organization id [ID] to new name [name]: Renames the specified organization.
-<li>Delete User [user ID]: Deletes a user with the specified ID.
-<li>Delete organization id [id]: Deletes the specified organization.
-<li>Update quota for organization [ID] to quota [quotaPlan]: Updates the quota plan for the specified organization. Plans can include: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.
+<li>Add User [user ID] : Ajoute l'utilisateur avec l'ID spécifié.</li>
+<li>Delete User [user ID] : Supprime l'utilisateur avec l'ID spécifié.</li>
+<li>Add permission [permissions] to users [user ID] : Ajoute les permissions indiquées aux utilisateurs spécifiés. Ces permissions peuvent inclure : ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read et ops.user.write.</li>
+<li>Remove permission [permissions] from users [user ID] : Retire les permissions indiquées des utilisateurs spécifiés. Les permissions peuvent inclure : ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read et ops.users.write.</li>
+<li>Create organization [name] : Crée l'organisation avec le nom spécifié.</li>
+<li>Change organization managers [ids] : Configure les utilisateurs spécifiés comme responsables d'une organisation.</li>
+<li>Rename organization id [id] to new name [name] : Renomme l'organisation spécifiée.</li>
+<li>Delete User [user ID] : Supprime l'utilisateur avec l'ID spécifié.</li>
+<li>Delete organization id [id] : Supprime l'organisation spécifiée.</li>
+<li>Update quota for organization [id] to quota [quotaPlan] : Met à jour le plan de quota pour l'organisation spécifiée. Les plans peuvent octroyer les quotas suivants : q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.</li>
 </ul>
 </dd>
 <dt>Source de journal</dt>
@@ -232,8 +228,8 @@ Rend compte des événements associés aux activités de gestion des rapports de
 <dd>Type d'événement (SECURITY_RUNTIME).
 <ul>
 <li>SECURITY_DATA_SYNC : Upload report [nom] to category [nom] date [date].
-Delete Report with ID [ID]
-<li>SECURITY_RESOURCE_ACCESS : Download Report [nom].
+Delete Report with ID [ID]</li>
+<li>SECURITY_RESOURCE_ACCESS : Download Report [nom].</li>
 </ul>
 </dd>
 <dt>Utilisateur</dt> 
@@ -241,9 +237,9 @@ Delete Report with ID [ID]
 <dt>Message</dt> 
 <dd>La commande a été exécutée.
 <ul>
-<li>Upload report [nom] to category [nom] date [date]: Upload - Upload a report with the specified file name and date to the specified category. 
-<li>Delete Report with ID [id]: Delete - Delete a report with the specified id.
-<li>Download Report [name]: Download - A report was downloaded with the specified name.
+<li>Upload report [nom] to category [nom] date [date] : Télécharge un rapport avec le nom de fichier et la date spécifiés dans la catégorie indiquée.</li>
+<li>Delete Report with ID [id] : Supprime le rapport avec l'ID spécifié.</li>
+<li>Download Report [name] : Télécharge le rapport avec le nom spécifié.</li>
 </ul>
 </dd>
 <dt>Source de journal</dt>
@@ -261,7 +257,7 @@ Rend compte des demandes d'accès privilégié à l'environnement Bluemix et de 
 <dt>Action_Name</dt>
 <dd>Indique la demande d'un utilisateur à faire partie d'un groupe, à renommer un ID utilisateur, à être révoqué en cas de refus, à être retiré d'un groupe (Addp, Rename, Revoke, Delete).</dd>
 <dt>Statut</dt>
-<dd>Cette zone indique le statut de la demande. Le valideur accepte ou rejette la demande. La demande est en attente d'approbation.L'utilisateur annule la demande (Acceptée, Rejetée, En attente, Annulée).</dd>
+<dd>Cette zone indique le statut de la demande. Le valideur accepte ou rejette la demande. La demande est en attente d'approbation. L'utilisateur annule la demande (Acceptée, Rejetée, En attente, Annulée).</dd>
 <dt>Id_User</dt>
 <dd>Nom d'utilisateur</dd>
 <dt>User_name</dt> 
@@ -289,7 +285,8 @@ Rend compte des opérations de gestion des clés.
 <dt>Key_Mgmt_Message</dt> 
 <dd>La commande a été exécutée (Création de la clé "nom clé", Création du certificat "nom certificat", configuration du certificat "nom certificat" supprimée).</dd>
 <dt>IP de destination</dt>
-<dd>Cible de la session.<dt>Source de journal</dt>
+<dd>Cible de la session.
+<dt>Source de journal</dt>
 <dd>Source de l'événement.</dd>
 </dl>
 
@@ -306,13 +303,13 @@ Rend compte des événements associés à la configuration des fenêtres de dép
 <dt>Event_Type</dt>
 <dd>Type d'événement (SECURITY_RUNTIME).
 <ul>
-<li> SECURITY_MGMT_CONFIG : Create Window [ID].
-<li> SECURITY_MGMT_CONFIG : Update Window [ID].
-<li> SECURITY_MGMT_CONFIG : Delete Window [ID].
-<li> SECURITY_MGMT_CONFIG : Create Subscription [ID].
-<li> SECURITY_MGMT_CONFIG : Update Subscription [ID].
-<li> SECURITY_MGMT_CONFIG : Delete Susbscription [ID].
-<li> SECURITY_MGMT_CONFIG : Create Topic Reply [ID].
+<li> SECURITY_MGMT_CONFIG : Create Window [ID].</li>
+<li> SECURITY_MGMT_CONFIG : Update Window [ID].</li>
+<li> SECURITY_MGMT_CONFIG : Delete Window [ID].</li>
+<li> SECURITY_MGMT_CONFIG : Create Subscription [ID].</li>
+<li> SECURITY_MGMT_CONFIG : Update Subscription [ID].</li>
+<li> SECURITY_MGMT_CONFIG : Delete Susbscription [ID].</li>
+<li> SECURITY_MGMT_CONFIG : Create Topic Reply [ID].</li>
 </ul>
 </dd>
 <dt>Utilisateur</dt> 
@@ -320,13 +317,13 @@ Rend compte des événements associés à la configuration des fenêtres de dép
 <dt>Message</dt>
 <dd>La commande a été exécutée.
 <ul>
-<li>Create Window [id]: Creates "creating" Fenêtres de mise à jour de l'environnement. Il s'agit des fenêtres d'interruption totale et des fenêtres de préférence pour les déploiements. A ces moments, les clients autorisent/n'autorisent pas l'exécution de déploiements n'entraînant pas d'interruption sans avoir à les approuver ou à les planifier.
-<li>Fenêtre de mise à jour [id]: Updates a maintenance update window. This event is generated when a user is updating the maintenance update windows for an environment.
-<li>SECURITY_MGMT_CONFIG: Delete Update Window Cet événement est généré lorsqu'un utilisateur délègue les fenêtres de mise à jour d'un environnement.
-<li>Create Subscription [id]: Creates an event subscription. The event subscription audit logs are generated when a user creates a subscription for either update or incident events. This will allow them to be notified when something is going on in their system..
-<li>Update Subscription [id]: Updates an event subscription. The event is generated when a user updates a subscription for either update or incident events.
-<li>Delete Subscription [id]: Delete Event Subscription. This event is generated when a user deletes a subscription for either update or incident events.
-<li>Create Topic Reply [id]: Reply to a Topic The topic reply audit log is generated when the customer approves and schedules disruptive update..
+<li>Create Window [id] : Crée une fenêtre de mise à jour de maintenance. Les journaux de fenêtres de mise à jour sont générés lorsqu'un utilisateur gère (crée) les fenêtres de mise à jour pour un environnement. Il s'agit des fenêtres d'interruption totale et des fenêtres de préférence pour les déploiements. A ces moments, les clients autorisent/n'autorisent pas l'exécution de déploiements n'entraînant pas d'interruption sans avoir à les approuver ou à les planifier.</li>
+<li>Update Window [id] : Met à jour une fenêtre de mise à jour de maintenance. Cet événement est généré lorsqu'un utilisateur met à jour les fenêtres de mise à jour de maintenance pour un environnement.</li>
+<li>Delete Window [ID] : Supprime une fenêtre de mise à jour. Cet événement est généré lorsqu'un utilisateur délègue les fenêtres de mise à jour d'un environnement.</li>
+<li>Create Subscription [id] : Crée un abonnement à un événement. Les journaux d'audit d'abonnement aux événements sont générés lorsqu'un utilisateur crée un abonnement pour des événements de mise à jour ou d'incident. Ceci leur permet d'être avisés de ces occurrences sur leur système.</li>
+<li>Update Subscription [id] : Met à jour un abonnement à un événement. L'événement est généré lorsqu'un utilisateur met à jour un abonnement à des événements de mise à jour ou d'incident.</li>
+<li>Delete Subscription [id] : Supprime un abonnement à un événement. Cet événement est généré lorsqu'un utilisateur supprime un abonnement à des événements de mise à jour ou d'incident.</li>
+<li>Create Topic Reply [id] : Répond à un sujet. Le journal d'audit de relecture de rubrique est généré lorsqu'un utilisateur approuve et planifie une mise à jour entraînant des perturbations.</li>
 </ul>
 </dd>
 <dt>Source de journal</dt>
@@ -346,11 +343,11 @@ Rend compte des événements associés à la plateforme Bluemix par le biais de 
 <dt>Event_Type</dt>
 <dd>Type d'événement (SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_AUTH_CREDS_MODIFY : Evénements associés à la modification de données d'identification d'un utilisateur donné.
-<li>SECURITY_MGMT_RESOURCE : Evénements de gestion de resources tels que la création, la suppression et les modifications des attributs d'une ressource.
-<li>SECURITY_MGMT_POLICY : Evénement associé à la gestion des règles de sécurité, tel que la création de listes de contrôle d'accès.
-<li>SECURITY_RUNTIME : Evénements de l'environnement d'exécution, tel que le démarrage ou l'arrêt de serveurs de sécurité.
-<li>SECURITY_RESOURCE_ACCESS : Evénements enregistrant tous les accès à une ressource. Par exemple, tous les accès à un fichier, toutes les requêtes/réponses HTTP à une page Web donnée et tous les accès à une table de base de données critique.
+<li>SECURITY_AUTH_CREDS_MODIFY : Evénements associés à la modification de données d'identification d'un utilisateur donné.</li>
+<li>SECURITY_MGMT_RESOURCE : Evénements de gestion de resources tels que la création, la suppression et les modifications des attributs d'une ressource.</li>
+<li>SECURITY_MGMT_POLICY : Evénement associé à la gestion des règles de sécurité, tel que la création de listes de contrôle d'accès.</li>
+<li>SECURITY_RUNTIME : Evénements de l'environnement d'exécution, tel que le démarrage ou l'arrêt de serveurs de sécurité.</li>
+<li>SECURITY_RESOURCE_ACCESS : Evénements enregistrant tous les accès à une ressource. Par exemple, tous les accès à un fichier, toutes les requêtes/réponses HTTP à une page Web donnée et tous les accès à une table de base de données critique.</li>
 </ul>
 </dd>
 <dt>Utilisateur</dt> 
@@ -359,14 +356,14 @@ Rend compte des événements associés à la plateforme Bluemix par le biais de 
 <dd>Détails de l'opération exécutée, tels que l'ID de l'entité et les résultats de l'opération. Exemples :
 <ul>
 <li>UserCreatedEvent ('["user_id=ca3a811f-1778-4103-9553-537788ed4c4e","username=equaranta"]’). User was created with
-(username=equaranta and id = ca3a811f-1778-4103-9553-537788ed4c4e).
-<li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). Group with name ops.reports.read was modified, with resulting membership (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e).
-<li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. User was deleted with id value=5cd5f412-4bbb- 4c44-b44b-713a5bc6144.
+(username=equaranta and id = ca3a811f-1778-4103-9553-537788ed4c4e).</li>
+<li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). Group with name ops.reports.read was modified, with resulting membership (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e).</li>
+<li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. User was deleted with id value=5cd5f412-4bbb- 4c44-b44b-713a5bc6144.</li>
 </ul>
 </dd>
 <dt>Message</dt>
 <dd>Entité sur laquelle l'opération a été exécutée (chaîne msg) ou code retour HTTP standard de l'opération (valeur numérique). </dd>
-<dt>Bluemix_Platform_Component</dt>
+<dt>Composant_plateforme_Bluemix</dt>
 <dd>Nom du composant.</dd>
 <dt>Source de journal</dt>
 <dd>Nom d'hôte/Adresse IP de la source de l'événement.</dd>
@@ -396,8 +393,8 @@ Rend compte des événements générés par Bluemix et susceptibles d'aider au d
 <dd>ID utilisateur cible avec lequel la commande est exécutée (par exemple, auid=55044 est connecté et lance une instruction “sudo su” (root) -> uid=0 avant d'exécuter la commande).
 <dt>exe_key</dt>
 <dd>Commande qui a été exécutée.</dd>
-<dt>IP source </dt>
-<dd>Adresse IP depuis laquelle l'utilisateur lance la commande. </dd>
+<dt>IP source</dt>
+<dd>Adresse IP depuis laquelle l'utilisateur lance la commande.</dd>
 <dt>Source de journal</dt>
 <dd>Source de l'événement.</dd>
 </dl>

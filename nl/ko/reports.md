@@ -132,15 +132,20 @@ Bluemix 내부 데이터베이스에서 데이터베이스 관리자가 수행�
 <dd>오퍼레이션을 수행한 사용자의 사용자 이름입니다. 다음 사용자는 데이터베이스에 정의된 사용자입니다.
 <ul>
 <li>UAADB: vcap, root, backup_user.
+</li>
 <li>CCDB: vcap, ccadmin, backup_user.
+</li>
 <li>위 항목에서 벗어난 사용의 경우에는 오퍼레이션 수행자에 대한 조사가 필요합니다. 이는 운영 체제 관리 보안 보고서 및 운영 체제 로그인 보안 보고서를 사용하여 수행됩니다.
+</li>
 </ul>
 </dd>
 <dt>소스</dt> 
 <dd>사용자가 명령을 시작한 IP 주소입니다. 예상 값은 다음과 같습니다.
 <ul>
 <li>UAADB – uaa VM 및 nfs_WAL_server VM.
+</li>
 <li>CCDB – api_worker, clock_global, cloud_controller_ng 및 nsf_WAL_server VM.
+</li>
 </ul>
 </dd>
 <dt>DB_Statement</dt>
@@ -162,15 +167,15 @@ Bluemix 관리 콘솔에서 수행된 사용자 관리 활동을 보고합니다
 <dt>Event_Type</dt>
 <dd>이벤트의 유형입니다(SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_MGMT_REGISTRY: Add User [user ID]
-<li>SECURITY_MGMT_REGISTRY: Delete User [user ID]
-<li>SECURITY_AUTHN_CREDS_MODIFY: Add permission [permissions] to users [user ID]
-<li>SECURITY_AUTHN_CREDS_MODIFY: Remove permission [permissions] from users [user ID]
-<li>SECURITY_MGMT_CONFIG: Create organization [name]
-<li>SECURITY_MGMT_CONFIG: Change organization managers [ids]
-<li>SECURITY_MGMT_CONFIG: Rename organization id [id] to new name [name]
-<li>SECURITY_MGMT_CONFIG: Delete organization id [id]
-<li>SECURITY_MGMT_CONFIG: Update quota for organization [id] to quota [quotaPlan]
+<li>SECURITY_MGMT_REGISTRY: Add User [user ID] </li>
+<li>SECURITY_MGMT_REGISTRY: Delete User [user ID] </li>
+<li>SECURITY_AUTHN_CREDS_MODIFY: Add permission [permissions] to users [user ID] </li>
+<li>SECURITY_AUTHN_CREDS_MODIFY: Remove permission [permissions] from users [user ID] </li>
+<li>SECURITY_MGMT_CONFIG: Create organization [name] </li>
+<li>SECURITY_MGMT_CONFIG: Change organization managers [ids] </li>
+<li>SECURITY_MGMT_CONFIG: Rename organization id [id] to new name [name] </li>
+<li>SECURITY_MGMT_CONFIG: Delete organization id [id] </li>
+<li>SECURITY_MGMT_CONFIG: Update quota for organization [id] to quota [quotaPlan]</li>
 </ul>
 </dd>
 <dt>사용자</dt> 
@@ -178,17 +183,17 @@ Bluemix 관리 콘솔에서 수행된 사용자 관리 활동을 보고합니다
 <dt>메시지</dt> 
 <dd>실행된 명령입니다.
 <ul>
-<li>Add User [user ID]: Adds a user with the specified ID.
-<li>Delete User [user ID]: Deletes a user with the specified ID.
-<li>Add permission [permissions] to users [user ID]: Adds permissions to the specified users. Permissions can include:
-ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read 및 ops.user.write.
-<li>Remove permission [permissions] from users [user ID]: Remove permission - Remove permissions from the specified users. Permissions can include: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.users.write.
-<li>Create organization [name]: Creates an organization with the specified name.
-<li>Change organization managers [ids]: Configures the managers of an organization to be the specified users.
-<li>Rename organization id [id] to new name [name]: Renames the specified organization.
-<li>Delete User [user ID]: Deletes a user with the specified ID.
-<li>Delete organization id [id]: Deletes the specified organization.
-<li>Update quota for organization [id] to quota [quotaPlan]: Updates the quota plan for the specified organization. Plans can include: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.
+<li>Add User [user ID]: Adds 지정된 ID의 사용자를 추가합니다.</li>
+<li>Delete User [user ID]: Deletes 지정된 ID의 사용자를 삭제합니다.</li>
+<li>Add permission [permissions] to users [user ID]: Adds 지정된 사용자에게 권한을 추가합니다. 다음과 같은 권한이 포함될 수 있음:
+ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, ops.user.write.</li>
+<li>Remove permission [permissions] from users [user ID]: Remove 권한 제거 - 지정된 사용자에서 권한을 제거합니다. 다음과 같은 권한이 포함될 수 있음: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, ops.users.write.</li>
+<li>Create organization [name]: Creates 지정된 이름으로 조직을 작성합니다.</li>
+<li>Change organization managers [ids]: Configures 조직의 관리자가 지정된 사용자가 되도록 구성합니다.</li>
+<li>Rename organization id [id] to new name [name]: Renames 지정된 조직의 이름을 바꿉니다.</li>
+<li>Delete User [user ID]: Deletes 지정된 ID의 사용자를 삭제합니다.</li>
+<li>Delete organization id [id]: Deletes 지정된 조직을 삭제합니다.</li>
+<li>Update quota for organization [id] to quota [quotaPlan]: Updates 지정된 조직의 할당량 플랜을 업데이트합니다. 다음과 같은 플랜이 포함될 수 있음: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.</li>
 </ul>
 </dd>
 <dt>로그 소스</dt>
@@ -229,8 +234,8 @@ Bluemix 관리 콘솔에서 수행된 서비스 카탈로그 관리 활동과 �
 <dd>이벤트의 유형입니다(SECURITY_RUNTIME).
 <ul>
 <li>SECURITY_DATA_SYNC: Upload report [name] to category [name] date [date].
-Delete Report with ID [id]
-<li>SECURITY_RESOURCE_ACCESS: Download Report [name].
+Delete Report with ID [id] </li>
+<li>SECURITY_RESOURCE_ACCESS: Download Report [name]. </li>
 </ul>
 </dd>
 <dt>사용자</dt> 
@@ -238,9 +243,9 @@ Delete Report with ID [id]
 <dt>메시지</dt> 
 <dd>실행된 명령입니다.
 <ul>
-<li>Upload report [name] to category [name] date [date]: Upload - Upload a report with the specified file name and date to the specified category. 
-<li>Delete Report with ID [id]: Delete - Delete a report with the specified id.
-<li>Download Report [name]: Download - A report was downloaded with the specified name.
+<li>Upload report [name] to category [name] date [date]: Upload - 지정된 카테고리에 지정된 파일 이름과 날짜의 보고서를 업로드합니다.</li>
+<li>Delete Report with ID [id]: Delete - 지정된 ID의 보고서를 삭제합니다.</li>
+<li>Download Report [name]: Download - 지정된 이름으로 보고서가 다운로드되었습니다.</li>
 </ul>
 </dd>
 <dt>로그 소스</dt>
@@ -304,13 +309,13 @@ Bluemix 환경의 액세스 권한에 대한 요청, 그리고 이러한 요청�
 <dt>Event_Type</dt>
 <dd>이벤트의 유형입니다(SECURITY_RUNTIME).
 <ul>
-<li> SECURITY_MGMT_CONFIG: Create Window [id].
-<li> SECURITY_MGMT_CONFIG: Update Window [id].
-<li> SECURITY_MGMT_CONFIG: Delete Window [id].
-<li> SECURITY_MGMT_CONFIG: Create Subscription [id].
-<li> SECURITY_MGMT_CONFIG: Update Subscription [id].
-<li> SECURITY_MGMT_CONFIG: Delete Susbscription [id].
-<li> SECURITY_MGMT_CONFIG: Create Topic Reply [id].
+<li> SECURITY_MGMT_CONFIG: Create Window [id]. </li>
+<li> SECURITY_MGMT_CONFIG: Update Window [id]. </li>
+<li> SECURITY_MGMT_CONFIG: Delete Window [id]. </li>
+<li> SECURITY_MGMT_CONFIG: Create Subscription [id]. </li>
+<li> SECURITY_MGMT_CONFIG: Update Subscription [id]. </li>
+<li> SECURITY_MGMT_CONFIG: Delete Susbscription [id]. </li>
+<li> SECURITY_MGMT_CONFIG: Create Topic Reply [id]. </li>
 </ul>
 </dd>
 <dt>사용자</dt> 
@@ -318,13 +323,16 @@ Bluemix 환경의 액세스 권한에 대한 요청, 그리고 이러한 요청�
 <dt>메시지</dt>
 <dd>실행된 명령입니다.
 <ul>
-<li>Create Window [id]: Creates "creating" 환경에 대한 업데이트 창을 작성합니다. 업데이트 창은 블랙아웃이며 배치 작업에 유용한 창입니다. 이는 고객이 배치를 승인하고 스케줄할 필요 없는 자동 배치를 허용하거나 허용하지 않는 경우입니다.
-<li>Update Window [id]: Updates a maintenance update window. This event is generated when a user is updating the maintenance update windows for an environment.
+<li>Create Window [id]: Creates 유지보수 업데이트를 위한 창을 작성합니다. 업데이트 창 로그는 사용자가 환경에 대한 업데이트 창을 관리(작성)할 때 생성됩니다. 업데이트 창은 블랙아웃이며 배치 작업에 유용한 창입니다. 이는 고객이 배치를 승인하고 스케줄할 필요 없는 자동 배치를 허용하거나 허용하지 않는 경우입니다.
+</li>
+<li>Update Window [id]: Updates 유지보수 업데이트 창을 업데이트합니다. 이 이벤트는 사용자가 환경에 대한 유지보수 업데이트 창을 업데이트할 때 생성됩니다.
+</li>
 <li>Delete Window [id]: 업데이트 창을 삭제합니다. 이 이벤트는 사용자가 환경에 대한 업데이트 창을 위임하는 경우 생성됩니다.
-<li>Create Subscription [id]: Creates an event subscription. The event subscription audit logs are generated when a user creates a subscription for either update or incident events. This will allow them to be notified when something is going on in their system..
-<li>Update Subscription [id]: Updates an event subscription. The event is generated when a user updates a subscription for either update or incident events.
-<li>Delete Subscription [id]: Delete Event Subscription. This event is generated when a user deletes a subscription for either update or incident events.
-<li>Create Topic Reply [id]: Reply to a Topic The topic reply audit log is generated when the customer approves and schedules disruptive update..
+</li>
+<li>Create Subscription [id]: Creates 이벤트 구독을 작성합니다. 이벤트 구독 감사 로그는 사용자가 업데이트 또는 인시던트 이벤트에 대한 구독을 작성할 때 생성됩니다. 이는 해당 시스템에서 무슨 일이 생기면 알릴 수 있게 됩니다.</li>
+<li>Update Subscription [id]: Updates 이벤트 구독을 업데이트합니다. 사용자가 업데이트 또는 인시던트 이벤트에 대한 구독을 업데이트할 때 이벤트가 생성됩니다. </li>
+<li>Delete Subscription [id]: Delete 이벤트 구독을 삭제합니다. 이 이벤트는 사용자가 업데이트 또는 인시던트 이벤트에 대한 구독을 삭제할 때 생성됩니다. </li>
+<li>Create Topic Reply [id]: Reply 토픽에 응답합니다. 토픽 응답 감사 로그는 고객이 시스템을 중단하는 업데이트를 승인하고 스케줄링할 때 생성됩니다.</li>
 </ul>
 </dd>
 <dt>로그 소스</dt>
@@ -345,10 +353,14 @@ Bluemix 환경의 액세스 권한에 대한 요청, 그리고 이러한 요청�
 <dd>이벤트의 유형입니다(SECURITY_RUNTIME).
 <ul>
 <li>SECURITY_AUTH_CREDS_MODIFY: 특정 사용자 ID에 대한 신임 정보의 수정과 관련된 이벤트입니다.
+</li>
 <li>SECURITY_MGMT_RESOURCE: 리소스 작성, 삭제, 리소스의 속성 변경과 같은 리소스 관리 이벤트입니다.
-<li>SECURITY_MGMT_POLICY: 액세스 제어 목록의 작성과 같은 보안 정책 관리와 관련된 이벤트입니다.
+</li>
+<li>SECURITY_MGMT_POLICY: 액세스 제어 목록의 작성과 같은 보안 정책 관리와 관련된 이벤트입니다. </li>
 <li>SECURITY_RUNTIME: 보안 서버 시작 및 중지와 같은 런타임 이벤트입니다.
+</li>
 <li>SECURITY_RESOURCE_ACCESS: 리소스에 대한 모든 액세스를 기록하는 이벤트입니다. 예를 들면 파일에 대한 모든 액세스, 특정 웹 페이지에 대한 모든 HTTP 요청/응답, 중요 데이터베이스 테이블에 대한 모든 액세스 등이 있습니다.
+</li>
 </ul>
 </dd>
 <dt>사용자</dt> 
@@ -356,9 +368,12 @@ Bluemix 환경의 액세스 권한에 대한 요청, 그리고 이러한 요청�
 <dt>대상</dt> 
 <dd>엔티티 ID 및 오퍼레이션의 결과와 같은, 실행된 오퍼레이션의 세부사항입니다. 예를 들어 다음과 같습니다.<ul>
 <li>UserCreatedEvent ('["user_id=ca3a811f-1778-4103-9553-537788ed4c4e","username=equaranta"]’). 사용자가 username=equaranta 및 id=ca3a811f-1778-4103-9553-537788ed4c4e를 사용하여 작성되었습니다.
+</li>
 <li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). 이름이 ops.reports.read인 그룹이 수정되었으며
 결과 멤버십은 ID 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e입니다.
+</li>
 <li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. 사용자가 ID 값 5cd5f412-4bbb- 4c44-b44b-713a5bc6144를 사용하여 삭제되었습니다.
+</li>
 </ul>
 </dd>
 <dt>메시지</dt>
