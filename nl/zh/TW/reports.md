@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-08-02"
 
 ---
 
@@ -132,20 +132,15 @@ lastupdated: "2017-05-30"
 <dd>執行作業之使用者的使用者名稱。下列使用者是定義給資料庫的使用者。
 <ul>
 <li>UAADB：vcap、root、backup_user。
-</li>
 <li>CCDB：vcap、ccadmin、backup_user。
-</li>
 <li>在上述項目之外的使用需要調查執行作業的人員。這可以使用「作業系統管理安全報告」及「作業系統登入安全報告」來完成。
-</li>
 </ul>
 </dd>
 <dt>來源</dt> 
 <dd>使用者從該處啟動指令的 IP 位址。預期值如下：
 <ul>
 <li>UAADB - uaa VM 及 nfs_WAL_server VM。
-</li>
 <li>CCDB - api_worker、clock_global、cloud_controller_ng 及 nsf_WAL_server VM。
-</li>
 </ul>
 </dd>
 <dt>DB 陳述式</dt>
@@ -168,23 +163,14 @@ lastupdated: "2017-05-30"
 <dd>事件類型 (SECURITY_RUNTIME)。
 <ul>
 <li>SECURITY_MGMT_REGISTRY：新增使用者 [user ID]
-</li>
 <li>SECURITY_MGMT_REGISTRY：刪除使用者 [user ID]
-</li>
 <li>SECURITY_AUTHN_CREDS_MODIFY：新增使用者 [user ID] 的許可權 [permissions]。
-</li>
 <li>SECURITY_AUTHN_CREDS_MODIFY：移除使用者 [user ID] 的許可權 [permissions]。
-</li>
 <li>SECURITY_MGMT_CONFIG：建立組織 [name]。
-</li>
 <li>SECURITY_MGMT_CONFIG：變更組織管理員 [ids]。
-</li>
 <li>SECURITY_MGMT_CONFIG：將組織 ID [id] 重新命名為新名稱 [name]。
-</li>
 <li>SECURITY_MGMT_CONFIG：刪除組織 ID [id]。
-</li>
 <li>SECURITY_MGMT_CONFIG：將組織 [id] 的配額更新為配額 [quotaPlan]。
-</li>
 </ul>
 </dd>
 <dt>使用者</dt> 
@@ -192,17 +178,16 @@ lastupdated: "2017-05-30"
 <dt>訊息</dt> 
 <dd>已執行的指令。
 <ul>
-<li>新增使用者 [user ID]：新增具有指定 ID 的使用者。</li>
-<li>刪除使用者 [user ID]：刪除具有指定 ID 的使用者。</li>
-<li>新增許可權 [permissions] 給使用者 [user ID]：新增許可權給指定的使用者。許可權可以包括：ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read 及 ops.user.write。</li>
-<li>移除使用者 [user ID] 的許可權 [permissions]：移除許可權 - 移除指定使用者的許可權。許可權可以包括：ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read 及 ops.users.write。</li>
-<li>建立組織 [name]：建立具有指定名稱的組織。</li>
-<li>變更組織管理員 [ids]：將組織的管理員配置為指定的使用者。</li>
-<li>將組織 ID [id] 重新命名為新名稱 [name]：重新命名指定的組織。</li>
-<li>刪除使用者 [user ID]：刪除具有指定 ID 的使用者。</li>
-<li>刪除組織 ID [id]：刪除指定的組織。</li>
-<li>將組織 [id] 的配額更新為配額 [quotaPlan]：更新指定組織的配額方案。方案可以包括：q2GB、q4GB、q8GB、q16GB、q32GB、q64GB、q128GB、q256GB、q512GB。</li>
-</ul>
+<li>新增使用者 [user ID] - 新增具有指定 ID 的使用者。
+<li>刪除使用者 [user ID] - 刪除具有指定 ID 的使用者。
+<li>新增許可權 [permissions] 給使用者 [user ID] - 新增許可權給指定的使用者。許可權可以包括：ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read 及 ops.user.write。
+<li>移除使用者 [user ID] 的許可權 [permissions] - 移除許可權。移除指定使用者的許可權。許可權可以包括：ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read 及 ops.users.write。
+<li>建立組織 [name] - 建立具有指定名稱的組織。
+<li>變更組織管理員 [ids] - 將組織的管理員配置為指定的使用者。
+<li>將組織 ID [id] 重新命名為新名稱 [name] - 重新命名指定的組織。
+<li>刪除使用者 [user ID] - 刪除具有指定 ID 的使用者。
+<li>刪除組織 ID [id] - 刪除指定的組織。
+<li>將組織 [id] 的配額更新為配額 [quotaPlan] - 更新指定組織的配額方案。方案可以包括：q2GB、q4GB、q8GB、q16GB、q32GB、q64GB、q128GB、q256GB、q512GB。</ul>
 </dd>
 <dt>日誌來源</dt>
 <dd>事件來源（產生事件之伺服器的 IP 位址/主機名稱）</dd>
@@ -243,9 +228,7 @@ lastupdated: "2017-05-30"
 <ul>
 <li>SECURITY_DATA_SYNC：將報告 [name] 上傳至種類 [name] 日期 [date]。
 刪除具有 ID [id] 的報告
-</li>
 <li>SECURITY_RESOURCE_ACCESS：下載報告 [name]。
-</li>
 </ul>
 </dd>
 <dt>使用者</dt> 
@@ -253,9 +236,9 @@ lastupdated: "2017-05-30"
 <dt>訊息</dt> 
 <dd>已執行的指令。
 <ul>
-<li>將報告 [name] 上傳至種類 [name] 日期 [date]：上傳 - 將具有指定檔名及日期的報告上傳至指定的種類。</li>
-<li>刪除具有 ID [id] 的報告：刪除 - 刪除具有指定 ID 的報告。</li>
-<li>下載報告 [name]: Download - 下載具有指定名稱的報告。</li>
+<li>將報告 [name] 上傳至種類 [name] 日期 [date] - 上傳。將具有指定檔名及日期的報告上傳至指定的種類。
+<li>刪除具有 ID [id] 的報告 - 刪除。刪除具有指定 ID 的報告。
+<li>下載報告 [name] - 下載。下載具有指定名稱的報告。
 </ul>
 </dd>
 <dt>日誌來源</dt>
@@ -320,19 +303,12 @@ lastupdated: "2017-05-30"
 <dd>事件類型 (SECURITY_RUNTIME)。
 <ul>
 <li> SECURITY_MGMT_CONFIG：建立時間範圍 [id]。
-</li>
 <li> SECURITY_MGMT_CONFIG：更新時間範圍 [id]。
-</li>
 <li> SECURITY_MGMT_CONFIG：刪除時間範圍 [id]。
-</li>
 <li> SECURITY_MGMT_CONFIG：建立訂閱 [id]。
-</li>
 <li> SECURITY_MGMT_CONFIG：更新訂閱 [id]。
-</li>
 <li> SECURITY_MGMT_CONFIG：刪除訂閱 [id]。
-</li>
 <li> SECURITY_MGMT_CONFIG：建立主題回覆 [id]。
-</li>
 </ul>
 </dd>
 <dt>使用者</dt> 
@@ -340,15 +316,13 @@ lastupdated: "2017-05-30"
 <dt>訊息</dt>
 <dd>已執行的指令。
 <ul>
-<li>建立時間範圍 [id]: Creates 維護更新的時間範圍。使用者管理（建立）環境的更新時間範圍時，會產生更新時間範圍日誌。更新時間範圍是部署的管制及偏好時間範圍。這是指客戶容許/不容許部署非干擾性的部署作業，而不需要核准及排定它們的時間。
-</li>
-<li>更新時間範圍 [id]: Updates 維護更新時間範圍。使用者更新環境的維護更新時間範圍時，會產生此事件。</li>
-<li>SECURITY_MGMT_CONFIG：刪除更新時間範圍。使用者委派環境的更新時間範圍時，會產生此事件。
-</li>
-<li>建立訂閱 [id]: Creates 事件訂閱。使用者建立更新事件或突發事件的訂閱時，會產生事件訂閱審核日誌。這樣可在系統上發生事情時通知他們。</li>
-<li>更新訂閱 [id]: Updates 事件訂閱。使用者更新更新事件或突發事件的訂閱時，會產生此事件。</li>
-<li>刪除訂閱 [id]: Delete 事件訂閱。使用者刪除更新事件或突發事件的訂閱時，會產生此事件。</li>
-<li>建立主題回覆 [id]: Reply 主題。客戶核准及排定干擾性更新時，會產生主題回覆審核日誌。</li>
+<li>建立時間範圍 [id] - 建立維護更新的時間範圍。使用者管理（建立）環境的更新時間範圍時，會產生更新時間範圍日誌。更新時間範圍是部署的管制及偏好時間範圍。這是指客戶容許/不容許部署非干擾性的部署作業，而不需要核准及排定它們的時間。
+<li>更新時間範圍 [id] - 更新維護更新時間範圍。使用者更新環境的維護更新時間範圍時，會產生此事件。
+<li>SECURITY_MGMT_CONFIG - 刪除更新時間範圍。使用者委派環境的更新時間範圍時，會產生此事件。
+<li>建立訂閱 [id] - 建立事件訂閱。使用者建立更新事件或突發事件的訂閱時，會產生事件訂閱審核日誌。這樣可在系統上發生事情時通知他們。
+<li>更新訂閱 [id] - 更新事件訂閱。使用者更新更新事件或突發事件的訂閱時，會產生此事件。
+<li>刪除訂閱 [id] - 刪除事件訂閱。使用者刪除更新事件或突發事件的訂閱時，會產生此事件。
+<li>建立主題回覆 [id] - 回覆主題。客戶核准及排定干擾性更新時，會產生主題回覆審核日誌。
 </ul>
 </dd>
 <dt>日誌來源</dt>
@@ -369,14 +343,10 @@ lastupdated: "2017-05-30"
 <dd>事件類型 (SECURITY_RUNTIME)。
 <ul>
 <li>SECURITY_AUTH_CREDS_MODIFY：給定使用者身分的認證修改相關事件。
-</li>
 <li>SECURITY_MGMT_RESOURCE：資源管理事件（例如資源屬性的建立、刪除及變更）。
-</li>
-<li>SECURITY_MGMT_POLICY：安全原則管理的相關事件（例如存取控制清單的建立）。</li>
+<li>SECURITY_MGMT_POLICY：安全原則管理的相關事件（例如存取控制清單的建立）。
 <li>SECURITY_RUNTIME：運行環境事件（例如安全伺服器的啟動及停止）。
-</li>
 <li>SECURITY_RESOURCE_ACCESS：記錄資源的所有存取的事件。例如，檔案的所有存取、給定網頁的所有 HTTP 要求/回應，以及重要資料庫表格的所有存取。
-</li>
 </ul>
 </dd>
 <dt>使用者</dt> 
@@ -384,11 +354,8 @@ lastupdated: "2017-05-30"
 <dt>目標</dt> 
 <dd>已執行作業的詳細資料（例如實體 ID 及作業結果）。範例：<ul>
 <li>UserCreatedEvent ('["user_id=ca3a811f-1778-4103-9553-537788ed4c4e","username=equaranta"]')。已使用（username=equaranta 及 id = ca3a811f-1778-4103-9553-537788ed4c4e）建立使用者。
-</li>
 <li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}')。已修改名稱為 ops.reports.read 的群組，結果的成員資格為 (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e)。
-</li>
 <li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'。已刪除 ID 值 = 5cd5f412-4bbb- 4c44-b44b-713a5bc6144 的使用者。
-</li>
 </ul>
 </dd>
 <dt>訊息</dt>

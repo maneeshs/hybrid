@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-08-02"
 
 ---
 
@@ -140,11 +140,8 @@ lastupdated: "2017-05-30"
 <dd>执行操作的用户的用户名。以下用户是针对数据库定义的用户。
 <ul>
 <li>UAADB：vcap、root、backup_user。
-</li>
 <li>CCDB：vcap、ccadmin、backup_user。
-</li>
 <li>如有以上用户之外的使用情况，需要调查是何人执行的操作。使用“操作系统管理安全报告”和“操作系统登录安全报告”可以完成此调查。
-</li>
 </ul>
 </dd>
 <dt>源</dt> 
@@ -152,9 +149,7 @@ lastupdated: "2017-05-30"
 期望值如下：
 <ul>
 <li>UAADB – uaa VM 和 nfs_WAL_server VM。
-</li>
 <li>CCDB – api_worker、clock_global、cloud_controller_ng 和 nsf_WAL_server VM。
-</li>
 </ul>
 </dd>
 <dt>DB_Statement</dt>
@@ -177,23 +172,14 @@ lastupdated: "2017-05-30"
 <dd>事件的类型 (SECURITY_RUNTIME)。
 <ul>
 <li>SECURITY_MGMT_REGISTRY：添加用户 [用户标识]
-</li>
 <li>SECURITY_MGMT_REGISTRY：删除用户 [用户标识]
-</li>
 <li>SECURITY_AUTHN_CREDS_MODIFY：向用户 [用户标识] 添加许可权 [许可权]。
-</li>
 <li>SECURITY_AUTHN_CREDS_MODIFY：从用户 [用户标识] 除去许可权 [许可权]。
-</li>
 <li>SECURITY_MGMT_CONFIG：创建组织 [名称]。
-</li>
 <li>SECURITY_MGMT_CONFIG：更改组织管理员 [标识]。
-</li>
 <li>SECURITY_MGMT_CONFIG：将组织标识 [标识] 重命名为新名称 [名称]。
-</li>
 <li>SECURITY_MGMT_CONFIG：删除组织标识 [标识]。
-</li>
 <li>SECURITY_MGMT_CONFIG：将组织 [标识] 的配额更新为配额 [配额套餐]。
-</li>
 </ul>
 </dd>
 <dt>用户</dt> 
@@ -201,17 +187,14 @@ lastupdated: "2017-05-30"
 <dt>消息</dt> 
 <dd>命令已执行。
 <ul>
-<li>添加用户 [用户标识]：添加具有指定标识的用户。</li>
-<li>删除用户 [用户标识]：删除具有指定标识的用户。</li>
-<li>向用户 [用户标识] 添加许可权 [许可权]：向指定用户添加许可权。许可权可以包括：ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read 和 ops.user.write。</li>
-<li>从用户 [用户标识] 除去许可权 [许可权]：除去许可权 - 从指定用户除去许可权。许可权可以包括：ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read 和 ops.users.write。</li>
-<li>创建组织 [名称]：创建具有指定名称的组织。</li>
-<li>更改组织管理员 [标识]：将组织管理员配置为指定的用户。</li>
-<li>将组织标识 [标识] 重命名为新名称 [名称]：重命名指定的组织。</li>
-<li>删除用户 [用户标识]：删除具有指定标识的用户。</li>
-<li>删除组织标识 [标识]：删除指定的组织。</li>
-<li>将组织 [标识] 的配额更新为配额 [配额套餐]：更新指定组织的配额套餐。套餐可以包括：q2GB、q4GB、q8GB、q16GB、q32GB、q64GB、q128GB、q256GB、q512GB。
-</li>
+<li>添加用户 [用户标识] - 添加具有指定标识的用户。
+<li>删除用户 [用户标识] - 删除具有指定标识的用户。
+<li>向用户 [用户标识] 添加许可权 [许可权] - 向指定用户添加许可权。许可权可以包括：ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read 和 ops.user.write。<li>除去用户 [用户标识] 的许可权 [许可权] - 除去许可权。除去指定用户的许可权。许可权可以包括：ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read 和 ops.users.write。<li>创建组织 [名称] - 创建具有指定名称的组织。
+<li>更改组织管理员 [标识] - 将组织管理员配置为指定的用户。
+<li>将组织标识 [标识] 重命名为新名称 [名称] - 重命名指定的组织。
+<li>删除用户 [用户标识] - 删除具有指定标识的用户。
+<li>删除组织标识 [标识] - 删除指定的组织。
+<li>将组织 [标识] 的配额更新为配额 [配额套餐] - 更新指定组织的配额套餐。套餐可以包括：q2GB、q4GB、q8GB、q16GB、q32GB、q64GB、q128GB、q256GB、q512GB。
 </ul>
 </dd>
 <dt>日志源</dt>
@@ -253,9 +236,7 @@ lastupdated: "2017-05-30"
 <ul>
 <li>SECURITY_DATA_SYNC：将报告 [名称] 上传到类别 [名称] 日期 [日期]。
 删除标识为 [标识] 的报告
-</li>
 <li>SECURITY_RESOURCE_ACCESS：下载报告 [名称]。
-</li>
 </ul>
 </dd>
 <dt>用户</dt> 
@@ -263,9 +244,9 @@ lastupdated: "2017-05-30"
 <dt>消息</dt> 
 <dd>命令已执行。
 <ul>
-<li>将报告 [名称] 上传到类别 [名称] 日期 [日期]：上传 - 将具有指定文件名和日期的报告上传到指定的类别。</li>
-<li>删除标识为 [标识] 的报告：删除 - 删除具有指定标识的报告。</li>
-<li>下载报告 [名称]：下载 - 已下载具有指定名称的报告。</li>
+<li>将日期为 [日期] 的报告 [名称] 上传到类别 [名称] - 上传。将具有指定文件名和日期的报告上传到指定的类别。
+<li>删除标识为 [标识] 的报告 - 删除。删除具有指定标识的报告。
+<li>下载报告 [名称] - 下载。已下载具有指定名称的报告。
 </ul>
 </dd>
 <dt>日志源</dt>
@@ -331,19 +312,12 @@ lastupdated: "2017-05-30"
 <dd>事件的类型 (SECURITY_RUNTIME)。
 <ul>
 <li> SECURITY_MGMT_CONFIG：创建窗口 [标识]。
-</li>
 <li> SECURITY_MGMT_CONFIG：更新窗口 [标识]。
-</li>
 <li> SECURITY_MGMT_CONFIG：删除窗口 [标识]。
-</li>
 <li> SECURITY_MGMT_CONFIG：创建预订 [标识]。
-</li>
 <li> SECURITY_MGMT_CONFIG：更新预订 [标识]。
-</li>
 <li> SECURITY_MGMT_CONFIG：删除预订 [标识]。
-</li>
 <li> SECURITY_MGMT_CONFIG：创建主题回复 [标识]。
-</li>
 </ul>
 </dd>
 <dt>用户</dt> 
@@ -351,16 +325,11 @@ lastupdated: "2017-05-30"
 <dt>消息</dt>
 <dd>命令已执行。
 <ul>
-<li>创建窗口 [标识]：创建用于维护更新的窗口。用户在管理（创建）环境的更新窗口时，将生成更新窗口日志。更新窗口是用于部署的中断和首选窗口。当客户在无需核准和安排非中断性部署的情况下，允许或不允许进行此类部署时生成此事件。
-</li>
-<li>更新窗口 [标识]：更新维护更新窗口。用户更新环境的维护更新窗口时，会生成此事件。
-</li>
-<li>SECURITY_MGMT_CONFIG：删除更新窗口。用户委派环境的更新窗口时，会生成此事件。
-</li>
-<li>创建预订 [标识]：创建事件预订。用户为更新事件或事故事件创建预订时，会生成事件预订审计日志。这样一来，当用户的系统上发生某些状况时，用户就可以获得通知。</li>
-<li>更新预订 [标识]：更新事件预订。用户为更新事件或事故事件更新预订时，会生成此事件。</li>
-<li>删除预订 [标识]：删除事件预订。用户为更新事件或事故事件删除预订时，会生成此事件。</li>
-<li>创建主题回复 [标识]：回复主题。客户核准并安排中断性更新时，会生成主题回复审计日志。</li>
+<li>创建窗口 [标识] - 创建用于维护更新的窗口。用户在管理（创建）环境的更新窗口时，将生成更新窗口日志。更新窗口是用于部署的中断和首选窗口。当客户在无需核准和安排非中断性部署的情况下，允许或不允许进行此类部署时生成此事件。
+<li>更新窗口 [标识] - 更新维护更新窗口。用户更新环境的维护更新窗口时，会生成此事件。
+<li>SECURITY_MGMT_CONFIG - 删除更新窗口。用户委派环境的更新窗口时，会生成此事件。
+<li>创建预订 [标识] - 创建事件预订。用户为更新事件或事故事件创建预订时，会生成事件预订审计日志。这样一来，当用户的系统上发生某些状况时，用户就可以获得通知。
+<li>更新预订 [标识] - 更新事件预订。用户为更新事件或事故事件更新预订时，会生成此事件。<li>删除预订 [标识] - 删除事件预订。用户为更新事件或事故事件删除预订时，会生成此事件。<li>创建主题回复 [标识] - 回复主题。当客户核准并安排中断性更新时，会生成主题回复审计日志。
 </ul>
 </dd>
 <dt>日志源</dt>
@@ -381,14 +350,10 @@ lastupdated: "2017-05-30"
 <dd>事件的类型 (SECURITY_RUNTIME)。
 <ul>
 <li>SECURITY_AUTH_CREDS_MODIFY：与修改给定用户身份的凭证相关的事件。
-</li>
 <li>SECURITY_MGMT_RESOURCE：资源管理事件（如创建、删除和更改资源的属性）。
-</li>
-<li>SECURITY_MGMT_POLICY：与管理安全策略相关的事件（如创建访问控制表）。</li>
+<li>SECURITY_MGMT_POLICY：与管理安全策略相关的事件（如创建访问控制表）。
 <li>SECURITY_RUNTIME：运行时事件（如安全服务器的启动和停止）。
-</li>
 <li>SECURITY_RESOURCE_ACCESS：记录资源所有访问的事件。示例为对文件的所有访问、对给定 Web 页面的所有 HTTP 请求/响应，以及对关键数据库表的所有访问。
-</li>
 </ul>
 </dd>
 <dt>用户</dt> 
@@ -396,11 +361,8 @@ lastupdated: "2017-05-30"
 <dt>目标</dt> 
 <dd>执行的操作的详细信息，如实体的标识和操作的结果。示例：<ul>
 <li>UserCreatedEvent ('["user_id=ca3a811f-1778-4103-9553-537788ed4c4e","username=equaranta"]’)。创建了用户名为 equaranta、标识为 ca3a811f-1778-4103-9553-537788ed4c4e 的用户。
-</li>
 <li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}')。修改了名称为 ops.reports.read 的组，生成的成员资格为：(id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e)。
-</li>
 <li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'。删除了标识值为 5cd5f412-4bbb- 4c44-b44b-713a5bc6144 的用户。
-</li>
 </ul>
 </dd>
 <dt>消息</dt>

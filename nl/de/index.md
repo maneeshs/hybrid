@@ -131,10 +131,10 @@ Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält 
 |-----------------|-------------------|
 | Aktiviert | Wählen Sie diese Option aus, um die Benachrichtigung zu aktivieren. Nehmen Sie die Auswahl zurück, um die Benachrichtigung zu inaktivieren. Abonnements sind standardmäßig aktiviert. |
 | Typ | Wählen Sie **Web-Hook** aus. |
-| Ereignis| Wählen Sie aus, ob Benachrichtigungen für ein **Wartungs-** oder **Vorfalls**ereignis abonniert werden sollen. |
+| Ereignis | Wählen Sie aus, ob Benachrichtigungen für ein **Wartungs-** oder **Vorfalls**ereignis abonniert werden sollen. |
 | Autorisierung | Wählen Sie aus, ob die Autorisierung aktiviert werden soll.  Es gibt folgende Optionen: **Basis** oder **Ohne**. |
 | Benutzername | Wenn Sie die **Basis**-Autorisierung ausgewählt haben, geben Sie den Benutzernamen für Ihren Web-Service ein. Wenn Sie nicht Ihre persönlichen Berechtigungsnachweise verwenden möchten, können Sie eine Funktions-ID speziell zur Verwendung mit {{site.data.keyword.Bluemix_notm}} einrichten. |
-| Kennwort | Wenn Sie die **Basis**-Autorisierung ausgewählt haben, geben Sie das Kennwort für Ihren Web-Service ein.|
+| Kennwort | Wenn Sie die **Basis**-Autorisierung ausgewählt haben, geben Sie das Kennwort für Ihren Web-Service ein. |
 | Beschreibung | Fügen Sie eine eindeutige Beschreibung für das Abonnement hinzu, das Sie erstellen. |
 | Neues Ereignis | Wählen Sie diese Option aus, um Benachrichtigungen zu neuen Wartungs- oder Vorfallereignissen zu aktivieren. Nehmen Sie die Auswahl zurück, um die Benachrichtigung zu inaktivieren. |
 | Methode | Wählen Sie **GET**, **POST** oder **PUT** aus. |
@@ -179,7 +179,7 @@ Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält 
 
 | **IBM Wert** | **Beschreibung** | **Ereignistyp** |
 |----------------|----------------|------------------------|
-| {{content.category}} | Betroffene Services| Vorfall |
+| {{content.category}} | Betroffene Services | Vorfall |
 | {{content.disruption}} | Betroffene Komponenten | Wartungsaktualisierung |
 | {{content.message}} | Nachrichtenbeschreibung |   Wartungsaktualisierung und Vorfall |
 | {{content.scheduleWindow.start}} | Geplantes Startdatum für die Aktualisierung | Wartungsaktualisierung |
@@ -222,7 +222,7 @@ Wenn Sie die Superuserberechtigung (`ops.admin`) besitzen, können Sie geplante 
 <dl>
 <dt>Unterbrechungsfreie Aktualisierungen</dt>
 <dd>Eine unterbrechungsfreie Aktualisierung hat keine Auswirkungen auf Ihre Umgebung, Ihre aktiven Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen. Dieser Aktualisierungstyp erfordert keine fallspezifische Genehmigung und wird während der vorab genehmigten, verfügbaren Wartungszeiten angewendet, die Sie auf der Seite 'Systemaktualisierungen' festgelegt haben.
-<p>**Hinweis**: Einige Plattformservices setzen möglicherweise die Definition mindestens eines Zeitfensters für unterbrechungsfreie Wartung während vordefinierter Zeiträume nach Bedarf des Service voraus. Überprüfen Sie die Servicebeschreibung für jeden dedizierten Service, der in Ihrer Umgebung bereitgestellt ist. </p></dd>
+<p>**Hinweis**: Einige Plattformservices setzen möglicherweise die Definition mindestens eines Zeitfensters für unterbrechungsfreie Wartung während vordefinierter Zeiträume nach Bedarf des Service voraus. Überprüfen Sie die Servicebeschreibung für jeden dedizierten Service, der in Ihrer Umgebung bereitgestellt ist.</p></dd>
 <dt>Aktualisierung mit Unterbrechungen</dt>
 <dd>Eine Aktualisierung mit Unterbrechungen kann sich auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen auswirken. Sie müssen jede dieser Wartungsaktualisierungen innerhalb des zugeteilten Wartungszeitraums von 21 Tagen terminieren und genehmigen. Sie können den vorgeschlagenen Bereitstellungszeitpunkt (Datum und Uhrzeit) oder die Option für ein zuvor genehmigtes Fenster auswählen. Alternativ können Sie auch den Kalender öffnen, um drei bestimmte Daten und Uhrzeiten auszuwählen, aus denen IBM dann bei der Planung der Aktualisierung auswählt.</dd>
 </dl>
@@ -360,23 +360,21 @@ Neben der grafischen Darstellung wird der Prozentsatz der Speicher- und Plattenk
 
 Um die Nutzung Ihres Speichers, Ihrer Platte, Ihrer CPU oder Ihres DEA anzuzeigen, klicken Sie auf **Aufgliederung**.  
 
-Um weitere Informationen zur physischen und reservierten Speicher- oder Plattennutzung im Zeitverlauf anzuzeigen, klicken Sie auf **Protokoll**. 
-Sie können die Nutzung für die letzten 48 Stunden, die letzten 30 Tage oder die letzten fünf Monate anzeigen. Die für die letzten 48 Stunden angezeigten Punkte stellen die eigentlichen Daten, die einmal pro Stunde erfasst werden. Die für die letzten 30 Tage angezeigten Punkte stellen den Durchschnittswert für jeden Tag dar. Die für die letzten 30 Tage angezeigten Punkte stellen den Durchschnittswert für jeden Monat dar. In den Ansichten für die letzten 30 Tage und die letzten 5 Monate können Sie auch den Maximalwert für jeden Tag oder Monat anzeigen, indem Sie das Optionsfeld oben im Diagramm verwenden. In der Ansicht für die vergangene Nutzung wird ein Diagramm zur Speicher- oder Plattennutzung im ausgewählten Zeitraum angezeigt.  
+Um weitere Informationen zur physischen und reservierten Speicher- oder Plattennutzung im Zeitverlauf anzuzeigen, klicken Sie auf **Protokoll**. Sie können die Nutzung für die letzten 48 Stunden, die letzten 30 Tage oder die letzten fünf Monate anzeigen. Die für die letzten 48 Stunden angezeigten Punkte stellen die eigentlichen Daten, die einmal pro Stunde erfasst werden. Die für die letzten 30 Tage angezeigten Punkte stellen den Durchschnittswert für jeden Tag dar. Die für die letzten 30 Tage angezeigten Punkte stellen den Durchschnittswert für jeden Monat dar. In den Ansichten für die letzten 30 Tage und die letzten 5 Monate können Sie auch den Maximalwert für jeden Tag oder Monat anzeigen, indem Sie das Optionsfeld oben im Diagramm verwenden. In der Ansicht für die vergangene Nutzung wird ein Diagramm zur Speicher- oder Plattennutzung im ausgewählten Zeitraum angezeigt.  
 	<dl>
 	<dt><strong>Reservierter Grenzwert</strong></dt>
 	<dd>Zeigt eine horizontale, gestrichelte Linie an. Der Grenzwert für den reservierten Speicher ist die gesamte Speicher- oder Plattenkapazität, die von allen aktiven Anwendungen in Ihrer Umgebung gemeinsam reserviert werden kann.</dd>
 	<dt><strong>Reserviert</strong></dt>
-	<dd>In der Zeile 'Reserviert' wird die Speicher- oder Plattenkapazität angezeigt, die zurzeit von allen aktiven Anwendungen in Ihrer Umgebung reserviert ist. 	</dd>
+	<dd>In der Zeile 'Reserviert' wird die Speicher- oder Plattenkapazität angezeigt, die zurzeit von allen aktiven Anwendungen in Ihrer Umgebung reserviert ist.</dd>
 	<dt><strong>Physischer Speicher - Grenzwert</strong></dt>
 	<dd>Zeigt eine horizontale, gestrichelte Linie an. Der Grenzwert für den physischen Speicher ist die gesamte physische Speicher- oder Plattenkapazität, die für Ihre Umgebung erworben wurde.</dd>
 	<dt><strong>Physisch</strong></dt>
 	<dd>In der Zeile 'Physisch' wird die Speicher- oder Plattenkapazität angezeigt, die zurzeit tatsächlich genutzt wird.</dd>
 	</dl>
 	
-Für jede der verfügbaren Ansichten zur vergangenen Nutzung sind mindestens zwei Datenpunkte zur Wiedergabe des Diagramms erforderlich. Dies entspricht den Daten für mindestens zwei Stunden in den letzten 48 Stunden, für zwei Tage in den letzten 30 Tagen und für zwei Monate in den letzten fünf Monaten. 
-Bei den Ansichten für 30 Tage und für 5 Monate werden vorläufige Durchschnitts- oder Höchstwerte für den aktuellen Tag oder Monat zurückgegeben, die dann angepasst werden, wenn weitere Daten zur Verfügung stehen. 
+Für jede der verfügbaren Ansichten zur vergangenen Nutzung sind mindestens zwei Datenpunkte zur Wiedergabe des Diagramms erforderlich. Dies entspricht den Daten für mindestens zwei Stunden in den letzten 48 Stunden, für zwei Tage in den letzten 30 Tagen und für zwei Monate in den letzten fünf Monaten. Bei den Ansichten für 30 Tage und für 5 Monate werden vorläufige Durchschnitts- oder Höchstwerte für den aktuellen Tag oder Monat zurückgegeben, die dann angepasst werden, wenn weitere Daten zur Verfügung stehen.
 
-Die Daten für diese Ansichten stehen über die [Metrik-API](/docs/admin/index.html#envappmetricsapi) zur Verfügung. Um die tatsächlichen API-Endpunkten und -Daten anzuzeigen, die zum Generieren der Ansicht verwendet werden, klicken Sie auf den Link **Weitere Informationen zu der API** über dem Diagramm. Wenn Sie auf einen der Links im daraufhin angezeigten Dialog klicken, wird im Browser eine neue Registerkarte mit der JSON-Antwort des Metrik-API-Endpunkts geöffnet.  
+Die Daten für diese Ansichten stehen über die [Metrik-API](/docs/admin/index.html#envappmetricsapi) zur Verfügung. Um die tatsächlichen API-Endpunkten und -Daten anzuzeigen, die zum Generieren der Ansicht verwendet werden, klicken Sie auf den Link **Weitere Informationen zu der API** über dem Diagramm. Wenn Sie auf einen der Links im daraufhin angezeigten Dialog klicken, wird im Browser eine neue Registerkarte mit der JSON-Antwort des Metrik-API-Endpunkts geöffnet. 
 
 #### Details zur Verwendung des Service
 {: #servicesresourceusage}
@@ -467,7 +465,7 @@ In der folgenden Tabelle sind Sicherheitsberichte aufgelistet, die für {{site.d
 | [Firewall-Ablehnungen](/docs/hybrid/reports.html#firewalldenies) | Ereignisse, die von den Vyatta-Firewall-Geräten generiert werden, wenn eine Zugriffsanforderung im Einklang mit den bestehenden Firewallregeln abgelehnt wird. |
 | {{site.data.keyword.Bluemix_notm}} [-Administratoranmeldung](/docs/hybrid/reports.html#oslogin) | Ereignisse, die vom Betriebssystem generiert werden, wenn ein Administrator eine SSH-Sitzung auf einem beliebigen {{site.data.keyword.Bluemix_notm}}-System startet. |
 | {{site.data.keyword.Bluemix_notm}} [-Anwendungsentwickleranmeldung](/docs/hybrid/reports.html#loginserverlogins) | Ereignisse, die von der Anmeldungskomponente der {{site.data.keyword.Bluemix_notm}}-Plattform generiert werden, wenn ein {{site.data.keyword.Bluemix_notm}}-Plattformbenutzer eine Sitzung über die Befehlszeile, die REST-APIs oder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle startet. |
-| {{site.data.keyword.Bluemix_notm}} [-Betriebssystemverwaltung](/docs/hybrid/reports.html#osadmin) | Ereignisse, die vom Betriebssystem generiert werden, wenn ein Administrator eine Aktion innerhalb einer aktuellen Arbeitssitzung ausführt. |
+| {{site.data.keyword.Bluemix_notm}} [-Betriebssystemverwaltung](/docs/hybrid/reports.html#osadmin)  | Ereignisse, die vom Betriebssystem generiert werden, wenn ein Administrator eine Aktion innerhalb einer aktuellen Arbeitssitzung ausführt. |
 | {{site.data.keyword.Bluemix_notm}} [-Plattformverwaltung (Cloud Foundry)](/docs/hybrid/reports.html#platformadmin) | Ereignisse im Zusammenhang mit Operationen, die vom {{site.data.keyword.Bluemix_notm}}-Plattformbenutzer über die Befehlszeile, die REST-APIs oder die {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle ausgeführt werden. |
 | [Interne Datenbankverwaltung](/docs/hybrid/reports.html#dbadmin) | Ereignisse im Zusammenhang mit Operationen, die von einem Datenbankadministrator in den internen {{site.data.keyword.Bluemix_notm}}-Datenbanken ausgeführt werden. |
 | [Benutzermanagement](/docs/hybrid/reports.html#acusermgmt) | Ereignisse im Zusammenhang mit Benutzerverwaltungsaktionen, die auf der Verwaltungsseite ausgeführt werden. |
@@ -640,7 +638,7 @@ Mithilfe der folgenden Tabellen können Sie die JSON-Datei füllen.
 
 | **JSON-Felder** | **Beschreibung** |
 |-----------------|-----------------|
-|bindable| Ein boolescher Wert, der angibt, ob Serviceinstanzen an Anwendungen gebunden werden können.  |
+|bindable   | Ein boolescher Wert, der angibt, ob Serviceinstanzen an Anwendungen gebunden werden können.  |
 |description | Die Beschreibung des Service, der angezeigt wird, wenn Sie den Befehl 'cf marketplace' verwenden oder wenn Sie den Mauszeiger über das Servicesymbol im Katalog der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle bewegen. Sie können für die Beschreibung einen einzelnen Satz oder Ausdruck hinzufügen. |
 |name | Der Name des Service, der in der cf-Befehlszeilenschnittstelle angezeigt wird. Dieser Name muss in {{site.data.keyword.Bluemix_notm}} eindeutig sein und muss aus Kleinbuchstaben ohne Leerzeichen bestehen. Sie können den Namen des Service nicht mehr ändern, nachdem Sie den Service mit {{site.data.keyword.Bluemix_notm}} registriert haben. |
 |id  | Die ID des Service. Diese ID muss in {{site.data.keyword.Bluemix_notm}} eindeutig und eine global eindeutige ID (GUID; Globally Unique Identifier) sein. Sie können die ID des Service nicht mehr ändern, nachdem Sie den Service mit {{site.data.keyword.Bluemix_notm}} registriert haben. |
@@ -653,7 +651,7 @@ Mithilfe der folgenden Tabellen können Sie die JSON-Datei füllen.
 
 | **Metadatenwerte** | **Beschreibung** |
 |---------------------|-----------------|
-|displayName| Der Name des Plans, der in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle angezeigt wird. Dieser Name wird auf der Seite mit den Servicedetails sowohl im Katalog als auch in der Preisliste angezeigt. Schreiben Sie den ersten Buchstaben des Plannamens groß. Verwenden Sie nicht "Default" als Standardplannamen, sondern stattdessen "Standard". |
+|displayName          | Der Name des Plans, der in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle angezeigt wird. Dieser Name wird auf der Seite mit den Servicedetails sowohl im Katalog als auch in der Preisliste angezeigt. Schreiben Sie den ersten Buchstaben des Plannamens groß. Verwenden Sie nicht "Default" als Standardplannamen, sondern stattdessen "Standard". |
 |providerDisplayName | Der Name des Service-Providers. |
 |longDescription | Die detaillierte Beschreibung des Service. Schreiben Sie mindestens zwei Sätze für eine ausführliche Beschreibung. |
 |plans                | Ein Array von Serviceplandefinitionen. Jeder Array-Eintrag in den Planfeldern besteht aus den folgenden Feldern: Name, Beschreibung, kostenlos, ID und Metadaten. Weitere Informationen zu [Planfeldern](index.html#planfields) finden Sie in der folgenden Tabelle. |
@@ -871,7 +869,7 @@ Ein Kontingent stellt die Ressourcengrenzen für die Organisationen in Ihrer Umg
 
 Im Bereich der Organisationsliste werden alle Organisationen in der {{site.data.keyword.Bluemix_notm}}-Umgebung angezeigt und Sie können Aktionen für einzelne Organisationen durch Klicken auf den Organisationsnamen ausführen.
 
-- Löschen Sie eine Organisation, indem Sie auf das Symbol **Löschen** ![Löschen](images/icon_trash.svg) in der Spalte 'Aktionen' klicken. 
+- Löschen Sie eine Organisation, indem Sie auf das Symbol **Löschen** ![Löschen](images/icon_trash.svg) in der Spalte 'Aktionen' klicken.
 - Zeigen Sie den Kontingentplan für eine Organisation an, indem Sie auf den Namen der Organisation in der Liste klicken. Auf der Seite **Organisationen verwalten** für die ausgewählte Organisation können Sie die folgenden Nutzungsinformationen anzeigen:
 
   - Anzahl der Services, die zurzeit verwendet werden.
@@ -970,7 +968,7 @@ Den Benutzern können die folgenden Berechtigungen mit bestimmten Zugriffsebenen
 
 | **Benutzerberechtigung** | **Beschreibung** |       
 |-----------------|-------------------|
-| Superuser| Benutzer mit der Berechtigung **Superuser**, für die **On** eingestellt ist, können die Berechtigungen für andere Benutzer bearbeiten. Wenn für die Berechtigung 'On' festgelegt ist, ist automatisch der uneingeschränkte Zugriff auf alle anderen Berechtigungen aktiviert. Zusätzlich zu den Tasks, die für jede Berechtigung in dieser Tabelle beschrieben werden, kann der Superuser auch Benachrichtigungsabonnements einrichten, um direkt über Wartungen und Vorfälle benachrichtigt zu werden, Wartungen zu planen, Verifizierungsprüfungen für Konsolenkomponenten auszuführen und Organisationen und Bereiche für die Umgebung zu erstellen. Diese Berechtigung entspricht der Administratorrolle (admin) für die Administrationskonsole.  |
+| Superuser | Benutzer mit der Berechtigung **Superuser**, für die **On** eingestellt ist, können die Berechtigungen für andere Benutzer bearbeiten. Wenn für die Berechtigung 'On' festgelegt ist, ist automatisch der uneingeschränkte Zugriff auf alle anderen Berechtigungen aktiviert. Zusätzlich zu den Tasks, die für jede Berechtigung in dieser Tabelle beschrieben werden, kann der Superuser auch Benachrichtigungsabonnements einrichten, um direkt über Wartungen und Vorfälle benachrichtigt zu werden, Wartungen zu planen, Verifizierungsprüfungen für Konsolenkomponenten auszuführen und Organisationen und Bereiche für die Umgebung zu erstellen. Diese Berechtigung entspricht der Administratorrolle (admin) für die Administrationskonsole.  |
 | Basic Access | Benutzer mit der Berechtigung **Basic Access**, für die **On** eingestellt ist, können die Option für die Verwaltungsseite in der {{site.data.keyword.Bluemix_notm}}-Benutzerschnittstelle anzeigen. Benutzer, deren Berechtigung aktiviert ist, können auf die Kacheln [Systeminformationen](#oc_system) und [Ressourcennutzung](#oc_resource) zugreifen. Ohne diese Berechtigung können Benutzer die Menüoption 'Verwaltung' nicht anzeigen und nicht auf sie zugreifen. Diese Berechtigung entspricht der Administratorrolle (admin) für die Administrationskonsole. Diese Berechtigung entspricht der Administratorrolle (login) für die Administrationskonsole. |
 | Catalog | Benutzern mit der Berechtigung **Catalog** kann der Zugriff auf **Lesen** oder **Schreiben** (Ändern) zugewiesen werden, und zwar für die in der lokalen oder dedizierten Instanz verfügbaren Services. Ein Benutzer mit Lesezugriff kann auf die Kachel 'Katalogverwaltung' zugreifen, um verfügbare Services anzuzeigen. Ein Benutzer mit Schreibzugriff kann auf die Kachel [Katalogverwaltung](#oc_catalog) zugreifen, um Services anzuzeigen, die Sichtbarkeit der Services zu bearbeiten, angepasste Services zu registrieren und die Liste für die Buildpack-Priorität zu steuern. |  
 | Reports | Benutzern mit der Berechtigung **Reports** kann für Sicherheitsberichte der Zugriff **Lesen** oder **Schreiben** (Ändern) zugewiesen werden. Ein Benutzer mit Lesezugriff kann auf die Kachel 'Berichte und Protokolle' zugreifen, um Berichte herunterzuladen. Benutzer mit Schreibzugriff können die Kachel [Berichte und Protokolle](#oc_report) anzeigen und mithilfe der Befehlszeilenschnittstelle neue Berichte hochladen sowie neue Kategorien für den Zugriff durch die Benutzer erstellen. |
@@ -1341,11 +1339,11 @@ Auf die in den folgenden Abschnitten beschriebenen Metrik-APIs kann über den re
 1. Ein Benutzer kann pro Stunde bis zu 200 API-Anforderungen für Metriken absetzen.
 2. Jede API-Anforderung gibt bis zu 200 Datenpunkte pro Anforderung zurück. Falls mehr Daten verfügbar sind, wird in der Antwort eine URL bereitgestellt, mit deren Hilfe die nächste Gruppe von Daten geladen werden kann.
 3. Jede API-Anforderung erfordert mindestens Basiszugriff eines Benutzers auf die Administrationskonsole.  Weitere Berechtigungen können wie nachfolgend beschrieben erforderlich sein.
-4. Es stehen Daten bis zu 5 Monaten rückwirkend ab dem Zeitpunkt der API-Anforderung zur Verfügung. 
+4. Es stehen Daten bis zu 5 Monaten rückwirkend ab dem Zeitpunkt der API-Anforderung zur Verfügung.
 
 ## Metriken über Ihre Umgebung erfassen
 
-Mit der Umgebungs-API können Sie allgemeine Informationen zur Umgebung für einen von Ihnen angegebenen Zeitraum erfassen. Sie können die Datenstichproben selbst, die etwa jede Stunde aufgezeichnet werden, oder für die Datenstichproben berechnete Statistiken anzeigen. Statistiken sind nur für die Speicher- und Plattenbelegung verfügbar. Die APIs ermöglichen es Ihnen, den Zeitbereich der zurückgegebenen tatsächlichen oder statistischen Daten anzugeben. Falls Sie beispielsweise sechs Stunden von tatsächlichen CPU-Daten für die Umgebung angefordert haben, würde die Antwort CPU-Daten für jede der angeforderten sechs Stunden enthalten. 
+Mit der Umgebungs-API können Sie allgemeine Informationen zur Umgebung für einen von Ihnen angegebenen Zeitraum erfassen. Sie können die Datenstichproben selbst, die etwa jede Stunde aufgezeichnet werden, oder für die Datenstichproben berechnete Statistiken anzeigen. Statistiken sind nur für die Speicher- und Plattenbelegung verfügbar. Die APIs ermöglichen es Ihnen, den Zeitbereich der zurückgegebenen tatsächlichen oder statistischen Daten anzugeben. Falls Sie beispielsweise sechs Stunden von tatsächlichen CPU-Daten für die Umgebung angefordert haben, würde die Antwort CPU-Daten für jede der angeforderten sechs Stunden enthalten.
 
 
 ### Umgebungsendpunkte
@@ -1706,7 +1704,7 @@ Das Datenformat ist in den folgenden Abschnitten erläutert.
 
 ### Endpunkte für die Umgebungsstatistik
 
-Sie können Statistiken anzeigen, die auf der Basis der gemessenen Speicher- und Plattenbelegung Ihrer Umgebung berechnet wurden. Die zurückgegebenen Statistiken umfassen die Durchschnitts-, Höchst- und Mindestwerte der Datenstichproben in jeder Datengruppierung. Die Daten können entweder nach Tag gruppiert werden, wobei die Statistiken für jeden Tag berechnet werden, oder nach Monat, wobei die Statistiken für jeden Monat berechnet werden. 
+Sie können Statistiken anzeigen, die auf der Basis der gemessenen Speicher- und Plattenbelegung Ihrer Umgebung berechnet wurden. Die zurückgegebenen Statistiken umfassen die Durchschnitts-, Höchst- und Mindestwerte der Datenstichproben in jeder Datengruppierung. Die Daten können entweder nach Tag gruppiert werden, wobei die Statistiken für jeden Tag berechnet werden, oder nach Monat, wobei die Statistiken für jeden Monat berechnet werden.
 
 Zum Aufrufen dieses API-Befehls können Sie die folgenden Endpunkte verwenden:
 * `/api/v1/env/stats/system/disk`
@@ -1716,7 +1714,7 @@ Zum Aufrufen dieses API-Befehls können Sie die folgenden Endpunkte verwenden:
 
 ### Abfrageparameter für Umgebungsstatistiken
 
-Mit den folgenden Abfrageparametern können Sie Statistikdaten für Ihre Festplatte und den Speicher erfassen: 
+Mit den folgenden Abfrageparametern können Sie Statistikdaten für Ihre Festplatte und den Speicher erfassen:
 
 <dl class="parml">
 <dt class="pt dlterm">startTime</dt>
@@ -1724,10 +1722,10 @@ Mit den folgenden Abfrageparametern können Sie Statistikdaten für Ihre Festpla
 <dt class="pt dlterm">endTime</dt>
 <dd class="pd">Der späteste Zeitpunkt, für den Daten zurückgegeben werden. Falls der Parameter 'endTime' nicht angegeben ist, wird der neueste Datenpunkt verwendet.</dd>
 <dt class="pt dlterm">averageType</dt>
-<dd class="pd">Die Gruppierung, für die Statistikdaten berechnet werden sollen. Gültige Werte sind `day` und `month`. Der Standardwert 'day' gibt die durchschnittlichen Nutzungswerte für jeden Tag im angegebenen Zeitraum zurück. Bei Angabe des Werts 'month' werden die durchschnittlichen Nutzungswerte für jeden Monat zurückgegeben. </dd>
+<dd class="pd">Die Gruppierung, für die Statistikdaten berechnet werden sollen. Gültige Werte sind `day` und `month`. Der Standardwert 'day' gibt die durchschnittlichen Nutzungswerte für jeden Tag im angegebenen Zeitraum zurück.  Bei Angabe des Werts 'month' werden die durchschnittlichen Nutzungswerte für jeden Monat zurückgegeben.</dd>
 </dl>
 
-Im folgenden Beispiel werden die Abfrageparameter zum Erfassen von Speicherstatistiken (Tagesdurchschnitt) für die Umgebung verwendet: 
+Im folgenden Beispiel werden die Abfrageparameter zum Erfassen von Speicherstatistiken (Tagesdurchschnitt) für die Umgebung verwendet:
 
 ```
 curl -b ./cookies.txt --header "Accept: application/json" https://console.<region>.bluemix.net/admin/metrics/api/v1/env/stats/system/memory

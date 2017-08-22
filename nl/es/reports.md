@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-08-02"
 
 ---
 
@@ -131,16 +131,16 @@ Informa de sucesos relacionados con las operaciones realizadas por un administra
 <dt>Usuario</dt> 
 <dd>Nombre del usuario que realizó la operación. A continuación se indican los usuarios definidos para la base de datos.
 <ul>
-<li>UAADB: vcap, root, backup_user.</li>
-<li>CCDB: vcap, ccadmin, backup_user.</li>
-<li>La utilización fuera de los anteriores precisará de la investigación sobre quién realizó la operación. Esto se puede hacer utilizando el Informe de seguridad de administración del sistema operativo y el Informe de seguridad de inicio de sesión de sistema operativo.</li>
+<li>UAADB: vcap, root, backup_user.
+<li>CCDB: vcap, ccadmin, backup_user.
+<li>La utilización fuera de los anteriores precisará de la investigación sobre quién realizó la operación. Esto se puede hacer utilizando el Informe de seguridad de administración del sistema operativo y el Informe de seguridad de inicio de sesión de sistema operativo.
 </ul>
 </dd>
 <dt>Origen</dt> 
 <dd>Dirección IP desde la que el usuario inicia el mandato. Los valores esperados son los siguientes:
 <ul>
-<li>UAADB – Máquinas virtuales uaa y la máquina virtual nfs_WAL_server.</li>
-<li>CCDB – Máquinas virtuales nsf_WAL_server, api_worker, clock_global y cloud_controller_ng.</li>
+<li>UAADB – Máquinas virtuales uaa y la máquina virtual nfs_WAL_server.
+<li>CCDB – Máquinas virtuales nsf_WAL_server, api_worker, clock_global y cloud_controller_ng.
 </ul>
 </dd>
 <dt>DB_Statement</dt>
@@ -162,15 +162,15 @@ Informa de actividades de gestión de usuarios realizada en la consola de admini
 <dt>Event_Type</dt>
 <dd>Tipo de suceso (SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_MGMT_REGISTRY: Añadir usuario [ID usuario]</li>
-<li>SECURITY_MGMT_REGISTRY: Suprimir usuario [ID usuario]</li>
-<li>SECURITY_AUTHN_CREDS_MODIFY: Añadir permisos [permisos] a usuarios [ID usuario].</li>
-<li>SECURITY_AUTHN_CREDS_MODIFY: Eliminar permisos [permisos] de usuarios [ID usuario].</li>
-<li>SECURITY_MGMT_CONFIG: Crear organización [nombre].</li>
-<li>SECURITY_MGMT_CONFIG: Cambiar gestores de la organización, [id].</li>
-<li>SECURITY_MGMT_CONFIG: Renombrar id de organización [id] a un nuevo nombre [nombre].</li>
-<li>SECURITY_MGMT_CONFIG: Suprimir id de organización [id].</li>
-<li>SECURITY_MGMT_CONFIG: Actualizar cuota para el id de organización [id] a la cuota [plan_cuota].</li>
+<li>SECURITY_MGMT_REGISTRY: Añadir usuario [ID usuario]
+<li>SECURITY_MGMT_REGISTRY: Suprimir usuario [ID usuario]
+<li>SECURITY_AUTHN_CREDS_MODIFY: Añadir permisos [permisos] a usuarios [ID usuario].
+<li>SECURITY_AUTHN_CREDS_MODIFY: Eliminar permisos [permisos] de usuarios [ID usuario].
+<li>SECURITY_MGMT_CONFIG: Crear organización [nombre].
+<li>SECURITY_MGMT_CONFIG: Cambiar gestores de la organización, [id].
+<li>SECURITY_MGMT_CONFIG: Renombrar id de organización [id] a un nuevo nombre [nombre].
+<li>SECURITY_MGMT_CONFIG: Suprimir id de organización [id].
+<li>SECURITY_MGMT_CONFIG: Actualizar cuota para el id de organización [id] a la cuota [plan_cuota].
 </ul>
 </dd>
 <dt>Usuario</dt> 
@@ -178,17 +178,17 @@ Informa de actividades de gestión de usuarios realizada en la consola de admini
 <dt>Mensaje</dt> 
 <dd>Mandato ejecutado.
 <ul>
-<li>Añadir usuario [ID usuario]: Añade un usuario con el ID especificado.</li>
-<li>Suprimir usuario [ID usuario]: Suprime un usuario con el ID especificado.</li>
-<li>Añadir permiso [permisos] a los usuarios [ID usuario]: Añade permisos a los usuarios especificados. Los permisos pueden incluir:
-ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read y ops.user.write.</li>
-<li>Eliminar permisos [permisos] de los usuarios [ID usuario]: Eliminar permiso - Elimina permisos de los usuarios especificados. Los permisos incluyen: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read y ops.users.write.</li>
-<li>Crear organización [nombre]: Crea una organización con el nombre especificado.</li>
-<li>Cambiar gestores de organización [id]: Configura a los gestores de una organización para que sean los usuarios especificados.</li>
-<li>Renombrar id de organización [id] por un nuevo nombre [nombre]: Renombra la organización especificada.</li>
-<li>Suprimir usuario [ID usuario]: Suprime un usuario con el ID especificado.</li>
-<li>Suprimir id de organización [id]: Suprime la organización especificada.</li>
-<li>Actualizar cuota de la organización [id] [Plancuota]: Actualiza el plan de cuota para la organización especificada. Los planes incluyen: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.</li>
+<li>Añadir usuario [ID de usuario]: Añade un usuario con el ID especificado.
+<li>Suprimir usuario [ID de usuario]: Suprime un usuario con el ID especificado.
+<li>Añadir permiso [permisos] a los usuarios [ID de usuario]: Añade permisos a los usuarios especificados. Los permisos pueden incluir:
+ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read y ops.user.write.
+<li>Eliminar permisos [permisos] de usuarios [ID de usuario]: Eliminar permisos. Eliminar permisos de los usuarios especificados. Los permisos pueden incluir: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read y ops.users.write.
+<li>Crear organización [nombre]: Crea una organización con el nombre especificado.
+<li>Cambiar gestores de organización [ids]: Configura a los gestores de una organización para que sean los usuarios especificados.
+<li>Renombrar id de organización [id] a un nuevo nombre [nombre]: Renombra la organización especificada.
+<li>Suprimir usuario [ID de usuario]: Suprime un usuario con el ID especificado.
+<li>Suprimir id de organización [id]: Suprime la organización especificada.
+<li>Actualizar cuota de la organización [id] a la cuota [quotaPlan]: Actualiza el plan de cuota para la organización especificada. Los planes incluyen: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.
 </ul>
 </dd>
 <dt>Origen de registro</dt>
@@ -229,8 +229,8 @@ Informa de sucesos relacionados con las actividades de gestión de informes de s
 <dd>Tipo de suceso (SECURITY_RUNTIME).
 <ul>
 <li>SECURITY_DATA_SYNC: Cargar informe [nombre] de categoría [nombre] con fecha [fecha].
-Suprimir informe con ID[id]</li>
-<li>SECURITY_RESOURCE_ACCESS: Descargar informe [nombre].</li>
+Suprimir informe con ID[id]
+<li>SECURITY_RESOURCE_ACCESS: Descargar informe [nombre].
 </ul>
 </dd>
 <dt>Usuario</dt> 
@@ -238,9 +238,9 @@ Suprimir informe con ID[id]</li>
 <dt>Mensaje</dt> 
 <dd>Mandato ejecutado.
 <ul>
-<li>Cargar informe [nombre] de categoría [nombre] con fecha [fecha]: Cargar - Carga un informe con el nombre de archivo especificado y la fecha en la categoría especificada.</li>
-<li>Suprimir informe con ID [id]: Suprimir - Suprime un informe con el id especificado.</li>
-<li>Descargar informe [nombre]: Descargar - Descargar un informe con el nombre especificado.</li>
+<li>Cargar informe [nombre] de categoría [nombre] con fecha [fecha]: Cargar. Cargar un informe con el nombre de archivo especificado y la fecha en la categoría especificada. 
+<li>Suprimir informe con ID [id]: Suprimir. Suprimir un informe con el id especificado.
+<li>Descargar informe [nombre]: Descargar. Descargar un informe con el nombre especificado.
 </ul>
 </dd>
 <dt>Origen de registro</dt>
@@ -304,13 +304,13 @@ Informa de sucesos relacionados con la configuración de suscripciones de notifi
 <dt>Event_Type</dt>
 <dd>Tipo de suceso (SECURITY_RUNTIME).
 <ul>
-<li> SECURITY_MGMT_CONFIG: Crear ventana [id].</li>
-<li> SECURITY_MGMT_CONFIG: Actualizar ventana [id].</li>
-<li> SECURITY_MGMT_CONFIG: Suprimir ventana [id].</li>
-<li> SECURITY_MGMT_CONFIG: Crear suscripción [id].</li>
-<li> SECURITY_MGMT_CONFIG: Actualizar suscripción [id].</li>
-<li> SECURITY_MGMT_CONFIG: Suprimir suscripción [id].</li>
-<li> SECURITY_MGMT_CONFIG: Crear suscripción [id].</li>
+<li> SECURITY_MGMT_CONFIG: Crear ventana [id].
+<li> SECURITY_MGMT_CONFIG: Actualizar ventana [id].
+<li> SECURITY_MGMT_CONFIG: Suprimir ventana [id].
+<li> SECURITY_MGMT_CONFIG: Crear suscripción [id].
+<li> SECURITY_MGMT_CONFIG: Actualizar suscripción [id].
+<li> SECURITY_MGMT_CONFIG: Suprimir suscripción [id].
+<li> SECURITY_MGMT_CONFIG: Crear suscripción [id].
 </ul>
 </dd>
 <dt>Usuario</dt> 
@@ -318,13 +318,13 @@ Informa de sucesos relacionados con la configuración de suscripciones de notifi
 <dt>Mensaje</dt>
 <dd>Mandato ejecutado.
 <ul>
-<li>Crear ventana [id]: Crea una ventana para actualizaciones de mantenimiento. Los registros de ventana de actualización se generan cuando un usuario está gestionando (creando) las ventanas de actualización para un entorno. Las ventanas de actualización son las ventanas temporales preferidas y de indisponibilidad para los despliegues. Los clientes indican cuando permiten/cuando no permiten despliegues no disruptivos sin la necesidad de aprobarlos y planificarlos.</li>
-<li>Actualizar ventana [id]: Actualiza una ventana de actualización de mantenimiento. Este suceso se genera cuando un usuario está actualizando las ventanas de actualización de mantenimiento para un entorno.</li>
-<li>SECURITY_MGMT_CONFIG: Suprimir ventana de actualización. Este suceso se genera cuando el usuario delega las ventanas de actualización de un entorno.</li>
-<li>Crear suscripción [id]: Crea una suscripción de sucesos. Los registros de auditoría de suscripción de sucesos se generan cuando un usuario crea una suscripción para sucesos de incidencia o actualización. Esto le permitirá ser notificado cuando algo ocurra en el sistema.</li>
-<li>Actualizar suscripción [id]: Actualiza una suscripción de sucesos. El suceso se genera cuando un usuario actualiza una suscripción para sucesos de incidencias o actualización.</li>
-<li>Suprimir suscripción [id]: Suprimir una suscripción de sucesos. Este suceso se genera cuando un usuario suprime una suscripción para sucesos de incidencia o actualización.</li>
-<li>Crear respuesta de tema [id]: Respuesta a un tema. El registro de auditoría de respuesta de tema se genera cuando el cliente aprueba y planifica una actualización disruptiva.</li>
+<li>Crear ventana [id]: Crea una ventana para las actualizaciones de mantenimiento. Los registros de ventana de actualización se generan cuando un usuario está gestionando (creando) las ventanas de actualización para un entorno. Las ventanas de actualización son las ventanas temporales preferidas y de indisponibilidad para los despliegues. Los clientes indican cuando permiten/cuando no permiten despliegues no disruptivos sin la necesidad de aprobarlos y planificarlos.
+<li>Actualizar ventana [id]: Actualiza una ventana de actualización de mantenimiento. Este suceso se genera cuando un usuario está actualizando las ventanas de actualización de mantenimiento para un entorno.
+<li>SECURITY_MGMT_CONFIG: Suprimir ventana de actualización. Este suceso se genera cuando el usuario delega las ventanas de actualización de un entorno.
+<li>Crear suscripción [id]: Crea una suscripción de sucesos. Los registros de auditoría de suscripción de sucesos se generan cuando un usuario crea una suscripción para sucesos de incidencia o actualización. Esto le permitirá ser notificado cuando algo ocurra en el sistema.
+<li>Actualizar suscripción [id]: Actualiza una suscripción de sucesos. El suceso se genera cuando un usuario actualiza una suscripción para sucesos de incidencias o actualización.
+<li>Suprimir suscripción [id]: Suprimir una suscripción de sucesos. Este suceso se genera cuando un usuario suprime una suscripción para sucesos de incidencia o actualización.
+<li>Crear respuesta de tema [id]: Respuesta a un tema. El registro de auditoría de respuesta de tema se genera cuando el cliente aprueba y planifica una actualización disruptiva.
 </ul>
 </dd>
 <dt>Origen de registro</dt>
@@ -344,11 +344,11 @@ Informa de sucesos relacionados con la plataforma Bluemix utilizando la línea d
 <dt>Event_Type</dt>
 <dd>Tipo de suceso (SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_AUTH_CREDS_MODIFY: Sucesos relacionados con la modificación de credenciales para una identidad de usuario dada.</li>
-<li>SECURITY_MGMT_RESOURCE: Sucesos de gestión de recursos como, por ejemplo, creación, supresión y cambios a los atributos de un recurso.</li>
-<li>SECURITY_MGMT_POLICY: Sucesos relacionados con la gestión de políticas de seguridad como, por ejemplo, la creación de listas de control de acceso.</li>
-<li>SECURITY_RUNTIME: Sucesos de tiempo de ejecución como, por ejemplo, los de inicio y detención de servidores de seguridad.</li>
-<li>SECURITY_RESOURCE_ACCESS: Sucesos que registran todos los accesos a un recurso. Por ejemplo, todos los accesos a un archivo, todas las solicitudes/respuestas HTTP a una página web dada o todos los accesos a una tabla de base de datos crítica.</li>
+<li>SECURITY_AUTH_CREDS_MODIFY: Sucesos relacionados con la modificación de credenciales para una identidad de usuario dada.
+<li>SECURITY_MGMT_RESOURCE: Sucesos de gestión de recursos como, por ejemplo, creación, supresión y cambios a los atributos de un recurso.
+<li>SECURITY_MGMT_POLICY: Sucesos relacionados con la gestión de políticas de seguridad como, por ejemplo, la creación de listas de control de acceso.
+<li>SECURITY_RUNTIME: Sucesos de tiempo de ejecución como, por ejemplo, los de inicio y detención de servidores de seguridad.
+<li>SECURITY_RESOURCE_ACCESS: Sucesos que registran todos los accesos a un recurso. Por ejemplo, todos los accesos a un archivo, todas las solicitudes/respuestas HTTP a una página web dada o todos los accesos a una tabla de base de datos crítica.
 </ul>
 </dd>
 <dt>Usuario</dt> 
@@ -356,9 +356,9 @@ Informa de sucesos relacionados con la plataforma Bluemix utilizando la línea d
 <dt>Destino</dt> 
 <dd>Detalles de la operación ejecutada como, por ejemplo, el id de la entidad y los resultados de la operación. Ejemplos:
 <ul>
-<li>UserCreatedEvent ('["user_id=ca3a811f-1778-4103-9553-537788ed4c4e","username=equaranta"]’). El usuario se creó con (username=equaranta e id = ca3a811f-1778-4103-9553-537788ed4c4e).</li>
-<li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). Se modificó el grupo denominado ops.reports.read, con pertenencia resultante (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e).</li>
-<li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. Se suprimió el usuario con el id value=5cd5f412-4bbb- 4c44-b44b-713a5bc6144.</li>
+<li>UserCreatedEvent ('["user_id=ca3a811f-1778-4103-9553-537788ed4c4e","username=equaranta"]’). El usuario se creó con (username=equaranta e id = ca3a811f-1778-4103-9553-537788ed4c4e).
+<li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). Se modificó el grupo denominado ops.reports.read, con pertenencia resultante (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e).
+<li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. Se suprimió el usuario con el id value=5cd5f412-4bbb- 4c44-b44b-713a5bc6144.
 </ul>
 </dd>
 <dt>Mensaje</dt>

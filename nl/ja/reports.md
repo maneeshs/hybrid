@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-08-02"
 
 ---
 
@@ -133,20 +133,15 @@ Bluemix プラットフォームのユーザーが、コマンド・ライン、
 <dd>操作を実行したユーザーのユーザー名。以下のユーザーが、データベースに定義されているユーザーです。
 <ul>
 <li>UAADB: vcap、root、backup_user。
-</li>
 <li>CCDB: vcap、ccadmin、backup_user。
-</li>
 <li>上記以外の使用では、誰が操作を実行したかについての調査が必要になります。これは、オペレーティング・システム管理セキュリティー・レポートおよびオペレーティング・システム・ログイン・セキュリティー・レポートを使用して実行できます。
-</li>
 </ul>
 </dd>
 <dt>ソース</dt> 
 <dd>ユーザーがコマンドを開始する IP アドレス。予期されている値は以下のとおりです。
 <ul>
 <li>UAADB – uaa VM および nfs_WAL_server VM。
-</li>
 <li>CCDB – api_worker VM、clock_global VM、cloud_controller_ng VM、および nsf_WAL_server VM。
-</li>
 </ul>
 </dd>
 <dt>DB_Statement</dt>
@@ -169,23 +164,14 @@ Bluemix 管理コンソールで実行されたユーザー管理アクティビ
 <dd>イベントのタイプ (SECURITY_RUNTIME)。
 <ul>
 <li>SECURITY_MGMT_REGISTRY: ユーザー [user ID] の追加。
-</li>
 <li>SECURITY_MGMT_REGISTRY: ユーザー [user ID] の削除。
-</li>
 <li>SECURITY_AUTHN_CREDS_MODIFY: 許可 [permission] をユーザー [user ID] に追加。
-</li>
 <li>SECURITY_AUTHN_CREDS_MODIFY: 許可 [permission] をユーザー [user ID] から削除。
-</li>
 <li>SECURITY_MGMT_CONFIG: 組織 [name] の作成。
-</li>
 <li>SECURITY_MGMT_CONFIG: 組織の管理者 [id] の変更。
-</li>
 <li>SECURITY_MGMT_CONFIG: 組織 ID [id] を新しい名前 [name] に名前変更。
-</li>
 <li>SECURITY_MGMT_CONFIG: 組織 ID [id] の削除。
-</li>
 <li>SECURITY_MGMT_CONFIG: 組織 [id] の割り当て量を、割り当て量 [quotaPlan] に更新。
-</li>
 </ul>
 </dd>
 <dt>ユーザー</dt> 
@@ -193,17 +179,15 @@ Bluemix 管理コンソールで実行されたユーザー管理アクティビ
 <dt>メッセージ</dt> 
 <dd>実行されたコマンド。
 <ul>
-<li>ユーザー [user ID] の追加: [user ID]: Adds 指定された ID のユーザーを追加します。</li>
-<li>ユーザー [user ID] の削除: [user ID]: Deletes 指定された ID のユーザーを削除します。</li>
-<li>ユーザー [user ID] への許可 [permissions] の追加: [user ID]: Adds 指定されたユーザーに許可を追加します。許可には、ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read、および ops.user.write が含まれます。</li>
-<li>許可 [permissions] をユーザー [user ID] から削除: [user ID]: Remove 許可の削除。指定されたユーザーから許可を削除します。許可には、ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read、および ops.users.write が含まれます。</li>
-<li>組織 [name] の作成: [name]: Creates 指定された名前で組織を作成します。</li>
-<li>組織の管理者 [id] の変更: [ids]: Configures 指定されたユーザーが組織の管理者になるように構成します。</li>
-<li>組織 ID [id] を新しい名前 [name] に名前変更: [name]: Renames 指定された組織を名前変更します。</li>
-<li>ユーザー [user ID] の削除: [user ID]: Deletes 指定された ID のユーザーを削除します。</li>
-<li>組織 ID [id] の削除: [id]: Deletes 指定された組織を削除します。</li>
-<li>組織 [id] の割り当て量を、割り当て量 [quotaPlan] に更新: [quotaPlan]: Updates 指定された組織の割り当て量プランを更新します。プランには、q2GB、q4GB、q8GB、q16GB、q32GB、q64GB、q128GB、q256GB、および q512GB が含まれます。</li>
-</ul>
+<li>ユーザー [user ID] の追加 - 指定された ID のユーザーを追加します。
+<li>ユーザー [user ID] の削除 - 指定された ID のユーザーを削除します。
+<li>許可 [permissions] をユーザー [user ID] に追加 - 指定されたユーザーに許可を追加します。許可には、ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read、および ops.user.write が含まれます。<li>許可 [permissions] をユーザー [user ID] から削除 - 許可を削除します。指定されたユーザーから許可を削除します。許可には、ops.admin、ops.login、ops.reports.read、ops.reports.write、ops.catalog.read、ops.catalog.write、ops.users.read、および ops.users.write が含まれます。
+<li>組織 [name] の作成 - 指定された名前の組織を作成します。
+<li>組織の管理者 [ids] の変更 - 組織の管理者が、指定されたユーザーになるように構成します。
+<li>組織 ID [id] を新しい名前 [name] に名前変更 - 指定された組織を名前変更します。
+<li>ユーザー [user ID] の削除 - 指定された ID のユーザーを削除します。
+<li>組織 ID [id] の削除 - 指定された組織を削除します。
+<li>組織 [id] の割り当て量を、割り当て量 [quotaPlan] に更新 - 指定された組織の割り当て量プランを更新します。プランには、q2GB、q4GB、q8GB、q16GB、q32GB、q64GB、q128GB、q256GB、および q512GB が含まれます。</ul>
 </dd>
 <dt>ログ・ソース</dt>
 <dd>イベントのソース (イベントを生成したサーバーの IP アドレス/ホスト名)</dd>
@@ -243,9 +227,7 @@ Bluemix 管理コンソールで実行されたサービス・カタログ管理
 <dd>イベントのタイプ (SECURITY_RUNTIME)。
 <ul>
 <li>SECURITY_DATA_SYNC: レポート [name] をカテゴリー [name] に [date] にアップロード。ID [id] のレポートの削除。
-</li>
 <li>SECURITY_RESOURCE_ACCESS: レポート [name] のダウンロード。
-</li>
 </ul>
 </dd>
 <dt>ユーザー</dt> 
@@ -253,9 +235,9 @@ Bluemix 管理コンソールで実行されたサービス・カタログ管理
 <dt>メッセージ</dt> 
 <dd>実行されたコマンド。
 <ul>
-<li>レポート [name] をカテゴリー [name] 日付 [date] にアップロード: [date]: Upload。指定されたファイル名と日付のレポートを、指定されたカテゴリーにアップロードします。</li>
-<li>ID [id] のレポートの削除: [id]: Delete。指定された ID のレポートを削除します。</li>
-<li>レポート [name] のダウンロード: [name]: Download。指定された名前のレポートがダウンロードされました。</li>
+<li>レポート [name] をカテゴリー [name] に日付 [date] にアップロード - アップロードします。指定されたファイル名と日付のレポートを、指定されたカテゴリーにアップロードします。
+<li>ID [id] のレポートの削除 - 削除します。指定された ID のレポートを削除します。
+<li>レポート [name] のダウンロード - ダウンロードします。指定された名前のレポートがダウンロードされます。
 </ul>
 </dd>
 <dt>ログ・ソース</dt>
@@ -320,19 +302,12 @@ Bluemix 環境への特権アクセスの要求、および Bluemix 管理者に
 <dd>イベントのタイプ (SECURITY_RUNTIME)。
 <ul>
 <li> SECURITY_MGMT_CONFIG: ウィンドウ [id] の作成。
-</li>
 <li> SECURITY_MGMT_CONFIG: ウィンドウ [id] の更新。
-</li>
 <li> SECURITY_MGMT_CONFIG: ウィンドウ [id] の削除。
-</li>
 <li> SECURITY_MGMT_CONFIG: サブスクリプション [id] の作成。
-</li>
 <li> SECURITY_MGMT_CONFIG: サブスクリプション [id] の更新。
-</li>
 <li> SECURITY_MGMT_CONFIG: サブスクリプション [id] の削除。
-</li>
 <li> SECURITY_MGMT_CONFIG: トピック応答 [id] の作成。
-</li>
 </ul>
 </dd>
 <dt>ユーザー</dt> 
@@ -340,15 +315,10 @@ Bluemix 環境への特権アクセスの要求、および Bluemix 管理者に
 <dt>メッセージ</dt>
 <dd>実行されたコマンド。
 <ul>
-<li>期間 [id] の作成: [id]: Creates 保守更新用の期間を作成します。更新期間のログは、ユーザーが環境の更新期間を管理 (作成) している時に生成されます。更新期間は、デプロイメントのための、ブラックアウト期間および優先期間です。これは、停止を伴わないデプロイメントが、承認やスケジュールなしでデプロイされることを顧客が許可している、または許可していない期間です。
-</li>
-<li>期間 [id] の更新: [id]: Updates 保守更新期間を更新します。このイベントは、ユーザーが環境の保守更新期間を更新している時に生成されます。</li>
-<li>SECURITY_MGMT_CONFIG: 更新期間の削除: このイベントは、ユーザーが環境の更新期間を代行している時に生成されます。
-</li>
-<li>サブスクリプション [id] の作成: [id]: Creates イベント・サブスクリプションを作成します。イベント・サブスクリプションの監査ログは、ユーザーが更新イベントまたはインシデント・イベント用のサブスクリプションを作成した時に生成されます。これにより、システムでイベントが発生するとユーザーに通知が送信されます。</li>
-<li>サブスクリプション [id] の更新: [id]: Updates イベント・サブスクリプションを更新します。このイベントは、ユーザーが更新イベントまたはインシデント・イベント用のサブスクリプションを更新した時に生成されます。</li>
-<li>サブスクリプション [id] の削除: [id]: Delete イベント・サブスクリプションを削除します。このイベントは、ユーザーが更新イベントまたはインシデント・イベント用のサブスクリプションを削除した時に生成されます。</li>
-<li>トピック応答 [id] の作成: [id]: Reply トピックへの応答。トピック応答監査ログは、お客様が、停止を伴う更新を承認およびスケジュールした時に生成されます。</li>
+<li>期間 [id] の作成 - 保守更新の期間を作成します。更新期間のログは、ユーザーが環境の更新期間を管理 (作成) している時に生成されます。更新期間は、デプロイメントのための、ブラックアウト期間および優先期間です。これは、停止を伴わないデプロイメントが、承認やスケジュールなしでデプロイされることを顧客が許可している、または許可していない期間です。
+<li>期間 [id] の更新 - 保守更新期間を更新します。このイベントは、ユーザーが環境の保守更新期間を更新している時に生成されます。<li>SECURITY_MGMT_CONFIG - 更新期間の削除: このイベントは、ユーザーが環境の更新期間を代行している時に生成されます。
+<li>サブスクリプション [id] の作成 - イベント・サブスクリプションを作成します。イベント・サブスクリプションの監査ログは、ユーザーが更新イベントまたはインシデント・イベント用のサブスクリプションを作成した時に生成されます。これにより、システムでイベントが発生するとユーザーに通知が送信されます。
+<li>サブスクリプション [id] の更新 - イベント・サブスクリプションを更新します。このイベントは、ユーザーが更新イベントまたはインシデント・イベント用のサブスクリプションを更新した時に生成されます。<li>サブスクリプション [id] の削除 - イベント・サブスクリプションを削除します。このイベントは、ユーザーが更新イベントまたはインシデント・イベント用のサブスクリプションを削除した時に生成されます。<li>トピック応答 [id] の作成- トピックへの応答: トピック応答監査ログは、顧客が、停止を伴う更新を承認およびスケジュールした時に生成されます。
 </ul>
 </dd>
 <dt>ログ・ソース</dt>
@@ -369,14 +339,10 @@ Bluemix 環境への特権アクセスの要求、および Bluemix 管理者に
 <dd>イベントのタイプ (SECURITY_RUNTIME)。
 <ul>
 <li>SECURITY_AUTH_CREDS_MODIFY: 指定されたユーザー ID の資格情報の変更に関連したイベント。
-</li>
 <li>SECURITY_MGMT_RESOURCE: リソースの作成、リソースの削除、およびリソースの属性の変更などのリソース管理イベント。
-</li>
-<li>SECURITY_MGMT_POLICY: アクセス制御リストの作成などのセキュリティー・ポリシーの管理に関連したイベント。</li>
+<li>SECURITY_MGMT_POLICY: アクセス制御リストの作成などのセキュリティー・ポリシーの管理に関連したイベント。
 <li>SECURITY_RUNTIME: セキュリティー・サーバーの開始および停止などのランタイム・イベント。
-</li>
 <li>SECURITY_RESOURCE_ACCESS: リソースへのすべてのアクセスを記録するイベント。例としては、ファイルへのすべてのアクセス、指定された Web ページへのすべての HTTP 要求/応答、および重要なデータベース表へのすべてのアクセスなどがあります。
-</li>
 </ul>
 </dd>
 <dt>ユーザー</dt> 
@@ -384,11 +350,8 @@ Bluemix 環境への特権アクセスの要求、および Bluemix 管理者に
 <dt>ターゲット</dt> 
 <dd>エンティティーの ID および操作の結果など、実行された操作の詳細。例:<ul>
 <li>UserCreatedEvent ('["user_id=ca3a811f-1778-4103-9553-537788ed4c4e","username=equaranta"]’)。ユーザーは、(username=equaranta および id = ca3a811f-1778-4103-9553-537788ed4c4e) で作成されました。
-</li>
 <li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}')。ops.reports.read という名前のグループが変更されました。結果のメンバーシップ (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21"、"5005f0f8- e090-4cab-b51d- 2ceee70acf0e)。
-</li>
 <li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'。ID 値 = 5cd5f412-4bbb- 4c44-b44b-713a5bc6144 のユーザーが削除されました。
-</li>
 </ul>
 </dd>
 <dt>メッセージ</dt>

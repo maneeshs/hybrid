@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-05-30"
+lastupdated: "2017-08-02"
 
 ---
 
@@ -131,16 +131,16 @@ Berichtet Ereignisse im Zusammenhang mit Operationen, die von einem Datenbankadm
 <dt>Benutzer</dt> 
 <dd>Der Benutzername des Benutzers, der die Operation ausgeführt hat. Die folgenden Benutzer sind die Benutzer, die in der Datenbank definiert sind.
 <ul>
-<li>UAADB: vcap, root, backup_user.</li>
-<li>CCDB: vcap, ccadmin, backup_user.</li>
-<li>Die Nutzung außerhalb der oben genannten Bereiche erfordert eine Untersuchung, wer die Operation ausgeführt hat. Dies kann mithilfe des Verwaltungssicherheitsberichts des Betriebssystems sowie des Sicherheitsberichts für die Betriebssystemanmeldung geschehen.</li>
+<li>UAADB: vcap, root, backup_user.
+<li>CCDB: vcap, ccadmin, backup_user.
+<li>Die Nutzung außerhalb der oben genannten Bereiche erfordert eine Untersuchung, wer die Operation ausgeführt hat. Dies kann mithilfe des Verwaltungssicherheitsberichts des Betriebssystems sowie des Sicherheitsberichts für die Betriebssystemanmeldung geschehen.
 </ul>
 </dd>
 <dt>Quelle</dt> 
 <dd>Die IP-Adresse, von der aus der Benutzer den Befehl startet. Folgende Werte werden erwartet:
 <ul>
-<li>UAADB – uaa VMs und die nfs_WAL_server-VM.</li>
-<li>CCDB – api_worker, clock_global, cloud_controller_ng und nsf_WAL_server-VMs.</li>
+<li>UAADB – uaa VMs und die nfs_WAL_server-VM.
+<li>CCDB – api_worker, clock_global, cloud_controller_ng und nsf_WAL_server-VMs.
 </ul>
 </dd>
 <dt>DB_Statement</dt>
@@ -162,15 +162,15 @@ Berichtet Benutzerverwaltungsaktivitäten, die für die Bluemix-Konsole ausgefü
 <dt>Event_Type</dt>
 <dd>Typ des Ereignisses (SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_MGMT_REGISTRY: Benutzer [Benutzer-ID] hinzufügen</li>
-<li>SECURITY_MGMT_REGISTRY: Benutzer [Benutzer-ID] löschen</li>
-<li>SECURITY_AUTHN_CREDS_MODIFY: Berechtigung [Berechtigungen] zu Benutzern [Benutzer-ID] hinzufügen.</li>
-<li>SECURITY_AUTHN_CREDS_MODIFY: Berechtigung [Berechtigungen] von Benutzern [Benutzer-ID] entfernen.</li>
-<li>SECURITY_MGMT_CONFIG: Organisation [Name] erstellen.</li>
-<li>SECURITY_MGMT_CONFIG: Organisationsmanager [IDs] ändern.</li>
-<li>SECURITY_MGMT_CONFIG: Organisations-ID [ID] umbenennen in [Name].</li>
-<li>SECURITY_MGMT_CONFIG: Organisations-ID [ID] löschen.</li>
-<li>SECURITY_MGMT_CONFIG: Kontingent für Organisation [ID] auf Kontingent [Kontingentplan] aktualisieren.</li>
+<li>SECURITY_MGMT_REGISTRY: Benutzer [Benutzer-ID] hinzufügen
+<li>SECURITY_MGMT_REGISTRY: Benutzer [Benutzer-ID] löschen
+<li>SECURITY_AUTHN_CREDS_MODIFY: Berechtigung [Berechtigungen] zu Benutzern [Benutzer-ID] hinzufügen.
+<li>SECURITY_AUTHN_CREDS_MODIFY: Berechtigung [Berechtigungen] von Benutzern [Benutzer-ID] entfernen.
+<li>SECURITY_MGMT_CONFIG: Organisation [Name] erstellen.
+<li>SECURITY_MGMT_CONFIG: Organisationsmanager [IDs] ändern.
+<li>SECURITY_MGMT_CONFIG: Organisations-ID [ID] umbenennen in [Name].
+<li>SECURITY_MGMT_CONFIG: Organisations-ID [ID] löschen.
+<li>SECURITY_MGMT_CONFIG: Kontingent für Organisation [ID] auf Kontingent [Kontingentplan] aktualisieren.
 </ul>
 </dd>
 <dt>Benutzer</dt> 
@@ -178,16 +178,16 @@ Berichtet Benutzerverwaltungsaktivitäten, die für die Bluemix-Konsole ausgefü
 <dt>Nachricht</dt> 
 <dd>Ausgeführter Befehl.
 <ul>
-<li>Hinzufügen von Benutzer [Benutzer-ID]: Fügt einen Benutzer mit der angegebenen ID hinzu. </li>
-<li>Löschen von Benutzer [Benutzer-ID]: Löscht einen Benutzer mit der angegebenen ID. </li>
-<li>Hinzufügen von Berechtigung [Berechtigungen] für Benutzer [Benutzer-ID]: Fügt Benutzer zu den angegebenen Benutzern hinzu. Die Berechtigungen können folgende sein: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.user.write.</li>
-<li>Entfernen von Berechtigung [Berechtigungen] für Benutzer [Benutzer- ID]: Entfernen von Berechtigung - Entfernen von Berechtigungen für die angegebenen Benutzer. Die Berechtigungen können folgende sein: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read und ops.users.write.</li>
-<li>Erstellen von Organisation [Name]: Erstellt eine Organisation mit dem angegebenen Namen. </li>
-<li>Ändern von Organisationsmanager [IDs]: Konfiguriert die Manager einer Organisation als angegebene Benutzer. </li>
-<li>Umbenennen von Organisation-ID [id] in Name [Name]: Benennt die angegebene Organisation um. </li>
-<li>Löschen von Benutzer [Benutzer-ID]: Löscht einen Benutzer mit der angegebenen ID. </li>
-<li>Löschen von Organisations-ID [ID]: Löscht die angegebene Organisation. </li>
-<li>Aktualisieren des Kontingents für Organisation [ID] auf Kontingent [Kontingentplan]: Aktualisiert den Kontingentplan für die angegebene Organisation. Zu den Plänen können folgende gehören: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.</li>
+<li>Hinzufügen von Benutzer [Benutzer-ID]: Fügt einen Benutzer mit der angegebenen ID hinzu.
+<li>Löschen von Benutzer [Benutzer-ID]: Löscht einen Benutzer mit der angegebenen ID.
+<li>Hinzufügen von Berechtigung [Berechtigungen] für Benutzer [Benutzer-ID]: Fügt Benutzer zu den angegebenen Benutzern hinzu. Die Berechtigungen können folgende sein: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.user.write.
+<li>Entfernen von Berechtigung [Berechtigungen] für Benutzer [Benutzer- ID]: Entfernen von Berechtigung - Entfernen von Berechtigungen für die angegebenen Benutzer. Die Berechtigungen können folgende sein: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read und ops.users.write.
+<li>Erstellen von Organisation [Name]: Erstellt eine Organisation mit dem angegebenen Namen.
+<li>Ändern von Organisationsmanager [IDs]: Konfiguriert die Manager einer Organisation als angegebene Benutzer.
+<li>Umbenennen von Organisation-ID [ID] in Name [Name]: Benennt die angegebene Organisation um.
+<li>Löschen von Benutzer [Benutzer-ID]: Löscht einen Benutzer mit der angegebenen ID.
+<li>Löschen von Organisations-ID [ID]: Löscht die angegebene Organisation.
+<li>Aktualisieren des Kontingents für Organisation [ID] auf Kontingent [Kontingentplan]: Aktualisiert den Kontingentplan für die angegebene Organisation. Zu den Plänen können folgende gehören: q2GB, q4GB, q8GB, q16GB, q32GB, q64GB, q128GB, q256GB, q512GB.
 </ul>
 </dd>
 <dt>Protokollquelle</dt>
@@ -228,18 +228,18 @@ Berichtet Ereignisse im Zusammenhang mit den Sicherheitsbericht-Verwaltungsaktio
 <dd>Typ des Ereignisses (SECURITY_RUNTIME).
 <ul>
 <li>SECURITY_DATA_SYNC: Bericht [Name] mit Datum [Datum] hochladen in Kategorie [Name].
-Bericht mit ID [ID] löschen</li>
-<li>SECURITY_RESOURCE_ACCESS: Bericht [Name] herunterladen.</li>
+Bericht mit ID [ID] löschen
+<li>SECURITY_RESOURCE_ACCESS: Bericht [Name] herunterladen.
 </ul>
 </dd>
 <dt>Benutzer</dt> 
 <dd>Der Benutzer, der die Operation gestartet hat.
 <dt>Nachricht</dt> 
-<dd>Befehl ausgeführt.
+<dd>Ausgeführter Befehl.
 <ul>
-<li>Hochladen von Bericht [Name] in Kategorie [Name] mit Datum [Datum]: Hochladen - Hochladen eines Berichts mit dem angegebenen Dateinamen und Datum in die angegebene Kategorie. </li>
-<li>Löschen von Bericht mit ID [ID]: Löschen - Löschen eines Berichts mit der angegebenen ID. </li>
-<li>Herunterladen von Bericht [Name]: Herunterladen - Ein Bericht mit den angegebenen Namen wurde heruntergeladen. </li>
+<li>Hochladen von Bericht [Name] in Kategorie [Name] mit Datum [Datum]: Hochladen - Hochladen eines Berichts mit dem angegebenen Dateinamen und Datum in die angegebene Kategorie. 
+<li>Löschen von Bericht mit ID [ID]: Löschen - Löschen eines Berichts mit der angegebenen ID.
+<li>Herunterladen von Bericht [Name]: Herunterladen - Ein Bericht mit den angegebenen Namen wurde heruntergeladen.
 </ul>
 </dd>
 <dt>Protokollquelle</dt>
@@ -303,27 +303,27 @@ Berichtet Ereignisse im Zusammenhang mit der Konfiguration der Fenster für die 
 <dt>Event_Type</dt>
 <dd>Typ des Ereignisses (SECURITY_RUNTIME).
 <ul>
-<li> SECURITY_MGMT_CONFIG: Fenster [ID] erstellen.</li>
-<li> SECURITY_MGMT_CONFIG: Fenster [ID] aktualisieren.</li>
-<li> SECURITY_MGMT_CONFIG: Fenster [ID] löschen.</li>
-<li> SECURITY_MGMT_CONFIG: Abonnement [ID] erstellen.</li>
-<li> SECURITY_MGMT_CONFIG: Abonnement [ID] aktualisieren.</li>
-<li> SECURITY_MGMT_CONFIG: Abonnement [ID] löschen.</li>
-<li> SECURITY_MGMT_CONFIG: Themenantwort [ID] erstellen.</li>
+<li> SECURITY_MGMT_CONFIG: Fenster [ID] erstellen.
+<li> SECURITY_MGMT_CONFIG: Fenster [ID] aktualisieren.
+<li> SECURITY_MGMT_CONFIG: Fenster [ID] löschen.
+<li> SECURITY_MGMT_CONFIG: Abonnement [ID] erstellen.
+<li> SECURITY_MGMT_CONFIG: Abonnement [ID] aktualisieren.
+<li> SECURITY_MGMT_CONFIG: Abonnement [ID] löschen.
+<li> SECURITY_MGMT_CONFIG: Themenantwort [ID] erstellen.
 </ul>
 </dd>
 <dt>Benutzer</dt> 
 <dd>Der Benutzer, der die Operation gestartet hat.
 <dt>Nachricht</dt>
-<dd>Befehl ausgeführt.
+<dd>Ausgeführter Befehl.
 <ul>
-<li>Erstellen von Fenster [ID]: Erstellt ein Fenster für Wartungsaktualisierungen. Das Aktualisierungsfensterprotokolle werden generiert, wenn ein Benutzer die Aktualisierungsfenster für eine Umgebung verwaltet (erstellt). Die Aktualisierungsfenster sind die Ausfallzeit- und bevorzugten Fenster für Bereitstellungen. Dies trifft zu, wenn Kunden zulassen bzw. nicht zulassen, dass unterbrechungsfreie Bereitstellungen bereitgestellt werden, ohne dass sie diese genehmigen und planen müssen.</li>
-<li>Aktualisieren von Fenster [ID]: Aktualisiert ein Fenster für Wartungsaktualisierungen. Dieses Ereignis wird generiert, wenn ein Benutzer die Wartungsaktualisierungsfenster für eine Umgebung aktualisiert. </li>
-<li>SECURITY_MGMT_CONFIG: Aktualisierungsfenster löschen. Dieses Ereignis wird generiert, wenn ein Benutzer die Aktualisierungsfenster für eine Umgebung delegiert.</li>
-<li>Erstellen von Abonnement [ID]: Erstellt ein Ereignisabonnement. Die Prüfprotokolle für das Ereignisabonnement werden generiert, wenn ein Benutzer ein Abonnement für Aktualisierungs- oder Störungsereignisse erstellt. Auf diese Weise kann er benachrichtigt werden, wenn im System ein Fehler vorliegt. </li>
-<li>Aktualisieren von Abonnement [ID]: Aktualisiert ein Ereignisabonnement. Das Ereignis wird generiert, wenn ein Benutzer ein Abonnement für Aktualisierungs- oder Störungsereignisse aktualisiert. </li>
-<li>Löschen von Abonnement [ID]: Löscht ein Ereignisabonnement. Dieses Ereignis wird generiert, wenn ein Benutzer ein Abonnement für Aktualisierungs- oder Störungsereignisse löscht. </li>
-<li>Erstellen von Themenantwort [ID]: Antwort auf ein Thema. Das Prüfprotokoll für Themenantworten wird generiert, wenn der Kunde eine Aktualisierung mit Unterbrechungen genehmigt und plant. </li>
+<li>Erstellen von Fenster [id] - Erstellt ein Fenster für Wartungsaktualisierungen. Das Aktualisierungsfensterprotokolle werden generiert, wenn ein Benutzer die Aktualisierungsfenster für eine Umgebung verwaltet (erstellt). Die Aktualisierungsfenster sind die Ausfallzeit- und bevorzugten Fenster für Bereitstellungen. Dies trifft zu, wenn Kunden zulassen bzw. nicht zulassen, dass unterbrechungsfreie Bereitstellungen bereitgestellt werden, ohne dass sie diese genehmigen und planen müssen.
+<li>Aktualisieren von Fenster [id] - Aktualisiert ein Fenster für Wartungsaktualisierungen. Dieses Ereignis wird generiert, wenn ein Benutzer die Wartungsaktualisierungsfenster für eine Umgebung aktualisiert.
+<li>SECURITY_MGMT_CONFIG - Aktualisierungsfenster löschen. Dieses Ereignis wird generiert, wenn ein Benutzer die Aktualisierungsfenster für eine Umgebung delegiert.
+<li>Erstellen von Abonnement [id] - Erstellt ein Ereignisabonnement. Die Prüfprotokolle für das Ereignisabonnement werden generiert, wenn ein Benutzer ein Abonnement für Aktualisierungs- oder Störungsereignisse erstellt. Auf diese Weise kann er benachrichtigt werden, wenn im System ein Fehler vorliegt.
+<li>Aktualisieren von Abonnement [id] - Aktualisiert ein Ereignisabonnement. Das Ereignis wird generiert, wenn ein Benutzer ein Abonnement für Aktualisierungs- oder Störungsereignisse aktualisiert.
+<li>Löschen von Abonnement [id] - Löscht ein Ereignisabonnement. Dieses Ereignis wird generiert, wenn ein Benutzer ein Abonnement für Aktualisierungs- oder Störungsereignisse löscht.
+<li>Erstellen von Topicantwort [id] auf ein Topic. Das Prüfprotokoll für Topicantworten wird generiert, wenn der Kunde eine Aktualisierung mit Unterbrechungen genehmigt und plant.
 </ul>
 </dd>
 <dt>Protokollquelle</dt>
@@ -343,11 +343,11 @@ Berichtet Ereignisse im Zusammenhang mit der Bluemix-Plattform bei Verwendung de
 <dt>Event_Type</dt>
 <dd>Typ des Ereignisses (SECURITY_RUNTIME).
 <ul>
-<li>SECURITY_AUTH_CREDS_MODIFY: Ereignisse im Zusammenhang mit Änderungen an Berechtigungsnachweisen für eine bestimmte Benutzeridentität.</li>
-<li>SECURITY_MGMT_RESOURCE: Ressourcenmanagementereignisse wie z. B. Erstellung, Löschung und Änderungen an den Attributen einer Ressource.</li>
-<li>SECURITY_MGMT_POLICY: Ereignis im Zusammenhang mit der Verwaltung von Sicherheitsrichtlinien, z. B. der Erstellung von Zugriffskontrolllisten.</li>
-<li>SECURITY_RUNTIME: Laufzeitereignisse wie z. B. das Starten und Stoppen von Sicherheitsservern.</li>
-<li>SECURITY_RESOURCE_ACCESS: Ereignisse, die alle Zugriffe auf eine Ressource aufzeichnen. Beispiele sind alle Zugriffe auf eine Datei, alle HTTP-Anforderungen/-Antworten auf eine bestimmte Webseite sowie alle Zugriffe auf eine kritische Datenbanktabelle.</li>
+<li>SECURITY_AUTH_CREDS_MODIFY: Ereignisse im Zusammenhang mit Änderungen an Berechtigungsnachweisen für eine bestimmte Benutzeridentität.
+<li>SECURITY_MGMT_RESOURCE: Ressourcenmanagementereignisse wie z. B. Erstellung, Löschung und Änderungen an den Attributen einer Ressource.
+<li>SECURITY_MGMT_POLICY: Ereignis im Zusammenhang mit der Verwaltung von Sicherheitsrichtlinien, z. B. der Erstellung von Zugriffskontrolllisten.
+<li>SECURITY_RUNTIME: Laufzeitereignisse wie z. B. das Starten und Stoppen von Sicherheitsservern.
+<li>SECURITY_RESOURCE_ACCESS: Ereignisse, die alle Zugriffe auf eine Ressource aufzeichnen. Beispiele sind alle Zugriffe auf eine Datei, alle HTTP-Anforderungen/-Antworten auf eine bestimmte Webseite sowie alle Zugriffe auf eine kritische Datenbanktabelle.
 </ul>
 </dd>
 <dt>Benutzer</dt> 
@@ -356,9 +356,9 @@ Berichtet Ereignisse im Zusammenhang mit der Bluemix-Plattform bei Verwendung de
 <dd>Details zur ausgeführten Operation, z. B. die ID der Entität und Ergebnisse der Operation. Beispiele:
 <ul>
 <li>UserCreatedEvent ('["user_id=ca3a811f-1778-4103-9553-537788ed4c4e","username=equaranta"]’). Der Benutzer wurde mit
-(username=equaranta and id = ca3a811f-1778-4103-9553-537788ed4c4e) erstellt.</li>
-<li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). Die Gruppe mit dem Namen ops.reports.read wurde geändert mit resultierender Mitgliedschaft (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e).</li>
-<li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. Benutzer wurde gelöscht mit id value=5cd5f412-4bbb- 4c44-b44b-713a5bc6144.</li>
+(username=equaranta and id = ca3a811f-1778-4103-9553-537788ed4c4e) erstellt.
+<li>GroupModifiedEvent ('{" "group_name":"ops.reports.read","members":["0625ff9a- 8a59-4cca-a80a-8e3b51f3dd21","5005f0f8-e090-4cabb51d- 2ceee70acf0e"}'). Die Gruppe mit dem Namen ops.reports.read wurde geändert mit resultierender Mitgliedschaft (id 0625ff9a- 8a59-4ccaa80a- 8e3b51f3dd21","5005f0f8- e090-4cab-b51d- 2ceee70acf0e).
+<li>UserDeletedEvent ('["UserDeletedEvent ('["user_id=5cd5f412-4bbb-4c44-b44b- 713a5bc6144d","username=818811853"]'):"]'. Benutzer wurde gelöscht mit id value=5cd5f412-4bbb- 4c44-b44b-713a5bc6144.
 </ul>
 </dd>
 <dt>Nachricht</dt>
