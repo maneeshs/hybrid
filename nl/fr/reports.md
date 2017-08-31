@@ -1,4 +1,4 @@
-﻿---
+---
 
 copyright:
   years: 2017
@@ -237,7 +237,7 @@ Delete Report with ID [ID]
 <dt>Message</dt> 
 <dd>La commande a été exécutée.
 <ul>
-<li>Upload report [nom] to category [nom] date [date] - Upload. Télécharge un rapport avec le nom de fichier et la date spécifiés dans la catégorie indiquée.
+<li>Upload report [nom] to category [nom] date [date] - Upload. Télécharge un rapport avec le nom de fichier et la date spécifiés dans la catégorie indiquée. 
 <li>Delete Report with ID [ID] - Delete. Supprime le rapport avec l'ID spécifié.
 <li>Download Report [nom] - Download. Télécharge le rapport avec le nom spécifié.
 </ul>
