@@ -294,7 +294,7 @@ Informa de operaciones de gestión de certificados de claves.
 ## Notificaciones del sistema
 {: #systemnotifications}
 
-Informa de sucesos relacionados con la configuración de suscripciones de notificaciones o ventanas de despliegue de actualización de software.
+Informa de sucesos relacionados con la configuración de suscripciones de notificaciones o períodos de despliegue de actualizaciones de software.
 
 ### Campos de datos
 
@@ -304,9 +304,9 @@ Informa de sucesos relacionados con la configuración de suscripciones de notifi
 <dt>Event_Type</dt>
 <dd>Tipo de suceso (SECURITY_RUNTIME).
 <ul>
-<li> SECURITY_MGMT_CONFIG: Crear ventana [id].
-<li> SECURITY_MGMT_CONFIG: Actualizar ventana [id].
-<li> SECURITY_MGMT_CONFIG: Suprimir ventana [id].
+<li> SECURITY_MGMT_CONFIG: Crear período [id].
+<li> SECURITY_MGMT_CONFIG: Actualizar período [id].
+<li> SECURITY_MGMT_CONFIG: Suprimir período [id].
 <li> SECURITY_MGMT_CONFIG: Crear suscripción [id].
 <li> SECURITY_MGMT_CONFIG: Actualizar suscripción [id].
 <li> SECURITY_MGMT_CONFIG: Suprimir suscripción [id].
@@ -318,9 +318,9 @@ Informa de sucesos relacionados con la configuración de suscripciones de notifi
 <dt>Mensaje</dt>
 <dd>Mandato ejecutado.
 <ul>
-<li>Crear ventana [id]: Crea una ventana para las actualizaciones de mantenimiento. Los registros de ventana de actualización se generan cuando un usuario está gestionando (creando) las ventanas de actualización para un entorno. Las ventanas de actualización son las ventanas temporales preferidas y de indisponibilidad para los despliegues. Los clientes indican cuando permiten/cuando no permiten despliegues no disruptivos sin la necesidad de aprobarlos y planificarlos.
-<li>Actualizar ventana [id]: Actualiza una ventana de actualización de mantenimiento. Este suceso se genera cuando un usuario está actualizando las ventanas de actualización de mantenimiento para un entorno.
-<li>SECURITY_MGMT_CONFIG: Suprimir ventana de actualización. Este suceso se genera cuando el usuario delega las ventanas de actualización de un entorno.
+<li>Crear período [id]: Crea un período para las actualizaciones de mantenimiento. Los registros de períodos de actualización se generan cuando un usuario está gestionando (creando) los períodos de actualización para un entorno. Los períodos de actualización son los períodos preferidos y de no disponibilidad para los despliegues. Los clientes indican cuando permiten/cuando no permiten despliegues no disruptivos sin la necesidad de aprobarlos y planificarlos.
+<li>Actualizar período [id]: Actualiza un período de actualización de mantenimiento. Este suceso se genera cuando un usuario está actualizando los períodos de actualización de mantenimiento para un entorno.
+<li>SECURITY_MGMT_CONFIG: Suprimir período de actualización. Este suceso se genera cuando el usuario delega los períodos de actualización de un entorno.
 <li>Crear suscripción [id]: Crea una suscripción de sucesos. Los registros de auditoría de suscripción de sucesos se generan cuando un usuario crea una suscripción para sucesos de incidencia o actualización. Esto le permitirá ser notificado cuando algo ocurra en el sistema.
 <li>Actualizar suscripción [id]: Actualiza una suscripción de sucesos. El suceso se genera cuando un usuario actualiza una suscripción para sucesos de incidencias o actualización.
 <li>Suprimir suscripción [id]: Suprimir una suscripción de sucesos. Este suceso se genera cuando un usuario suprime una suscripción para sucesos de incidencia o actualización.
