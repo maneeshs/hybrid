@@ -260,7 +260,7 @@ You can choose to set specific blackout windows of time in which your environmen
 4. Set your blackout window by selecting the frequency, duration, and start time for the window.
 5. Click **Submit**.
 
-Blackout dates will require IBM approval, and the time it takes to gain approval will vary. When the requested blackout dates are approved, IBM will cancel any existing updates that are currently scheduled during the unavailable window. IBM will also create new records for these updates and schedule them outside the approved blackout dates.
+Blackout windows will require IBM approval, and the time it takes to gain approval will vary. Blackouts windows that overlap with a deployment already scheduled to take place within 7 days of the time the blackout is submitted may take longer to approve. When the requested blackout is approved, IBM will cancel any existing updates that are currently scheduled during the blackout window. IBM will also create new records for these updates and schedule them outside the approved blackout dates.
 
 ### Scheduling and approving updates
 {: #scheduleandapprove}
