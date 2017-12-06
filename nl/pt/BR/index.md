@@ -1023,8 +1023,7 @@ Para efetuar login no Console administrativo, execute o comando a seguir:
 <dd class="pd">Envia um cabeçalho Aceitar.</dd>
 </dl>
 
-O exemplo a seguir mostra a saída a partir deste
-comando:
+O exemplo a seguir mostra a saída a partir deste comando:
 ```
 {
     "message": "Logged in",
@@ -1301,8 +1300,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 POST para o servidor HTTP.</dd>
 </dl>
 
-O exemplo a seguir mostra a saída a partir deste
-comando:
+O exemplo a seguir mostra a saída a partir deste comando:
 
 ```
 * Conectado ao host local (127.0.0.1) porta 3000 (#0)
@@ -1342,8 +1340,7 @@ Para remover um usuário, deve-se fornecer o ID de usuário do usuário. Execute
 <dd class="pd">Especifica uma solicitação DELETE.</dd>
 </dl>
 
-O exemplo a seguir mostra a saída a partir deste
-comando:
+O exemplo a seguir mostra a saída a partir deste comando:
 
 ```
  * connect to ::1 port 3000 failed: Connection refused
