@@ -14,10 +14,10 @@ lastupdated: "2017-09-07"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# Gestión de {{site.data.keyword.Bluemix_notm}} Local y {{site.data.keyword.Bluemix_notm}} Dedicado
+# Gestión de {{site.data.keyword.Bluemix_local_notm}} y {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #mng}
 
-Si tiene acceso de administrador para {{site.data.keyword.Bluemix}} Local o {{site.data.keyword.Bluemix_notm}} Dedicado, vaya a la página **Administración** para gestionar recursos, supervisar el uso de cuota, administrar permisos de usuarios, planificar las notificaciones de actualización, ver informes y registros de seguridad, etc. Puede gestionar sus organizaciones mediante la creación de espacios y la configuración de [roles y permisos de usuarios](/docs/admin/index.html#oc_useradmin); consulte [Gestión de las organizaciones](/docs/admin/orgs_spaces.html).
+Si tiene acceso de administrador para {{site.data.keyword.Bluemix_local_notm}} o {{site.data.keyword.Bluemix_dedicated_notm}}, vaya a la página **Administración** para gestionar recursos, supervisar el uso de cuota, administrar permisos de usuarios, planificar las notificaciones de actualización, ver informes y registros de seguridad, etc. Puede gestionar sus organizaciones mediante la creación de espacios y la configuración de [roles y permisos de usuarios](/docs/admin/index.html#oc_useradmin); consulte [Gestión de las organizaciones](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
 {: #ld_table1}

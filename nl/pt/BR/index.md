@@ -14,10 +14,10 @@ lastupdated: "2017-09-07"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# Gerenciando o {{site.data.keyword.Bluemix_notm}} Local e {{site.data.keyword.Bluemix_notm}} Dedicated
+# Gerenciando o {{site.data.keyword.Bluemix_local_notm}} e o {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #mng}
 
-Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix}} Local ou o {{site.data.keyword.Bluemix_notm}} Dedicated, acesse a página **Administração** para gerenciar recursos, monitorar o uso de cotas, administrar permissões de usuário, planejar notificações de upgrade, visualizar relatórios e logs de segurança e mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](/docs/admin/index.html#oc_useradmin); veja [Gerenciando suas organizações](/docs/admin/orgs_spaces.html).
+Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix_local_notm}} ou {{site.data.keyword.Bluemix_dedicated_notm}}, acesse a página **Administração** para gerenciar recursos, monitorar o uso de cotas, administrar permissões de usuário, planejar notificações de upgrade, visualizar relatórios e logs de segurança e muito mais. É possível gerenciar suas organizações criando espaços e configurando [funções de usuário e permissões](/docs/admin/index.html#oc_useradmin); veja [Gerenciando suas organizações](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
 {: #ld_table1}
@@ -1332,7 +1332,7 @@ comando:
 remover usuários da instância do {{site.data.keyword.Bluemix_notm}}. Deve-se ter
 permissão de **Usuários** com acesso de **Gravação** para remover usuários.
 
-Para remover um usuário, deve-se fornecer o ID de usuário do usuário. Execute o comando a seguir:
+Para remover um usuário, deve-se fornecer o ID de usuário do usuário. Execute o seguinte comando:
 
 `curl -v -b ./cookies.txt -X DELETE https://<your_host>.ibm.com/codi/v1/users?user_id=<some_user_id@domain.com>`
 {: codeblock}

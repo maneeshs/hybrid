@@ -14,10 +14,10 @@ lastupdated: "2017-09-07"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# 管理 {{site.data.keyword.Bluemix_notm}} 本端及 {{site.data.keyword.Bluemix_notm}} 專用
+# 管理 {{site.data.keyword.Bluemix_local_notm}} 及 {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #mng}
 
-如果您具有「{{site.data.keyword.Bluemix}} 本端」或「{{site.data.keyword.Bluemix_notm}} 專用」的管理者存取權，請移至**管理**頁面來管理資源、監視配額用量、管理使用者許可權、排定升級通知，以及檢視安全報告和日誌等。您可以透過建立空間並設定[使用者角色和許可權](/docs/admin/index.html#oc_useradmin)來管理組織；請參閱[管理組織](/docs/admin/orgs_spaces.html)。
+如果您具有 {{site.data.keyword.Bluemix_local_notm}} 或 {{site.data.keyword.Bluemix_dedicated_notm}} 的管理者存取權，請移至**管理**頁面來管理資源、監視配額用量、管理使用者許可權、排定升級通知，以及檢視安全報告和日誌等。您可以透過建立空間並設定[使用者角色和許可權](/docs/admin/index.html#oc_useradmin)來管理組織；請參閱[管理組織](/docs/admin/orgs_spaces.html)。
 {:shortdesc}
 
 {: #ld_table1}

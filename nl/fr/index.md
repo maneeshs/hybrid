@@ -14,10 +14,10 @@ lastupdated: "2017-09-07"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# Gestion de l'environnement {{site.data.keyword.Bluemix_notm}} local et de l'environnement {{site.data.keyword.Bluemix_notm}} dédié
+# Gestion des environnements {{site.data.keyword.Bluemix_local_notm}} et {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #mng}
 
-Si vous disposez d'un accès administrateur pour l'environnement {{site.data.keyword.Bluemix}} local ou {{site.data.keyword.Bluemix_notm}} dédié, accédez à la page **Administration** pour gérer les ressources, surveiller l'utilisation des quotas, administrer des droits d'utilisateur, planifier des notifications de mise à niveau, afficher des rapports de sécurité et des journaux, etc. Vous pouvez gérer votre organisation en créant des espaces et en configurant des [rôles utilisateur et autorisations](/docs/admin/index.html#oc_useradmin). Voir [Gestion de vos organisations](/docs/admin/orgs_spaces.html).
+Si vous disposez d'un accès administrateur pour l'environnement {{site.data.keyword.Bluemix_local_notm}} ou {{site.data.keyword.Bluemix_dedicated_notm}}, accédez à la page **Administration** pour gérer les ressources, surveiller l'utilisation des quotas, administrer des droits d'utilisateur, planifier des notifications de mise à niveau, afficher des rapports de sécurité et des journaux, etc. Vous pouvez gérer votre organisation en créant des espaces et en configurant des [rôles utilisateur et autorisations](/docs/admin/index.html#oc_useradmin). Voir [Gestion de vos organisations](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
 {: #ld_table1}
@@ -775,7 +775,7 @@ Pour créer une organisation et ajouter des responsables, procédez comme suit :
 
 Vous pouvez créer des espaces dans votre organisation, par exemple un espace *dev* comme environnement de développement, un espace *test* comme environnement de test et un espace *production* comme environnement de production. Ensuite, vous pouvez associer vos applications à des espaces. Procédez comme suit pour créer un espace :
 
-1. Dans la barre de menu, cliquez sur **Compte** &gt; **Gérer les organisations**.
+1. Dans la barre de menus, cliquez sur **Compte** &gt; **Gérer les organisations**.
 2. Sélectionnez l'organisation à laquelle ajouter un espace.
 3. Cliquez sur **Créer un espace**.
 4. Entrez un nom d'espace.
