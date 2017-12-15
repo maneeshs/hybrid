@@ -14,10 +14,10 @@ lastupdated: "2017-09-07"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# {{site.data.keyword.Bluemix_notm}} Local und {{site.data.keyword.Bluemix_notm}} Dedicated verwalten
+# {{site.data.keyword.Bluemix_local_notm}} und {{site.data.keyword.Bluemix_dedicated_notm}} verwalten
 {: #mng}
 
-Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix}} Local oder {{site.data.keyword.Bluemix_notm}} Dedicated verfügen, können Sie über die Seite **Verwaltung** Ressourcen verwalten, die Kontingentnutzung überwachen, Benutzerberechtigungen verwalten, Upgradebenachrichtigungen planen, Sicherheitsberichte und Protokolle anzeigen und vieles mehr. Sie können Ihre Organisationen verwalten, indem Sie Bereiche erstellen und [Benutzerrollen und Berechtigungen festlegen](/docs/admin/index.html#oc_useradmin). Weitere Informationen finden Sie in [Organisationen verwalten](/docs/admin/orgs_spaces.html).
+Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix_local_notm}} oder {{site.data.keyword.Bluemix_dedicated_notm}} verfügen, können Sie über die Seite **Verwaltung** Ressourcen verwalten, die Kontingentnutzung überwachen, Benutzerberechtigungen verwalten, Upgradebenachrichtigungen planen, Sicherheitsberichte und Protokolle anzeigen und vieles mehr. Sie können Ihre Organisationen verwalten, indem Sie Bereiche erstellen und [Benutzerrollen und Berechtigungen festlegen](/docs/admin/index.html#oc_useradmin). Weitere Informationen finden Sie in [Organisationen verwalten](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
 {: #ld_table1}
@@ -388,7 +388,7 @@ Die Registerkarte **Service** zeigt die Gesamtnutzung des Service in Bezug auf d
 ### Kontonutzung
 {: #accountusage}
 
-Sie können die monatliche Nutzung für Ihr Konto für Ihre dedizierte oder lokale Umgebung anzeigen. Mithilfe dieser Daten können Sie ermitteln, wie viel bestimmten Organisationen auf Grundlage ihrer Nutzung zu berechnen ist. Alle Administrationskonsolenbenutzer mit der Berechtigung **Benutzer** und mit dem Zugriffsrecht **Lesen** können die Kontonutzungsdaten anzeigen. Abrechnungsmanager der Organisation können außerdem die Kontonutzungsdaten für ihre Organisationen anzeigen, selbst wenn Abrechnungsmanagern die Administrationskonsolenberechtigung **Benutzer** nicht zugewiesen wurde. Administratoren der Administrationskonsole (Superuserberechtigung) können Organisationen die Rolle eines Abrechnungsmanagers zuweisen, indem sie auf **Konto** &gt; **Organisationen verwalten** klicken.
+Sie können die monatliche Nutzung für Ihr Konto für Ihre dedizierte oder lokale Umgebung anzeigen. Mithilfe dieser Daten können Sie ermitteln, wie viel bestimmten Organisationen auf Grundlage ihrer Nutzung zu berechnen ist. Alle Administrationskonsolenbenutzer mit der Berechtigung **Benutzer** und mit den Zugriffsberechtigungen zum **Lesen** können die Kontonutzungsdaten anzeigen. Abrechnungsmanager der Organisation können außerdem die Kontonutzungsdaten für ihre Organisationen anzeigen, selbst wenn Abrechnungsmanagern die Administrationskonsolenberechtigung **Benutzer** nicht zugewiesen wurde. Administratoren der Administrationskonsole (Superuserberechtigung) können Organisationen die Rolle eines Abrechnungsmanagers zuweisen, indem sie auf **Konto** &gt; **Organisationen verwalten** klicken.
 
 Führen Sie die folgenden Schritte durch, um die Kontonutzungsdaten anzuzeigen:
 
