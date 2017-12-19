@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-06"
+lastupdated: "2017-12-19"
 
 ---
 
@@ -112,7 +112,7 @@ To create an email or webhook subscription from the **Notification Subscriptions
 | Enabled | Select the option to enable the email notifications. Clear the selection to disable the email notification. Subscriptions are enabled by default. |
 | Type | Select **Email**. |
 | Event | Select **Threshold**. |
-| Threshold | Select the type of threshold you want to be notified about: Organization Quota, Physical Disk, Physical Memory, Reserved Disk, or Reserved Memory. |
+| Threshold | Select the type of threshold you want to be notified about: Average CPU, Organization Quota, Physical Disk, Physical Memory, Reserved Disk, or Reserved Memory. |
 | Threshold Direction | Select the direction that you want the data to be moving in, either Ascending or Descending, when it passes the Notify When Crossing value that you set. For example, if the Notify When Crossing value is 50%, and the direction is descending, you are notified only if the usage percentage goes from 50% or more to less than 50%.  If you set the direction to ascending, you would be notified when the usage percentage goes from less than 50% to more than 50%.   |
 | Notify When Crossing Above (%) | Enter the threshold percentage at which you want to be notified. If you chose the Ascending property in the Threshold Direction field, the email notification is sent when the threshold rises above this percentage. |
 | Notify When Crossing Below (%) | Enter the threshold percentage at which you want to be notified. If you chose the Descending property in the Threshold Direction field, the email notification is sent when the threshold drops beneath this percentage. |
@@ -160,7 +160,7 @@ An Organization Quota threshold notification includes only the organizations tha
 | Enabled | Select the option to enable the notification. Clear the selection to disable the notification. Subscriptions are enabled by default. |
 | Type | Select **Webhook**. |
 | Event | Select **Threshold**. |
-| Threshold | Select the type of threshold you want to be notified about: Organization Quota, Physical Disk,  Physical Memory, Reserved Disk, or Reserved Memory.|
+| Threshold | Select the type of threshold you want to be notified about: Average CPU, Organization Quota, Physical Disk,  Physical Memory, Reserved Disk, or Reserved Memory.|
 | Threshold Direction | Select whether you want to see the threshold data in Ascending order or Descending order.  |
 | Notify When Crossing Below (%) | If you selected the **Descending** **Threshold Direction**, enter the threshold percentage at which you want to be notified. When the threshold drops beneath this percentage, the webhook notification is sent. |
 | Notify When Crossing Above (%) | If you selected the **Ascending** **Threshold Direction**, enter the threshold percentage at which you want to be notified. When the threshold rises above this percentage, the webhook notification is sent. |
@@ -201,6 +201,7 @@ An Organization Quota threshold notification includes only the organizations tha
 
 | **IBM value** | **Description** | **Event type** |
 |----------------|----------------|------------------------|
+| {{content.average_cpu}} | Average CPU threshold | Threshold |
 | {{content.org_quota}} | Organization quota threshold | Threshold |
 | {{content.physical_disk}} | Physical disk threshold | Threshold |
 | {{content.physical_memory}} | Physical memory threshold | Threshold |  
