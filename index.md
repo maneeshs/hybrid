@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-07"
+lastupdated: "2017-12-06"
 
 ---
 
@@ -32,7 +32,10 @@ If you have administrator access for {{site.data.keyword.Bluemix_local_notm}} or
 |Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](/docs/admin/index.html#oc_report). |
 |View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending maintenance updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. See [Viewing system information](/docs/admin/index.html#oc_system). |
 |Extend notifications and set up notification subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**. You can use webhooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and notification subscriptions](/docs/admin/index.html#oc_eventsubscription). |
+|Manage European Union System Access| Click **ADMINISTRATION &gt; EU System Access** to manage your EU System Access policy and to view access requests. See [Managing Access to Cloud Systems in the European Union](/docs/admin/index.html#oc_euaccess). |
 {: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
+
+**Note**: The EU System Access option in the {{site.data.keyword.Bluemix_notm}} console is only available if your environment is configured to be an EU Managed Cloud.
 
 <!-- staging only for WoW start -->
 
@@ -2349,3 +2352,111 @@ cf ba
 For more help for a command, use the `-help` option.
 
 For more information about how to work with the {{site.data.keyword.Bluemix_notm}} Admin CLI plug-in, see [{{site.data.keyword.Bluemix_notm}} admin](../cli/plugins/bluemix_admin/index.html).
+
+
+## Managing Access to Cloud Systems in the European Union
+{: #oc_euaccess}
+
+IBM personnel regularly access cloud systems to perform maintenance activities, either in response to incidents or to deploy maintenance updates. IBM makes every effort to assign personnel from the European Union (EU) to perform maintenance activities on {{site.data.keyword.Bluemix_dedicated_notm}} systems located in the EU. When this is not possible, IBM might assign personnel from outside of the EU to perform maintenance on an EU cloud system. You have control over the level of approval required before IBM personnel from outside the EU can access your EU cloud system. Once access is approved in accordance to your access control policies, temporary credentials are provided by IBM to the assigned personnel.
+
+You control access through policy options available in the Administration Console. Click **ADMINISTRATION &gt; EU System Access**. The policies determine the level of approval required by the customer before IBM personnel from outside the EU can access the EU cloud system. You can set up the non-EU access policy, approve or reject access requests resulting from the configured policy, and browse the history of approval requests. The _EU System Access_ view has three tabs:
+ 
+* Policies
+* Pending Requests
+* Request History
+
+**Note:** The EU System Access option in the {{site.data.keyword.Bluemix_notm}} console is only available if your environment is configured to be an EU-managed cloud system.
+
+### Setting up an access policy 
+
+To manage your EU system access policy, click **ADMINISTRATION &gt; EU System Access &gt; Policy**.
+
+In the **Policy** section, you can specify the level of approval required for IBM personnel located outside the EU to access your system. Any access by non-EU personnel to EU cloud systems requires prior IBM approval. The three available policy options determine if and when customer approval is required, including IBM approval.
+
+<ul>
+<li>No customer approval is required. IBM approved personnel from outside the European Union can access the cloud system without your approval.</li>
+<li>Customer approval is always required. IBM personnel from outside the EU can access the cloud system only with explicit approval.</li>
+<li>Custom policy. Your approval is required depending on the type and condition of the maintenance activity for which access is required.</li>
+</ul>
+
+When your policy calls for customer approval, you can optionally define an _Auto-approval_ period where access requests are approved automatically.
+
+For the custom policy, the following lists and describes the various types of activities and their associated conditions:
+
+{: #ld_table18}
+
+| **Activity** | **Condition** | **Description** |       
+|-----------------|-------------------|-------------------|
+| Incident | Blocker | The specified component is inaccessible or not operating as expected.  The environment is significantly impacted. There is no workaround. |
+| Incident | Non-Blocker | The specified component is having intermittent issues or a portion of the component is not working as expected. The environment is not significantly impacted or there is a workaround. |
+| Maintenance Update | Emergency Deployment | The update is required to resolve or prevent an incident. |  
+| Maintenance Update | Normal Deployment | The update is part of a regular upgrade of a service or component to enhance its functionality, usability, reliability or performance. |
+{: caption="Table 18. EU Custom Policy" caption-side="top"}
+
+### Addressing pending requests 
+
+To view access requests that require your attention, click **ADMINISTRATION &gt; EU System Access &gt; Pending Requests**.
+
+In the **Pending Requests** table, you can approve or reject requests to access your EU system from IBM personnel located outside of the EU. Some information on pending requests is displayed as table columns. Additional details are provided when the table row for a given request is expanded.  
+
+To approve or reject one or more requests, select one or more checkboxes to the left of the request and then select the **Approve** or **Reject** button. Once an access request is approved or rejected, which can be done either manually by the customer or automatically through an auto-approve policy, its record moves from the **Pending Requests** tab to the **Request History** tab. Once you approve an access request, you'll be able to see a record of the various IBM personnel accessing the system. 
+
+**Note**: An access request is associated with a specific maintenance activity. That maintenance activity may be carried out by multiple IBM personnel. When you approve an access request, you are potentially approving access by multiple IBM personnel to the system. Each person accessing the cloud system still requires individual approval and credentials by IBM, but you only need to grant approval once for all required activity associated with the update or incident. 
+
+Summary information for each approval request is provided in table rows. Additional information is displayed when a table row is expanded:
+
+<dl>
+<dt>Status</dt>
+<dd>The status of the access request: Pending, Approved, or Rejected.</dd>
+<dt>Activity Type</dt>
+<dd>The type of activity for which access is needed: maintenance update or incident.</dd>
+<dt>Record ID</dt>
+<dd>The ID of the record used to track the activity for which access is needed. The value is linked to the actual record if the activity is a Maintenance Update.</dd>
+<dt>Request Date</dt>
+<dd>The date and time access approval was requested from the customer.</dd>
+<dt>Time to Auto-approval</dt>
+<dd>The time remaining before the request is approved automatically. Applicable only if an auto-approval was specified as part of the access policy. Note that when you set an auto-approval period, the countdown for that Auto-approval starts when the personnel assigned is approved by IBM. Approval requests for maintenance updates might not have a Time to Auto-approval, even if an Auto-approval was specified as part of the access policy. If this is a pre-approval request, the detail will contain a note, indicating that it is for a specific time in the future.</dd>
+<dt>Description</dt>
+<dd>The justification for requesting access to the cloud system.</dd>
+<dt>Severity</dt>
+<dd>Indicates the severity of an incident. It is displayed for incidents only. </dd>
+<dt>Emergency Deployment</dt>
+<dd>Indicates whether a maintenance update needs an emergency deployment.  It is displayed for maintenance updates only.</dd>
+<dt>Note</dt>
+<dd>Indicates when a request is for pre-approval as part of a maintenance update that is scheduled to be deployed in the future. When you approve such request, you are pre-approving access to the cloud system when the Maintenance Update is scheduled for deployment. Once you pre-approve a request, no further approval is required when the system is actually accessed.</dd>
+</dl>
+
+**Note**: A notification subscription can be configured to send you an email or invoke a webhook when a new access request has been created. See the section on **Notifications and notification subscriptions** for more information (/docs/hybrid/index.html#oc_eventsubscription).
+
+### Viewing request history 
+
+To view previous access requests for your system, click **ADMINISTRATION &gt; EU System Access &gt; Request History**
+
+In the **Request History** section, you can view all previous access requests from IBM personnel located outside of the EU.
+
+Summary information for each historical request is provided in table rows. Additional information is displayed when a table row is expanded:
+
+<dl>
+<dt>Status</dt>
+<dd>The status of the access request: approved or rejected.</dd>
+<dt>Activity Type</dt>
+<dd>The type of activity for which access is needed: maintenance update or incident).</dd>
+<dt>Record ID</dt>
+<dd>The ID of the record used to track the update or incident activity. The value is linked to the actual record if the activity is a maintenance update.</dd>
+<dt>Request Date</dt>
+<dd>The date and time access approval was requested from the customer.</dd>
+<dt>Action Date</dt>
+<dd>The date and time when the request was approved or rejected by the customer. The field displays __Automatic Approval__ if the EU Access policy was configured for IBM approval only.</dd>
+<dt>Description</dt>
+<dd>The reason for requesting access to the cloud system.</dd>
+<dt>Severity</dt>
+<dd>Indicates the severity of an incident. It is displayed only for incidents. </dd>
+<dt>Emergency Deployment</dt>
+<dd>Indicates whether a maintenance update needs an emergency deployment. It is displayed only maintenance updates.</dd>
+<dt>Note</dt>
+<dd>Describes any additional relevant conditions on the request. For example, this field will be used to indicate when a request is for pre-approval as part of a maintenance update that is scheduled to be deployed in the future.</dd>
+<dt>Access History</dt>
+<dd>For every person accessing the system, it shows the date and time when access was approved by IBM, and when access for that person was granted and revoked. Individuals are identified as IBM Personnel 1, for example.</dd>
+</dl>
+
+**Note**: New access requests will automatically transition to the **Approved** state and be displayed in the **Request History** section if the access policy has been configured to only require IBM approval.
