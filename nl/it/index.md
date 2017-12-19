@@ -14,10 +14,10 @@ lastupdated: "2017-09-07"
 {:pre: .pre}
 {:table: .aria-labeledby="caption"}
 
-# Gestione di {{site.data.keyword.Bluemix_notm}} locale e {{site.data.keyword.Bluemix_notm}} dedicato
+# Gestione di {{site.data.keyword.Bluemix_local_notm}} e {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #mng}
 
-Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix}} locale o {{site.data.keyword.Bluemix_notm}} dedicato, vai alla pagina **Amministrazione** per gestire risorse, monitorare l'utilizzo delle quote, amministrare le autorizzazioni utente, pianificare le notifiche di aggiornamento, visualizzare log e report di sicurezza e altro. Puoi gestire le tue organizzazioni creando degli spazi e impostando dei [ruoli e delle autorizzazioni per gli utenti](/docs/admin/index.html#oc_useradmin); vedi [Gestione delle tue organizzazioni](/docs/admin/orgs_spaces.html).
+Se disponi dell'accesso come amministratore per {{site.data.keyword.Bluemix_local_notm}} o {{site.data.keyword.Bluemix_dedicated_notm}}, vai alla pagina **Amministrazione** per gestire le risorse, monitorare l'utilizzo delle quote, amministrare le autorizzazioni utente, pianificare le notifiche di aggiornamento, visualizzare log e report di sicurezza e altro. Puoi gestire le tue organizzazioni creando degli spazi e impostando dei [ruoli e delle autorizzazioni per gli utenti](/docs/admin/index.html#oc_useradmin); vedi [Gestione delle tue organizzazioni](/docs/admin/orgs_spaces.html).
 {:shortdesc}
 
 {: #ld_table1}
@@ -669,7 +669,7 @@ Le seguenti tabelle possono aiutarti a compilare il file JSON.
 |plan_updateable | Un valore booleano che indica se il servizio supporta le modifiche del piano. Il valore predefinito è false. |
 |embeddableDashboard (facoltativo) | Un campo che indica come viene visualizzato il dashboard del servizio nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Se non specifichi questo campo, il dashboard viene integrato ma viene limitato a una larghezza minima di 960px e il dashboard avrà un ulteriore riempimento orizzontale intorno all'iframe. Puoi utilizzare true, false, drilldown o launch. Per questo valore puoi utilizzare i seguenti campi: true, false, drilldown e launch.  |
 |notCreatable (facoltativo) | Un valore booleano che indica se le istanze per il servizio possono essere create dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} e dall'interfaccia riga di comando cf. Il valore true significa che le istanze del servizio non possono essere create né dall'interfaccia utente {{site.data.keyword.Bluemix_notm}} né dall'interfaccia riga di comando cf. Il valore predefinito è false. |
-|notCreatableMessage (facoltativo) | Un messaggio che viene visualizzato nell'interfaccia utente {{site.data.keyword.Bluemix_notm}} se non è possibile creare le istanze del servizio. Se non specifichi questo campo, verrà visualizzato il seguente messaggio predefinito: Per ricevere una notifica sulla disponibilità del servizio, confermare l'indirizzo email o immettere un nuovo indirizzo. |
+|notCreatableMessage (facoltativo) | Un messaggio che viene visualizzato nell'interfaccia utente {{site.data.keyword.Bluemix_notm}} se non è possibile creare le istanze del servizio. Se non specifichi questo campo, verrà visualizzato il seguente messaggio predefinito: Per ricevere una notifica sulla disponibilità del servizio, confermare l'indirizzo e-mail o immettere un nuovo indirizzo. |
 |notCreatableRobotMessage (facoltativo) | Un messaggio che viene visualizzato nell'area commenti della pagina dei dettagli del servizio nell'interfaccia utente {{site.data.keyword.Bluemix_notm}}. Il messaggio viene utilizzato per indicare che un servizio potrebbe avere un problema o altre cause che lo rendono non disponibile. Puoi specificare un messaggio per spiegare il motivo. Se non specifichi questo campo, verrà visualizzato il seguente messaggio predefinito: Questo servizio non è al momento disponibile. |
 |apiReferenceUrl (facoltativo) | L'URL dell'iframe nell'area Riferimento API nella pagina dei dettagli del servizio all'interno del catalogo. Se non viene utilizzato per la pagina dei dettagli del servizio nel Catalogo, puoi immettere il valore numerico assegnato alla Documentazione API REST del tuo servizio durante la registrazione nel microservizio Documentazione API REST di {{site.data.keyword.Bluemix_notm}}. In questo modo, la documentazione dell'API REST verrà visualizzata nel dashboard del servizio. |
 |sdkDownloadUrl (facoltativo) | L'URL della pagina Web che si apre quando fai clic sul pulsante Scarica SDK. Il pulsante Scarica SDK si trova nel tile del servizio nella pagina di panoramica dell'applicazione nel Dashboard. La
@@ -776,7 +776,7 @@ Per creare un'organizzazione e aggiungere gestori, completa la seguente procedur
 
 1. Fai clic su <strong>CREA ORGANIZZAZIONE</strong>.
 2. Immetti un nome per l'organizzazione.
-3. Immetti il nome o l'email della persona che vuoi aggiungere come gestore. Puoi aggiungere più di un gestore immettendo e selezionando più nomi.
+3. Immetti il nome o l'e-mail della persona che vuoi aggiungere come gestore. Puoi aggiungere più di un gestore immettendo e selezionando più nomi.
 4. Fai clic su <strong>CREA ORGANIZZAZIONE</strong> per salvare le tue modifiche e creare l'organizzazione.
 
 ### Creazione di spazi
@@ -923,7 +923,7 @@ A seconda del tuo accesso di **Lettura** o **Scrittura** per le autorizzazioni d
 **Utenti** con l'accesso in **Scrittura**, puoi aggiungere gli utenti.
 
   1. Per aggiungere un singolo utente dalla tua directory LDAP, fai clic su **Aggiungi utente**.
-  2. Nel campo **Ricerca**, immetti l'indirizzo email per l'utente e seleziona quindi l'utente dall'elenco compilato.
+  2. Nel campo **Ricerca**, immetti l'indirizzo e-mail per l'utente e seleziona quindi l'utente dall'elenco compilato.
   3. Quindi, dal campo **Organizzazione**, scegli l'organizzazione a cui vuoi aggiungere l'utente immettendo il nome dell'organizzazione e selezionandolo dall'elenco compilato.
   4. Per aggiungere l'utente all'organizzazione selezionata, fai clic su **Aggiungi utente**.
 
@@ -942,7 +942,7 @@ non dispongono di autorizzazioni.
 completata correttamente, l'utente o il gruppo viene aggiunto alla tabella per consentirti operazioni di visualizzazione e ricerca. Quando gli utenti vengono aggiunti,
 non dispongono di autorizzazioni.
 
-* Aggiungi un gruppo di utenti importando un foglio di calcolo che include ID utente, indirizzi email utente e l'organizzazione a cui intendi aggiungere l'utente. Se disponi dell'autorizzazione **Superuser** o **Utenti** con l'accesso in **Scrittura**, puoi aggiungere gli utenti.
+* Aggiungi un gruppo di utenti importando un foglio di calcolo che include ID utente, indirizzi e-mail utente e l'organizzazione a cui intendi aggiungere l'utente. Se disponi dell'autorizzazione **Superuser** o **Utenti** con l'accesso in **Scrittura**, puoi aggiungere gli utenti.
 
 **Nota**: immetti gli ID utente che corrispondono ai valori utilizzati nel tuo registro utenti.
 
@@ -1177,7 +1177,7 @@ un cookie.</dd>
 Per ciascun utente registrato, i risultati includono le seguenti informazioni:
 * `"first_name"` (nome) e
                                 `"last_name"` (cognome)
-* `"user_id"`, ID utente e indirizzo email
+* `"user_id"`, ID utente e indirizzo e-mail
 * `"guid"`, GUID dell'organizzazione.
 * `"permissions"`, ossia le autorizzazioni assegnate all'utente per la Console di gestione.
 
@@ -1252,7 +1252,7 @@ o più organizzazioni. Per aggiungere un utente,
 devi fornire le seguenti informazioni:
 
 * Nome e cognome dell'utente. Fornisci `"nome"` e `"cognome"` da [Elenco degli utenti](index.html#listingusr).
-* Indirizzo email e ID utente: fornisci l'`"id_utente"` da [Elenco degli utenti](index.html#listingusr) sia per l'indirizzo email sia per l'ID utente.
+* Indirizzo e-mail e ID utente: fornisci l'`"id_utente"` da [Elenco degli utenti](index.html#listingusr) sia per l'indirizzo e-mail sia per l'ID utente.
 * `"guid"`. Fornisci il GUID dell'organizzazione da [Elenco delle organizzazioni](index.html#listingorg).
 
 Per fornire le informazioni, ti servi di un file JSON.
@@ -1275,7 +1275,7 @@ questo contenuto:</p>
 {
     "members": [
         {
-            "emails": [
+            "e-mails": [
                 "un_id_utente@dominio.com"
             ],
             "first_name": "un_nome",
