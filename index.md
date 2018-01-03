@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-12-19"
+lastupdated: "2017-01-03"
 
 ---
 
@@ -235,7 +235,15 @@ You can view scheduled and pending maintenance updates, if you have the superuse
 ### Setting preapproved update windows
 {: #preapprovedmaintenance}
 
-Non-disruptive maintenance updates are scheduled to run during preapproved windows of time. By default, two weekly available update windows are created for your system. These windows are typically set to recur every Saturday and Sunday night. You can change the default settings in one of the following ways:
+Non-disruptive maintenance updates are scheduled to run during preapproved windows of time. The following update windows are created by default in every system on Mondays and Wednesdays (GMT):
+
+<ul>
+<li>01:00AM - 07:00AM (GMT)</li>
+<li>09:00AM - 03:00PM (GMT)</li>
+<li>05:00PM - 11:00PM (GMT)</li>
+</ul>
+
+You can change the default settings in one of the following ways:
  * Edit the default update windows by choosing a different day or a different start time, or both
  * Create an update window and then delete the default update window
 
