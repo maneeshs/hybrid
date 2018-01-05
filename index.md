@@ -1744,6 +1744,7 @@ The following sections provide the data format.
 {: screen}
 
 ### Environment metrics response format
+{: #envmetricsresponse}
 
 ```
 {
