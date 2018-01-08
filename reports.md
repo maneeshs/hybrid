@@ -145,7 +145,7 @@ Reports events related to operations performed by a database administrator on th
 <ul>
 <li>UAADB: vcap, root, backup_user.
 <li>CCDB: vcap, ccadmin, backup_user.
-<li>Usage outside of the above will need investigation into who did the operation. This can be done using the Operating System Administration Security Report and the Operating System Login Security Report.
+<li>Usage outside of the previous will need investigation into who did the operation. This can be done using the Operating System Administration Security Report and the Operating System Login Security Report.
 </ul>
 </dd>
 <dt>Source</dt> 
