@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-03"
+lastupdated: "2018-01-10"
 
 ---
 
@@ -17,22 +17,22 @@ lastupdated: "2018-01-03"
 # Managing {{site.data.keyword.Bluemix_local_notm}} and {{site.data.keyword.Bluemix_dedicated_notm}}
 {: #mng}
 
-If you have administrator access for {{site.data.keyword.Bluemix_local_notm}} or {{site.data.keyword.Bluemix_dedicated_notm}}, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](/docs/admin/index.html#oc_useradmin); see [Managing your organizations](/docs/admin/orgs_spaces.html).
+If you have administrator access for {{site.data.keyword.Bluemix_local_notm}} or {{site.data.keyword.Bluemix_dedicated_notm}}, go to the **Administration** page to manage resources, monitor quota usage, administer user permissions, schedule upgrade notifications, view security reports and logs, and more. You can manage your orgs by creating spaces and setting [user roles and permissions](/docs/hybrid/index.html#oc_useradmin); see [Managing your organizations](/docs/account/orgs_spaces.html).
 {:shortdesc}
 
 {: #ld_table1}
 
 | What can I do? | Details |    
 |----------------|---------|
-|Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business. See [Viewing usage information](/docs/admin/index.html#oc_resource).|
-|Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](/docs/admin/index.html#oc_catalog).|
-|Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](/docs/admin/index.html#oc_organizations).|
-|Create spaces and assign user roles | Click **Account** &gt; **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](/docs/admin/orgs_spaces.html). |
-|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](/docs/admin/index.html#oc_useradmin). |
-|Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](/docs/admin/index.html#oc_report). |
-|View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending maintenance updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. See [Viewing system information](/docs/admin/index.html#oc_system). |
-|Extend notifications and set up notification subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**. You can use webhooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and notification subscriptions](/docs/admin/index.html#oc_eventsubscription). |
-|Manage European Union System Access| Click **ADMINISTRATION &gt; EU System Access** to manage your EU System Access policy and to view access requests. See [Managing Access to Cloud Systems in the European Union](/docs/admin/index.html#oc_euaccess). |
+|Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business. See [Viewing usage information](/docs/hybrid/index.html#oc_resource).|
+|Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](/docs/hybrid/index.html#oc_catalog).|
+|Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](/docs/hybrid/index.html#oc_organizations).|
+|Create spaces and assign user roles | Click **Account** &gt; **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](/docs/hybrid/orgs_spaces.html). |
+|Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](/docs/hybrid/index.html#oc_useradmin). |
+|Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](/docs/hybrid/index.html#oc_report). |
+|View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending maintenance updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. See [Viewing system information](/docs/hybrid/index.html#oc_system). |
+|Extend notifications and set up notification subscriptions | Click **ADMINISTRATION &gt; SYSTEM INFORMATION &gt; *Number* pending**. You can use webhooks to integrate with a web service of your choice to set up an event notification subscription for an update or incident. See [Notifications and notification subscriptions](/docs/hybrid/index.html#oc_eventsubscription). |
+|Manage European Union System Access| Click **ADMINISTRATION &gt; EU System Access** to manage your EU System Access policy and to view access requests. See [Managing Access to Cloud Systems in the European Union](/docs/hybrid/index.html#oc_euaccess). |
 {: caption="Table 1. Administrative tasks for managing your {{site.data.keyword.Bluemix_notm}} local or dedicated instance" caption-side="top"}
 
 **Note**: The EU System Access option in the {{site.data.keyword.Bluemix_notm}} console is only available if your environment is configured to be an EU Managed Cloud.
@@ -343,7 +343,7 @@ You can view different types of usage information for your local or dedicated in
 
 - Resource information including disk space, CPU usage, network usage, and average response times. See [Resource usage](index.html#resourceusage).
 - Account usage per org including number of runtime apps with usage, total number of runtime GB-hours, and the number of service instances with usage. See [Account usage](index.html#accountusage).
-- Org memory quota usage, allocated app memory based on the total used memory quota, and a view of GB-hour usage per app for a specific org. You can also view quota usage for all orgs on the  Organization Administration page in the **Quota Monitoring** section. See [Organization administration](../admin/index.html#orgusage).
+- Org memory quota usage, allocated app memory based on the total used memory quota, and a view of GB-hour usage per app for a specific org. You can also view quota usage for all orgs on the  Organization Administration page in the **Quota Monitoring** section. See [Organization administration](../hybrid/index.html#orgusage).
 
 
 ### Resource usage
@@ -389,7 +389,7 @@ To see more detailed information about your physical and reserved memory or disk
 	
 For each of the available historical usage views, at least two data points are required for the graph to render. This equates to data for at least two hours during the last 48 hours, two days during the last 30 days, and two months during the last 5 months. For the 30 day and 5 month views, partially complete averages or maximum values are returned for the current day or month and will adjust as more data is collected.
 
-The data powering these views is available via the [Metrics API](/docs/admin/index.html#envappmetricsapi). To see the actual API endpoints and data used to generate the view, click on the **Learn more about the API** link above the chart. If you click on any of the links in the dialog that appears, a new tab will open in your browser containing the JSON response of the metrics API endpoint. 
+The data powering these views is available via the [Metrics API](/docs/hybrid/index.html#envappmetricsapi). To see the actual API endpoints and data used to generate the view, click on the **Learn more about the API** link above the chart. If you click on any of the links in the dialog that appears, a new tab will open in your browser containing the JSON response of the metrics API endpoint. 
 
 #### Service usage details
 {: #servicesresourceusage}
@@ -451,7 +451,7 @@ To view usage per org, click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION**
 - Application allocation graph that shows which applications are included in the used memory quota.
 - Metered application usage graph that shows a a three-month report of used GB-hours per deployed app. You can select the **List View** to see data for all apps, including the memory allocation per app and the metered GB-hour usage for the past three months.
 
-For more information about viewing usage per org, adjusting quota plans, and managing your orgs, see [Administering organizations](../admin/index.html#oc_organizations).
+For more information about viewing usage per org, adjusting quota plans, and managing your orgs, see [Administering organizations](../hybrid/index.html#oc_organizations).
 
 ### Reports
 {: #oc_report}
