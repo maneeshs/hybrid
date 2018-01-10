@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-07"
+lastupdated: "2017-12-19"
 
 ---
 
@@ -32,7 +32,10 @@ Si vous disposez d'un accès administrateur pour l'environnement {{site.data.key
 |Consulter les rapports et les journaux | Cliquez sur **ADMINISTRATION &gt; RAPPORTS ET JOURNAUX** afin d'afficher des rapports de sécurité et des journaux d'audit pour votre instance. Voir [Affichage des rapports](/docs/admin/index.html#oc_report). |
 |Afficher les informations système | Cliquez sur **ADMINISTRATION &gt; INFORMATIONS SYSTEME** afin d'afficher des informations système, telles que les mises à jour de maintenance en attente, le nom et la version de votre instance, la région, l'adresse URL de l'API, l'adresse URL de l'interface de ligne de commande, les détails de la configuration LDAP, les mappages des groupes et des utilisateurs, des statistiques et les domaines partagés. Voir [Affichage des informations système](/docs/admin/index.html#oc_system). |
 |Etendre des notifications et configurer des abonnements à des notifications | Cliquez sur **Administration &gt; Informations système &gt; *Nombre* en attente**. Vous pouvez utiliser des webhooks pour l'intégration à un service Web de votre choix afin de configurer un abonnement aux notifications d'événement pour une mise à jour ou un incident. Voir [Notifications et abonnements à des notifications](/docs/admin/index.html#oc_eventsubscription). |
+|Gérer l'accès au système de l'Union européenne| Cliquez sur **ADMINISTRATION &gt; Accès au système de l'UE** pour gérer votre règle d'accès au système de l'Union européenne et afficher les demandes d'accès. Voir [Gestion de l'accès aux systèmes cloud de l'Union européenne](/docs/admin/index.html#oc_euaccess). |
 {: caption="Tableau 1. Tâches d'administration pour la gestion de votre instance {{site.data.keyword.Bluemix_notm}} locale ou dédiée" caption-side="top"}
+
+**Remarque** : l'option Accès au système de l'UE dans la console {{site.data.keyword.Bluemix_notm}} n'est disponible que si votre environnement est configuré pour être un cloud géré par l'Union européenne.
 
 <!-- staging only for WoW start -->
 
@@ -109,7 +112,7 @@ Pour créer un abonnement par courrier électronique ou webhook depuis la page *
 | Activé | Sélectionnez l'option d'activation des notifications par courrier électronique. Effacez la sélection pour désactiver la notification par courrier électronique. Les abonnements sont activés par défaut. |
 | Type | Sélectionnez **Courrier électronique**. |
 | Evénement | Sélectionnez **Seuil**. |
-| Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : quota d'organisation, disque physique, mémoire physique, disque réservé ou mémoire réservée. |
+| Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : UC moyenne, Quota de l'organisation, Disque physique, Mémoire physique, Disque réservé ou Mémoire réservée. |
 | Direction du seuil | Sélectionnez la direction dans laquelle les données doivent être classées, c'est-à-dire Croissant ou Décroissant, lorsqu'elles dépassent ou passent sous la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil que vous avez définie. Par exemple, si la valeur Notifier lors du dépassement du seuil/lors du passage sous le seuil est de 50 % et que la direction est décroissante, vous ne recevez de notification que si le pourcentage d'utilisation passe de 50 % ou plus à moins de 50 %. Si vous définissez la direction croissante, vous recevez une notification lorsque le pourcentage d'utilisation passe de moins de 50 % à plus de 50 %.
 | Notifier lors du dépassement du seuil (%) | Entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Si vous avez choisi la propriété Croissant dans la zone Direction du seuil, la notification par courrier électronique est envoyée lorsque le seuil dépasse ce pourcentage. |
 | Notifier lors du passage sous le seuil (%) | Entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Si vous avez choisi la propriété Décroissant dans la zone Direction du seuil, la notification par courrier électronique est envoyée lorsque le seuil passe sous ce pourcentage. |
@@ -157,7 +160,7 @@ Une notification de seuil de quota inclut uniquement les organisations qui ont d
 | Activé | Sélectionnez l'option d'activation de la notification. Effacez la sélection pour désactiver la notification. Les abonnements sont activés par défaut. |
 | Type | Sélectionnez **Webhook**. |
 | Evénement | Sélectionnez **Seuil**. |
-| Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : quota d'organisation, disque physique, mémoire physique, disque réservé ou mémoire réservée.|
+| Seuil | Sélectionnez le type de seuil pour lequel vous voulez recevoir des notifications : UC moyenne, Quota de l'organisation, Disque physique, Mémoire physique, Disque réservé ou Mémoire réservée. |
 | Direction du seuil | Indiquez si vous voulez afficher les données de seuil dans l'ordre croissant ou décroissant.  |
 | Notifier lors du passage sous le seuil (%) | Si vous avez sélectionné une **direction de seuil** **décroissante**, entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Lorsque le seuil passe sous ce pourcentage, la notification par webhook est envoyée. |
 | Notifier lors du dépassement du seuil (%) | Si vous avez sélectionné une **direction de seuil** **croissante**, entrez le seuil en pourcentage à partir duquel vous voulez recevoir une notification. Lorsque le seuil dépasse ce pourcentage, la notification par webhook est envoyée. |
@@ -198,6 +201,7 @@ Une notification de seuil de quota inclut uniquement les organisations qui ont d
 
 | **Valeur IBM** | **Description** | **Type d'événement** |
 |----------------|----------------|------------------------|
+| {{content.average_cpu}} | Seuil d'UC moyen | Seuil |
 | {{content.org_quota}} | Seuil de quota d'organisation | Seuil |
 | {{content.physical_disk}} | Seuil de disque physique | Seuil |
 | {{content.physical_memory}} | Seuil de mémoire physique | Seuil |  
@@ -260,7 +264,7 @@ Vous pouvez choisir de définir des fenêtres d'indisponibilités spécifiques a
 4. Définissez votre fenêtre d'indisponibilité en sélectionnant la fréquence, la durée et l'heure de début de la fenêtre.
 5. Cliquez sur **Soumettre**.
 
-Les dates d'indisponibilité doivent être approuvées par IBM et le délai d'approbation est variable. Une fois les dates acceptées, IBM annule toutes les mises à jour actuellement prévues dans le cadre de la fenêtre d'indisponibilité. IBM crée également de nouveaux enregistrements pour ces mises à jour et planifie ces dernières en dehors des dates d'indisponibilité approuvées.
+Les fenêtres d'indisponibilité nécessitent l'approbation d'IBM et le temps requis pour obtenir cette approbation est variable. Les fenêtres d'indisponibilité qui coïncident avec un déploiement déjà planifié pour se produire dans un laps de temps de 7 jours après la soumission de l'indisponibilité risquent d'être encore plus longues à approuver. Une fois l'indisponibilité demandée approuvée, IBM annule toutes les mises à jour qui sont actuellement prévues dans le cadre de la fenêtre d'indisponibilité. IBM crée également de nouveaux enregistrements pour ces mises à jour et planifie ces dernières en dehors des dates d'indisponibilité approuvées.
 
 ### Planification et approbation des mises à jour
 {: #scheduleandapprove}
@@ -848,7 +852,7 @@ Un quota représente les limites de ressources pour les organisations de votre e
 <dd>Nombre maximal d'adresses IP publiques pouvant être allouées entre tous les espaces d'une organisation.</dd>
 </dl>
 <strong>Remarque</strong> : si vous ne disposez pas encore de conteneurs dans votre environnement, ou si les conteneurs de votre environnement ne sont pas encore configurés, vous obtenez un message d'erreur.
-<p>Pour plus d'informations sur les conteneurs, voir [A propos d'IBM containers](/docs/containers/container_ov.html). Pour plus d'informations sur les quotas de conteneur, voir [Quota et comptes Bluemix](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Pour plus d'informations sur les conteneurs, voir [A propos d'IBM containers](/docs/containers/container_ov.html). Pour plus d'informations sur les quotas de conteneur, voir [Quota et comptes {{site.data.keyword.Bluemix_notm}}](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
 <strong>Remarque :</strong> Les conteneurs ne sont pas disponibles dans la région {{site.data.keyword.Bluemix_notm}} Sydney.</li>
 </ul>
 <li>Pour sauvegarder les modifications que vous avez apportées dans la page Gérer l'organisation, cliquez sur <strong>SAUVEGARDER</strong>.</li>
@@ -2293,3 +2297,111 @@ cf ba
 Pour obtenir de l'aide supplémentaire sur une commande, utilisez l'option `-help`.
 
 Pour plus d'informations sur l'utilisation du plug-in d'interface de ligne de commande d'administration {{site.data.keyword.Bluemix_notm}}, voir [Administration {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html).
+
+
+## Gestion de l'accès aux systèmes cloud de l'Union européenne
+{: #oc_euaccess}
+
+Le personnel {{site.data.keyword.IBM_notm}} accède régulièrement aux systèmes cloud pour effectuer des activités de maintenance, en réponse à des incidents ou pour déployer des mises à jour de maintenance. {{site.data.keyword.IBM_notm}} met tout en oeuvre pour demander à des personnes appartenant à l'Union européenne de procéder aux activités de maintenance sur des systèmes {{site.data.keyword.Bluemix_dedicated_notm}} situés dans l'UE. Quand ce n'est pas possible, {{site.data.keyword.IBM_notm}} peut charger des personnes vivant en dehors de l'Union européenne d'effectuer cette maintenance sur un système cloud de l'UE. Vous contrôlez le niveau d'approbation requis avant que des employés{{site.data.keyword.IBM_notm}} hors UE puissent accéder à votre système cloud situé dans l'Union européenne. Une fois l'accès approuvé en accord avec vos règles de contrôle d'accès, des données d'identification temporaires sont fournies par {{site.data.keyword.IBM_notm}} au personnel désigné.
+
+Vous gérez l'accès via des options de règle disponibles dans la console d'administration. Cliquez sur **ADMINISTRATION &gt; Accès au système de l'UE**. Les règles déterminent le niveau d'approbation requis par le client avant que le personnel {{site.data.keyword.IBM_notm}} travaillant en dehors de l'Union européenne puisse accéder au système cloud de l'UE. Vous pouvez configurer une règle d'accès non UE, approuver ou rejeter des demandes en provenance de la règle configurée ou parcourir l'historique des demandes d'approbation. La vue _Accès au système de l'UE_ propose trois onglets :
+ 
+* Règles
+* Demandes en attente
+* Historique des demandes
+
+**Remarque :** l'option Accès au système de l'UE de la console {{site.data.keyword.Bluemix_notm}} n'est disponible que si votre environnement est configuré pour être un système cloud géré par l'Union européenne.
+
+### Configuration d'une règle d'accès 
+
+Pour gérer votre règle d'accès au système de l'UE, cliquez sur **ADMINISTRATION &gt; Accès au système de l'UE &gt; Règle**.
+
+Dans la section **Règle**, vous pouvez spécifier le niveau d'approbation requis à accorder au personnel IBM situé en dehors de l'UE pour accéder à votre système. Tout accès par un employé ne se trouvant pas dans l'Union européenne à des systèmes cloud de l'EU nécessite l'approbation préalable d'IBM. Les trois options de règles disponibles déterminent si et quand une approbation du client est requise, incluant l'approbation d'IBM.
+
+<ul>
+<li>Aucune approbation du client n'est requise. Le personnel approuvé par IBM et travaillant en dehors de l'Union européenne peut accéder au système cloud sans votre approbation.</li>
+<li>L'approbation du client est toujours requise. Le personnel IBM travaillant en dehors de l'Union européenne ne peut accéder au système cloud qu'avec votre approbation explicite.</li>
+<li>Règle personnalisée. Votre approbation est requise selon le type et la condition de l'activité de maintenance pour laquelle un accès est requis.</li>
+</ul>
+
+Quand votre règle demande une approbation du client, vous pouvez définir éventuellement une période _Approbation automatique_ durant laquelle les demandes d'accès sont automatiquement approuvées.
+
+Pour la règle personnalisée, le tableau ci-après répertorie et décrit les différents types d'activités et les conditions qui leur sont associées :
+
+{: #ld_table18}
+
+| **Activité** | **Condition** | **Description** |       
+|-----------------|-------------------|-------------------|
+| Incident | Blocage | Le composant spécifié est inaccessible ou ne fonctionne pas comme prévu. L'environnement est impacté de façon significative. Il n'existe pas de solution de contournement.|
+| Incident | Pas de blocage | Le composant spécifié connaît des problèmes intermittents ou une portion du composant ne fonctionne pas comme prévu. L'environnement n'est pas impacté de façon significative ou une solution de contournement existe. |
+| Mise à jour de maintenance | Déploiement d'urgence | La mise à jour est nécessaire pour résoudre ou empêcher un incident. |  
+| Mise à jour de maintenance | Déploiement normal | La mise à jour fait partie d'un processus de mise à niveau périodique d'un service ou d'un composant pour améliorer ses fonctionnalités, sa facilité d'emploi, sa fiabilité ou ses performances. |
+{: caption="Tableau 18. Règle personnalisée - Union européenne" caption-side="top"}
+
+### Adressage des demandes en attente 
+
+Pour afficher les demandes d'accès requérant votre attention, cliquez sur **ADMINISTRATION &gt; Accès au système de l'UE &gt; Demandes en attente**.
+
+Dans le tableau **Demandes en attente**, vous pouvez approuver ou rejeter des demandes d'accès à votre système UE effectuée par un membre du personnel IBM situé en dehors de l'Union européenne. Certaines informations relatives aux demandes en attente s'affichent sous forme de colonnes de tableau. Des détails supplémentaires sont fournis quand la ligne de tableau pour une demande donnée est développée.  
+
+Pour approuver ou rejeter une ou plusieurs demandes, cochez la ou les cases se trouvant à gauche de la ou des demandes concernées puis sélectionnez le bouton **Approuver** ou **Rejeter**. Une fois qu'une demande d'accès est approuvée ou rejetée, ce qui peut être effectué manuellement par le client ou automatiquement via une règle d'approbation automatique, son enregistrement est déplacé de l'onglet **Demandes en attente** vers l'onglet **Historique des demandes**. Une fois que vous avez approuvé une demande d'accès, vous pouvez voir un enregistrement des différents employés IBM qui accèdent au système. 
+
+**Remarque** : une demande d'accès est associée à une activité de maintenance spécifique. Cette activité peut être effectuée par plusieurs membres du personnel IBM. Quand vous approuvez une demande d'accès, vous approuvez potentiellement l'accès au système de plusieurs employés IBM différents. Chaque personne accédant au système cloud requiert toujours une approbation individuelle et des données d'identification de la part d'IBM, mais vous n'avez besoin d'accorder votre approbation qu'une seule fois pour l'ensemble de l'activité requise associée à la mise à jour ou l'incident. 
+
+Des informations récapitulatives pour chaque demande d'approbation sont fournies dans les lignes du tableau. D'autres informations s'affichent quand une ligne de tableau est développée :
+
+<dl>
+<dt>Statut</dt>
+<dd>Statut de la demande d'accès : En attente, Approuvée ou Rejetée.</dd>
+<dt>Type d'activité</dt>
+<dd>Type d'activité pour laquelle l'accès est nécessaire : mise à jour de maintenance ou incident.</dd>
+<dt>ID d'enregistrement</dt>
+<dd>ID de l'enregistrement utilisé pour procéder au suivi de l'activité pour laquelle l'accès est nécessaire. La valeur est liée à l'enregistrement réel si le type d'activité est Mise à jour de maintenance.</dd>
+<dt>Date de demande</dt>
+<dd>Date et heure à laquelle l'approbation d'accès a été demandée au client.</dd>
+<dt>Délai d'approbation automatique</dt>
+<dd>Temps restant avant que la demande soit approuvée automatiquement. Ne s'applique que si l'approbation automatique a été spécifiée en tant qu'élément de la règle d'accès. Notez que quand vous définissez une période d'approbation automatique, le compte à rebours pour cette approbation démarre quand le personnel affecté est approuvé par IBM. Les demandes d'approbation pour les mises à jour de maintenance peuvent ne pas avoir de valeur Délai d'approbation automatique, même si une approbation automatique a été spécifiée dans la règle d'accès. S'il s'agit d'une demande de préapprobation, les détails incluent une note, qui indique que le délai s'applique à un moment spécifique dans le futur.</dd>
+<dt>Description</dt>
+<dd>Justification de la demande d'accès au système cloud.</dd>
+<dt>Gravité</dt>
+<dd>Indique le niveau de gravité d'un incident. Ne s'affiche que pour les incidents. </dd>
+<dt>Déploiement d'urgence</dt>
+<dd>Indique si une mise à jour de maintenance nécessite un déploiement d'urgence. Ne s'affiche que pour les mises à jour de maintenance.</dd>
+<dt>Note</dt>
+<dd>Indique si une demande concerne une préapprobation dans le cadre d'une mise à jour de maintenance prévue pour être déployée dans le futur. Quand vous approuvez une telle demande, vous préapprouvez l'accès au système cloud quand la mise à jour de maintenance est prévue pour déploiement. Une fois la demande préapprouvée, aucune autre approbation n'est requise au moment où l'accès au système est effectué.</dd>
+</dl>
+
+**Remarque** : un abonnement aux notifications peut être configuré pour envoyer un e-mail ou invoquer un webhook quand une nouvelle demande d'accès a été créée. Voir la section **Notifications et abonnements à des notifications** pour plus d'informations (/docs/hybrid/index.html#oc_eventsubscription).
+
+### Affichage de l'historique des demandes 
+
+Pour afficher les demandes d'accès précédentes enregistrées pour votre système, cliquez sur **ADMINISTRATION &gt; Accès au système de l'UE &gt; Historique des demandes**
+
+Dans la section **Historique des demandes**, vous pouvez visualiser toutes les demandes d'accès précédentes effectuées par des employés IBM situés en dehors de l'Union européenne.
+
+Des informations récapitulatives pour chaque demande d'historique sont fournies dans les lignes du tableau. D'autres informations s'affichent quand une ligne de tableau est développée :
+
+<dl>
+<dt>Statut</dt>
+<dd>Statut de la demande d'accès : Approuvée ou Rejetée.</dd>
+<dt>Type d'activité</dt>
+<dd>Type d'activité pour laquelle l'accès est nécessaire : mise à jour de maintenance ou incident.</dd>
+<dt>ID d'enregistrement</dt>
+<dd>ID de l'enregistrement utilisé pour procéder au suivi de l'activité de mise à jour ou d'incident. La valeur est liée à l'enregistrement réel si l'activité est une mise à jour de maintenance.</dd>
+<dt>Date de demande</dt>
+<dd>Date et heure à laquelle l'approbation d'accès a été demandée au client.</dd>
+<dt>Date de l'action</dt>
+<dd>Date et heure à laquelle la demande a été approuvée ou rejetée par le client. La zone affiche __Approbation automatique__ si la règle d'accès UE n'a été configurée que pour l'approbation IBM.</dd>
+<dt>Description</dt>
+<dd>Motif de la demande d'accès au système cloud.</dd>
+<dt>Gravité</dt>
+<dd>Indique le niveau de gravité d'un incident. Ne s'affiche que pour les incidents. </dd>
+<dt>Déploiement d'urgence</dt>
+<dd>Indique si une mise à jour de maintenance nécessite un déploiement d'urgence. Ne s'affiche que pour les mises à jour de maintenance.</dd>
+<dt>Note</dt>
+<dd>Décrit toutes autres conditions pertinentes relatives à la demande. Ainsi, cette zone peut être utilisée pour indiquer si une demande concerne une préapprobation dans le cadre d'une mise à jour de maintenance prévue pour être déployée dans le futur. </dd>
+<dt>Historique des accès</dt>
+<dd>Pour chaque personne accédant au système, affiche la date et l'heure à laquelle l'accès a été approuvé par IBM, et le moment où l'accès pour cette personne a été accordé et révoqué. Les individus sont identifiés comme Personnel IBM 1, par exemple.</dd>
+</dl>
+
+**Remarque** : les nouvelles demandes d'accès passent automatiquement à l'état **Approuvée** et sont affichées dans la section **Historique des demandes** si la règle d'accès a été configurée pour ne requérir que l'approbation d'IBM.

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-07"
+lastupdated: "2017-12-19"
 
 ---
 
@@ -32,7 +32,10 @@ Si tiene acceso de administrador para {{site.data.keyword.Bluemix_local_notm}} o
 |Revisar informes y registros | Pulse **ADMINISTRACIÓN &gt; INFORMES Y REGISTROS** para ver informes de seguridad y registros de auditoría para su instancia. Ver [Visualización de informes](/docs/admin/index.html#oc_report). |
 |Ver información del sistema | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA** para ver información del sistema como actualizaciones de mantenimiento pendientes, el nombre y la versión de la instancia, la región, el URL de API, el URL de CLI, los detalles de configuración de LDAP, las correlaciones de usuario y de grupo, las estadísticas y los dominios compartidos. Consulte [Visualización de información del sistema](/docs/admin/index.html#oc_system). |
 |Ampliar notificaciones y configurar suscripciones de notificaciones | Pulse **ADMINISTRACIÓN &gt; INFORMACIÓN DEL SISTEMA &gt; *Número* pendientes**. Puede usar webhooks para integrar con el servicio web que quiera para configurar la suscripción a notificación de sucesos para una actualización o incidencia. Consulte [Suscripción de notificaciones](/docs/admin/index.html#oc_eventsubscription). |
+|Gestionar acceso al sistema de la Unión Europea| Pulse **ADMINISTRACIÓN &gt; Acceso al sistema de la UE** para gestionar la política de acceso al sistema de la UE y ver las solicitudes de acceso. Consulte [Gestión de acceso a sistemas en nube en la Unión Europea](/docs/admin/index.html#oc_euaccess). |
 {: caption="Tabla 1. Tareas administrativas para gestionar la instancia local o dedicada de {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
+
+**Nota**: la opción de acceso al sistema de la UE de la consola de {{site.data.keyword.Bluemix_notm}} solo está disponible si el entorno está configurado para ser una nube gestionada en la UE.
 
 <!-- staging only for WoW start -->
 
@@ -112,7 +115,7 @@ Para crear una suscripción de correo electrónico o webhook desde la página **
 | Habilitado | Seleccione la opción para habilitar las notificaciones por correo electrónico. Anule la selección para inhabilitar la notificación por correo electrónico. Las suscripciones están habilitadas de forma predeterminada. |
 | Tipo | Seleccione **Correo electrónico**. |
 | Suceso | Seleccione **Umbral**. |
-| Umbral | Seleccione el tipo de umbral sobre el que desea que se le notifique: Cuota de organización, Disco físico, Memoria física, Disco reservado o Memoria reservada. |
+| Umbral | Seleccione el tipo de umbral sobre el que desea que se le notifique: Promedio de CPU, Cuota de organización, Disco físico, Memoria física, Disco reservado o Memoria reservada. |
 | Dirección de umbral | Seleccione la dirección en la que desea que se muevan los datos, ya sea Ascendente o Descendente, cuando pasa el valor Notificar al aumentar/bajar que haya establecido. Por ejemplo, si el valor Notificar al aumentar/bajar es 50%, y la dirección es descendente, sólo se le notificará si el porcentaje de uso va desde 50% o más a menos de 50%. Si establece la dirección en ascendente, se le notificaría cuando el porcentaje de uso vaya de menos de 50% a más de 50%.   |
 | Notificar al aumentar por encima de (%) | Especifique el porcentaje de umbral en el que desea que se le notifique. Si ha elegido la propiedad Ascendente en el campo Dirección de umbral, la notificación de correo electrónico se enviará cuando el umbral supere este porcentaje. |
 | Notificar al bajar por debajo de (%) | Especifique el porcentaje de umbral en el que desea que se le notifique. Si ha elegido la propiedad Descendente en el campo Dirección de umbral, la notificación de correo electrónico se enviará cuando el umbral caiga por debajo de este porcentaje. |
@@ -160,7 +163,7 @@ Una notificación de umbral de Cuota de organización incluye sólo las organiza
 | Habilitado | Seleccione la opción para habilitar la notificación. Anule la selección para inhabilitar la notificación. Las suscripciones están habilitadas de forma predeterminada. |
 | Tipo | Seleccione **Webhook**. |
 | Suceso | Seleccione **Umbral**. |
-| Umbral | Seleccione el tipo de umbral sobre el que desea que se le notifique: Cuota de organización, Disco físico, Memoria física, Disco reservado o Memoria reservada.|
+| Umbral | Seleccione el tipo de umbral sobre el que desea que se le notifique: Promedio de CPU, Cuota de organización, Disco físico, Memoria física, Disco reservado o Memoria reservada.|
 | Dirección de umbral | Seleccione si desea ver los datos del umbral en orden Ascendente o Descendente.  |
 | Notificar al bajar por debajo de (%) | Si ha seleccionado la **Dirección de umbral** **Descendente**, especifique el porcentaje de umbral en el que desea que se le notifique. Cuando el umbral cae por debajo de este porcentaje, se enviará la notificación de webhook. |
 | Notificar al aumentar por encima de (%) | Si ha seleccionado la **Dirección de umbral** **Ascendente**, especifique el porcentaje de umbral en el que desea que se le notifique. Cuando el umbral está por encima de este porcentaje, se enviará la notificación de webhook. |
@@ -201,6 +204,7 @@ Una notificación de umbral de Cuota de organización incluye sólo las organiza
 
 | **Valor de IBM** | **Descripción** | **Tipo de suceso** |
 |----------------|----------------|------------------------|
+| {{content.average_cpu}} | Umbral de promedio de CPU | Umbral |
 | {{content.org_quota}} | Umbral de cuota de organización | Umbral |
 | {{content.physical_disk}} | Umbral de disco físico | Umbral |
 | {{content.physical_memory}} | Umbral de memoria física | Umbral |  
@@ -263,7 +267,7 @@ Puede elegir establecer períodos de tiempo de no disponibilidad específicos en
 4. Establezca el período de no disponibilidad seleccionando la frecuencia, duración y hora de inicio del período.
 5. Pulse **Enviar**.
 
-Las fechas de no disponibilidad requieren aprobación de IBM, y el tiempo que se tarda en obtener la aprobación puede variar. Al aprobarse las fechas de no disponibilidad solicitadas, IBM cancelará todas las actualizaciones existentes que actualmente estén planificadas durante el período de no disponibilidad. IBM también creará nuevos registros para estas actualizaciones y las planificará fuera de las fechas de no disponibilidad aprobadas.
+Los períodos de no disponibilidad requieren aprobación de IBM, y el tiempo que se tarda en obtener la aprobación puede variar. Los períodos de no disponibilidad que se solapan con un despliegue ya planificado dentro de los 7 días siguientes a la hora de envío de la no disponibilidad pueden tardar más tiempo en aprobarse. Al aprobarse la no disponibilidad solicitada, IBM cancelará todas las actualizaciones existentes que actualmente estén planificadas durante el período de no disponibilidad. IBM también creará nuevos registros para estas actualizaciones y las planificará fuera de las fechas de no disponibilidad aprobadas.
 
 ### Planificación y aprobación de actualizaciones
 {: #scheduleandapprove}
@@ -874,7 +878,7 @@ Una cuota representa los límites de recursos para las organizaciones del entorn
 <dd>El número máximo de direcciones IP públicas que puede asignar entre todos los espacios de una organización.</dd>
 </dl>
 <strong>Nota</strong>: si aún no tiene contenedores en su entorno o si aún no tiene los contenedores del entorno configurados, recibirá un mensaje de error.
-<p>Para obtener más información sobre contenedores, consulte [Acerca de los contenedores de IBM](/docs/containers/container_ov.html). Para obtener más información sobre cuotas de contenedor, consulte [Cuota y cuentas de Bluemix](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Para obtener más información sobre contenedores, consulte [Acerca de los contenedores de IBM](/docs/containers/container_ov.html). Para obtener más información sobre las cuotas de contenedor, consulte [Cuota y cuentas de {{site.data.keyword.Bluemix_notm}}](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
 <strong>Nota:</strong> Los contenedores no están disponibles en la región Sídney de {{site.data.keyword.Bluemix_notm}}.</li>
 </ul>
 <li>Para guardar los cambios que haya efectuado en la página Gestionar
@@ -2348,3 +2352,111 @@ cf ba
 Para obtener más ayuda sobre un mandato, utilice la opción `-help`.
 
 Para obtener más información sobre cómo trabajar con el plug-in CLI de administración de {{site.data.keyword.Bluemix_notm}}, consulte Administración de [{{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html).
+
+
+## Gestión de acceso a sistemas en nube en la Unión Europea
+{: #oc_euaccess}
+
+El personal de {{site.data.keyword.IBM_notm}} accede periódicamente a los sistemas en nube para realizar actividades de mantenimiento, ya sea en respuesta a incidentes o para desplegar actualizaciones de mantenimiento. {{site.data.keyword.IBM_notm}} realiza todos los esfuerzos necesarios para asignar personal de la Unión Europea (UE) para realizar actividades de mantenimiento, ya sea en respuesta a los incidentes o para realizar actualizaciones de mantenimiento en sistemas {{site.data.keyword.Bluemix_dedicated_notm}} ubicados en la UE. Cuando esto no es posible, {{site.data.keyword.IBM_notm}} puede asignar personal de fuera de la UE para realizar mantenimiento en un sistema en nube de la UE. El usuario tiene el control del nivel de aprobación necesario para que personal de {{site.data.keyword.IBM_notm}} de fuera de la UE pueda acceder a su sistema en nube de la UE. Una vez aprobado el acceso, de acuerdo con las políticas de control de acceso del usuario, {{site.data.keyword.IBM_notm}} proporciona las credenciales temporales al personal asignado.
+
+Se puede controlar el acceso a las opciones de política disponibles en la consola de administración. Pulse **ADMINISTRACIÓN &gt; Acceso al sistema de la UE**. Las políticas determinan el nivel de aprobación que necesita el cliente para que el personal de {{site.data.keyword.IBM_notm}} de fuera de la UE puede acceder al sistema en nube de la UE. Puede configurar la política de acceso no UE, aprobar o rechazar solicitudes de acceso resultantes de la política configurada y examinar el historial de solicitudes de aprobación. La vista _Acceso al sistema de la UE_ tiene tres separadores:
+ 
+* Políticas
+* Solicitudes pendientes
+* Historial de solicitudes
+
+**Nota:** la opción de acceso al sistema de la UE de la consola de {{site.data.keyword.Bluemix_notm}} solo está disponible si el entorno está configurado para ser un sistema en nube gestionado en la UE.
+
+### Configuración de una política de acceso 
+
+Para gestionar la política de acceso del sistema de la UE, pulse **ADMINISTRACIÓN &gt; Acceso al sistema de la UE &gt; Política**.
+
+En la sección **Política**, puede especificar el nivel de aprobación necesario para que el personal de IBM ubicado fuera de la UE acceda al sistema. Cualquier acceso de personal de fuera de la UE a los sistemas en nube de la UE requiere la aprobación previa de IBM. Las tres opciones de política disponibles determinan si se necesita la aprobación del cliente y cuándo se necesita, incluida la aprobación de IBM.
+
+<ul>
+<li>No se necesita la aprobación del cliente. El personal aprobado por IBM de fuera de la Unión Europea puede acceder al sistema en nube sin su aprobación.</li>
+<li>Siempre se necesita la aprobación del cliente. El personal de IBM de fuera de la UE puede acceder al sistema en nube solo con aprobación explícita.</li>
+<li>Política personalizada. Su aprobación es necesaria según el tipo y la condición de la actividad de mantenimiento para los que es necesario el acceso.</li>
+</ul>
+
+Cuando la política llama para la aprobación del cliente, puede optar por definir un periodo de _Aprobación automática_ en el que las solicitudes de acceso se aprueben automáticamente.
+
+Para la política personalizada, a continuación se listan y se describen los diferentes tipos de actividades y sus condiciones asociadas:
+
+{: #ld_table18}
+
+| **Actividad** | **Condición** | **Descripción** |       
+|-----------------|-------------------|-------------------|
+| Incidencia | Bloqueador | El componente especificado es inaccesible o no funciona como se esperaba.  El entorno está significativamente afectado. No existe ninguna solución temporal. |
+| Incidencia | No bloqueador | El componente especificado está teniendo problemas intermitentes o una parte del componente no funciona como se esperaba. El entorno no está afectado significativamente o hay un método alternativo. |
+| Actualización de mantenimiento | Despliegue crítico | Es necesaria la actualización para resolver o prevenir una incidencia. |  
+| Actualización de mantenimiento | Despliegue normal | La actualización es parte de una actualización periódica de un servicio o componente para mejorar su funcionalidad, usabilidad, fiabilidad o rendimiento. |
+{: caption="Tabla 18. Política personalizada de la UE" caption-side="top"}
+
+### Cómo atender las solicitudes pendientes 
+
+Para ver las solicitudes de acceso que requieren su atención, pulse **ADMINISTRACIÓN &gt; Acceso al sistema de la UE &gt; Solicitudes pendientes**.
+
+En la tabla **Solicitudes pendientes**, puede aprobar o rechazar solicitudes para que personal de IBM ubicado fuera de la UE acceda a su sistema de la UE. Alguna información sobre las solicitudes pendientes se visualiza como columnas de tabla. Se proporcionan detalles adicionales cuando se expande la fila de tabla para una solicitud determinada.  
+
+Para aprobar o rechazar una o varias solicitudes, seleccione uno o varios recuadros a la izquierda de la solicitud y seleccione el botón **Aprobar** o **Rechazar**. Cuando una solicitud de acceso se aprueba o rechaza, lo que puede realizar manualmente el cliente o hacerlo automáticamente mediante una política de aprobación automática, su registro se mueve del separador **Solicitudes pendientes** al separador **Historial de solicitudes**. Una vez que se aprueba una solicitud de acceso, podrá ver un registro de los diferentes empleados de IBM que acceden al sistema. 
+
+**Nota**: una solicitud de acceso se asocia con una actividad de mantenimiento específica. Esa actividad de mantenimiento la pueden llevar a cabo varios empleados de IBM. Cuando se aprueba una solicitud de acceso, se aprueba potencialmente el acceso al sistema por parte de varios empleados de IBM. Aún así, es necesario que IBM proporcione credenciales y apruebe de forma individual a cada persona que accede al sistema en nube, pero el usuario sólo necesita dar su aprobación una vez para todas las actividades necesarias asociadas con la actualización o incidencia. 
+
+En las filas de la tabla, se proporciona información de resumen para cada solicitud de aprobación. Se visualiza información adicional cuando se expande una fila de la tabla:
+
+<dl>
+<dt>Estado</dt>
+<dd>El estado de la solicitud de acceso: Pendiente, Aprobado o Rechazado.</dd>
+<dt>Tipo de actividad</dt>
+<dd>El tipo de actividad para el que se necesita acceso: actualización de mantenimiento o incidencia.</dd>
+<dt>ID de registro</dt>
+<dd>El ID del registro utilizado para rastrear la actividad para la que se necesita acceso. El valor se enlaza con el registro real si la actividad es una actualización de mantenimiento.</dd>
+<dt>Fecha de solicitud</dt>
+<dd>La fecha y la hora en las que se solicitó la aprobación de acceso del cliente.</dd>
+<dt>Hora de aprobación automática</dt>
+<dd>El tiempo restante antes de que la solicitud se apruebe automáticamente. Solo es aplicable si se ha especificado una aprobación automática como parte de la política de acceso. Tenga en cuenta que, cuando se define un periodo de aprobación automática, la cuenta atrás para dicha aprobación automática se inicia cuando IBM aprueba al personal asignado. Puede que las solicitudes de aprobación para actualizaciones de mantenimiento no tengan una Hora de aprobación automática, aunque la aprobación automática se haya especificado como parte de la política de acceso. Si se trata de una solicitud de aprobación previa, el detalle contendrá una nota para indicar que es para un momento específico en el futuro.</dd>
+<dt>Descripción</dt>
+<dd>La justificación para solicitar acceso al sistema en nube.</dd>
+<dt>Gravedad</dt>
+<dd>Indica la gravedad de un incidente. Se muestra sólo para incidentes. </dd>
+<dt>Despliegue crítico</dt>
+<dd>Indica si una actualización de mantenimiento necesita un despliegue de emergencia.  Se muestra solo para actualizaciones de mantenimiento.</dd>
+<dt>Nota</dt>
+<dd>Indica cuándo una solicitud es para aprobación previa como parte de una actualización de mantenimiento que se desplegará en el futuro. Cuando se aprueba tal solicitud, se está preaprobando el acceso al sistema en nube en el momento del despliegue planificado de la actualización de mantenimiento. Una vez que se preaprueba una solicitud, no se necesita volverla a aprobar cuando se accede el sistema.</dd>
+</dl>
+
+**Nota**: se puede configurar una suscripción de notificación para enviarle un correo electrónico o invocar un webhook cuando se cree una nueva solicitud de acceso. Consulte la sección sobre **Suscripción de notificaciones** para obtener más información (/docs/hybrid/index.html#oc_eventsubscription).
+
+### Visualización del historial de solicitudes 
+
+Para ver las solicitudes anteriores de acceso al sistema, pulse **ADMINISTRACIÓN &gt; Acceso al sistema de la UE &gt; Historial de solicitudes**
+
+En la sección **Historial de solicitudes**, puede ver todas las solicitudes de acceso anteriores del personal de IBM ubicado fuera de la UE.
+
+En las filas de la tabla, se proporciona información de resumen para cada solicitud del historial. Se visualiza información adicional cuando se expande una fila de la tabla:
+
+<dl>
+<dt>Estado</dt>
+<dd>El estado de la solicitud de acceso: aprobado o rechazado.</dd>
+<dt>Tipo de actividad</dt>
+<dd>El tipo de actividad para el que se necesita acceso: actualización de mantenimiento o incidencia.</dd>
+<dt>ID de registro</dt>
+<dd>El ID del registro utilizado para rastrear la actividad de actualización o incidencia. El valor se enlaza con el registro real si la actividad es una actualización de mantenimiento.</dd>
+<dt>Fecha de solicitud</dt>
+<dd>La fecha y la hora en las que se solicitó la aprobación de acceso del cliente.</dd>
+<dt>Fecha de acción</dt>
+<dd>La fecha y la hora en las que el cliente aprobó o rechazó la solicitud. El campo muestra __Aprobación automática__ si la política de acceso de la UE se ha configurado solo para aprobación de IBM.</dd>
+<dt>Descripción</dt>
+<dd>La razón para solicitar acceso al sistema en nube.</dd>
+<dt>Gravedad</dt>
+<dd>Indica la gravedad de un incidente. Se muestra solo para incidentes. </dd>
+<dt>Despliegue crítico</dt>
+<dd>Indica si una actualización de mantenimiento necesita un despliegue de emergencia. Se muestra solo para actualizaciones de mantenimiento.</dd>
+<dt>Nota</dt>
+<dd>Describe las condiciones pertinentes adicionales sobre la solicitud. Por ejemplo, este campo se utilizará para indicar cuándo una solicitud es para aprobación previa como parte de una actualización de mantenimiento que se desplegará en el futuro.</dd>
+<dt>Historial de acceso</dt>
+<dd>Por cada persona que accede al sistema, muestra la fecha y la hora en las que IBM aprobó el acceso, y en las que se otorgó y se revocó el acceso a esa persona. Las personas se identifican como Personal IBM 1, por ejemplo.</dd>
+</dl>
+
+**Nota**: las solicitudes de acceso nuevas pasarán automáticamente al estado **Aprobado** y se mostrarán en la sección **Historial de solicitudes** si la política de acceso se ha configurado para requerir solo la aprobación de IBM.
