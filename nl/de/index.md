@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-07"
+lastupdated: "2017-12-19"
 
 ---
 
@@ -32,7 +32,10 @@ Wenn Sie über Administratorzugriff für {{site.data.keyword.Bluemix_local_notm}
 |Berichte und Protokolle prüfen | Klicken Sie auf **Verwaltung &gt; Berichte und Protokolle**, um Sicherheitsberichte und Prüfprotokolle für Ihre Instanz anzuzeigen. Siehe [Berichte anzeigen](/docs/admin/index.html#oc_report). |
 |Systeminformationen anzeigen | Klicken Sie auf **Verwaltung &gt; Systeminformationen**, um Systeminformationen wie anstehende Wartungsaktualisierungen, Name und Version Ihrer Instanz, Region, API-URL, CLI-URL, LDAP-Konfigurationsdetails, Gruppen- und Benutzerzuordnungen, Statistiken und gemeinsam genutzte Domänen anzuzeigen. Siehe [Systeminformationen anzeigen](/docs/admin/index.html#oc_system). |
 |Benachrichtigungen erweitern und Benachrichtigungsabonnements einrichten | Klicken Sie auf **Verwaltung &gt; Systemverwaltung &gt; *Anzahl* anstehend**. Sie können Web-Hooks zur Integration in einen Web-Service Ihrer Wahl verwenden, um ein Abonnement für Ereignisbenachrichtigungen für eine Aktualisierung oder einen Vorfall einzurichten. Siehe [Benachrichtigungen und Benachrichtigungsabonnements](/docs/admin/index.html#oc_eventsubscription). |
+|Zugriff auf Systeme in der EU verwalten | Klicken Sie auf **Verwaltung &gt; EU - Systemzugriff**, um Ihre Richtlinie für den EU-Systemzugriff zu verwalten und Zugriffsanforderungen anzuzeigen. Weitere Informationen finden Sie unter [Zugriff auf Cloudsysteme in der Europäischen Union verwalten](/docs/admin/index.html#oc_euaccess). |
 {: caption="Tabelle 1. Verwaltungstasks zur Verwaltung Ihrer lokalen oder dedizierten {{site.data.keyword.Bluemix_notm}}-Instanz" caption-side="top"}
+
+**Hinweis**: Die Option 'EU - Systemzugriff' in der {{site.data.keyword.Bluemix_notm}}-Konsole ist nur verfügbar, wenn Ihre Umgebung als Cloud mit EU-bezogener Verwaltung konfiguriert ist. 
 
 <!-- staging only for WoW start -->
 
@@ -109,7 +112,7 @@ Führen Sie folgende Schritte aus, um ein E-Mail- oder Web-Hook-Abonnement auf d
 | Aktiviert | Wählen Sie diese Option aus, um E-Mail-Benachrichtigungen zu aktivieren. Nehmen Sie die Auswahl zurück, um E-Mail-Benachrichtigungen zu inaktivieren. Abonnements sind standardmäßig aktiviert. |
 | Typ | Wählen Sie **E-Mail** aus. |
 | Ereignis | Wählen Sie **Schwellenwert** aus. |
-| Schwellenwert | Wählen Sie die Art der Schwellenwerte aus, über die Sie benachrichtigt werden wollen: Organisationskontingent, physische Platte, physischer Speicher, reservierte Platte oder reservierter Speicher. |
+| Schwellenwert | Wählen Sie die Art der Schwellenwerte aus, über die Sie benachrichtigt werden wollen: Durchschnittliche CPU-Auslastung, Organisationskontingent, physische Platte, physischer Speicher, reservierte Platte oder reservierter Speicher. |
 | Schwellenwertrichtung | Wählen Sie die Richtung aus, in der die Daten verschoben werden sollen (aufsteigend oder absteigend), wenn sie den von Ihnen festgelegten Wert für 'Benachrichtigung bei Überschreitung' überschreiten. Wenn der Wert für 'Benachrichtigung bei Überschreitung' beispielsweise bei 50% liegt und die Richtung 'absteigend' ist, werden Sie nur dann benachrichtigt, wenn der Nutzungs-Prozentsatz von mindestens 50% auf unter 50% fällt. Wenn die Richtung auf 'aufsteigend' festgelegt ist, werden Sie benachrichtigt, sobald der Nutzungs-Prozentsatz von unter 50 % auf über 50 % steigt.
 | Benachrichtigung bei Überschreitung (%) | Geben Sie den Schwellenwert-Prozentsatz ein, bei dem Sie benachrichtigt werden möchten. Wenn Sie im Feld 'Schwellenwertrichtung' die Eigenschaft 'aufsteigend' angegeben haben, werden die E-Mail-Benachrichtigungen gesendet, sobald der Schwellenwert diesen Prozentsatz übersteigt. |
 | Benachrichtigung bei Unterschreitung (%) | Geben Sie den Schwellenwert-Prozentsatz ein, bei dem Sie benachrichtigt werden möchten. Wenn Sie im Feld 'Schwellenwertrichtung' die Eigenschaft 'absteigend' angegeben haben, werden die E-Mail-Benachrichtigungen gesendet, sobald der Schwellenwert diesen Prozentsatz unterschreitet. |
@@ -157,7 +160,7 @@ Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält 
 | Aktiviert | Wählen Sie diese Option aus, um die Benachrichtigung zu aktivieren. Nehmen Sie die Auswahl zurück, um die Benachrichtigung zu inaktivieren. Abonnements sind standardmäßig aktiviert. |
 | Typ | Wählen Sie **Web-Hook** aus. |
 | Ereignis | Wählen Sie **Schwellenwert** aus. |
-| Schwellenwert | Wählen Sie die Art der Schwellenwerte aus, über die Sie benachrichtigt werden wollen: Organisationskontingent, physische Platte, physischer Speicher, reservierte Platte oder reservierter Speicher.|
+| Schwellenwert | Wählen Sie die Art der Schwellenwerte aus, über die Sie benachrichtigt werden wollen: Durchschnittliche CPU-Auslastung, Organisationskontingent, physische Platte, physischer Speicher, reservierte Platte oder reservierter Speicher. |
 | Schwellenwertrichtung | Wählen Sie aus, ob die Schwellenwertdaten in aufsteigender oder in absteigender Reihenfolge angezeigt werden sollen.  |
 | Benachrichtigung bei Unterschreitung (%) | Wenn Sie **Schwellenwertrichtung** mit **Absteigend** angegeben haben, geben Sie den Schwellenwert-Prozentsatz ein, bei dem Sie benachrichtigt werden wollen. Fällt der Schwellenwert unterhalb dieses Prozentsatzes, wird die Web-Hook-Benachrichtigung gesendet. |
 | Benachrichtigung bei Überschreitung (%) | Wenn Sie **Schwellenwertrichtung** mit **Aufsteigend** angegeben haben, geben Sie den Schwellenwert-Prozentsatz ein, bei dem Sie benachrichtigt werden wollen. Überschreitet der Schwellenwert diesen Prozentsatz, wird die Web-Hook-Benachrichtigung gesendet. |
@@ -198,6 +201,7 @@ Eine Benachrichtigung über einen Organisationskontingentschwellenwert enthält 
 
 | **IBM Wert** | **Beschreibung** | **Ereignistyp** |
 |----------------|----------------|------------------------|
+| {{content.average_cpu}} | Schwellenwert für durchschnittliche CPU-Auslastung | Schwellenwert |
 | {{content.org_quota}} | Schwellenwert für Organisationskontingent | Schwellenwert |
 | {{content.physical_disk}} | Schwellenwert für physische Platte | Schwellenwert |
 | {{content.physical_memory}} | Schwellenwert für physischen Speicher | Schwellenwert |  
@@ -260,7 +264,7 @@ Sie können bestimmte Ausfallzeitfenster festlegen, in denen Ihre Umgebung nicht
 4. Legen Sie das erste nicht Ausfallzeitfenster fest, indem Sie die Häufigkeit, die Dauer und die Anfangszeit für das Fenster auswählen.
 5. Klicken Sie auf **Abschicken**.
 
-Für Ausfallzeiten ist eine Genehmigung durch IBM erforderlich, die für die Genehmigung benötigte Zeit kann dabei variieren. Wenn die angeforderten Ausfallzeiten genehmigt sind, storniert IBM vorhandene Aktualisierungen, die momentan über das Nichtverfügbarkeitsfenster geplant sind. Darüber hinaus erstellt IBM neue Datensätze für diese Aktualisierungen und plant sie außerhalb der genehmigten Ausfallzeiten ein.
+Für Ausfallzeitfenster ist eine IBM Genehmigung erforderlich. Die für die Genehmigung benötigte Zeit kann dabei variieren. Bei Ausfallzeitfenstern, die sich mit einer bereits geplanten Bereitstellung überlappen, die innerhalb von 7 Tagen nach der Übergabe der Ausfallzeit stattfinden soll, dauert die Genehmigung möglicherweise länger. Wenn die angeforderte Ausfallzeit genehmigt ist, storniert IBM vorhandene Aktualisierungen, die zu diesem Zeitpunkt während des Ausfallzeitfensters geplant sind. Darüber hinaus erstellt IBM neue Datensätze für diese Aktualisierungen und plant sie außerhalb der genehmigten Ausfallzeiten ein.
 
 ### Aktualisierungen planen und genehmigen
 {: #scheduleandapprove}
@@ -302,7 +306,7 @@ für die eine Aktion Ihrerseits erforderlich ist. Es gibt zwei Typen, die Ihnen 
 
 <dl>
 <dt>Unterbrechungsfreie Aktualisierungen</dt>
-<dd>Eine unterbrechungsfreie Aktualisierung hat keine Auswirkungen auf Ihre Umgebung, Ihre aktiven Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen. Dieser Aktualisierungstyp erfordert keine fallspezifische Genehmigung. Diese Aktualisierungen werden in den vorab genehmigten Aktualisierungzeitfenstern, die Sie auf der Seite 'Systemaktualisierungen' festgelegt haben, angewendet.</dd>
+<dd>Eine unterbrechungsfreie Aktualisierung hat keine Auswirkungen auf Ihre Umgebung, Ihre aktiven Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen. Dieser Aktualisierungstyp erfordert keine fallspezifische Genehmigung. Diese Aktualisierungen werden in den vorab genehmigten Aktualisierungszeitfenstern, die Sie auf der Seite 'Systemaktualisierungen' festgelegt haben, angewendet.</dd>
 <dt>Aktualisierung mit Unterbrechungen</dt>
 <dd>Eine Aktualisierung mit Unterbrechungen kann sich auf Ihre Umgebung, die Ausführung von Anwendungen oder den Zugriff der Benutzer auf Ihre Anwendungen auswirken. Sie können jede dieser Wartungsaktualisierungen innerhalb des zugeteilten Wartungszeitraums von 21 Tagen terminieren und genehmigen, um sicherzustellen, dass die Aktualisierung nicht während kritischer Geschäftszeiten angewendet wird. Sie können das vorgeschlagene Implementierungsdatum und die vorgeschlagene Uhrzeit auswählen, die auf Ihren vorab genehmigten Aktualisierungsfenstern basieren, oder Sie können zwei weitere Uhrzeiten und Daten auswählen, aus denen IBM dann bei der Anwendung der Aktualisierung auswählen kann.</dd>
 </dl>
@@ -857,7 +861,7 @@ Ein Kontingent stellt die Ressourcengrenzen für die Organisationen in Ihrer Umg
 <dd>Die maximale Anzahl öffentlicher IP-Adressen, die Sie bereichsübergreifend in einer Organisation zuordnen können.</dd>
 </dl>
 <strong>Hinweis:</strong> Wenn in Ihrer Umgebung noch keine Container vorhanden oder konfiguriert sind, wird eine Fehlernachricht angezeigt.
-<p>Weitere Informationen zu Containern finden Sie in den [Informationen zu IBM Containern](/docs/containers/container_ov.html). Weitere Informationen zu Containerkontingenten finden Sie unter [Kontingent und Bluemix-Konten](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Weitere Informationen zu Containern finden Sie in den [Informationen zu IBM Containern](/docs/containers/container_ov.html). Weitere Informationen zu Containerkontingenten finden Sie unter [Kontingent und {{site.data.keyword.Bluemix_notm}}-Konten](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
 <strong>Hinweis:</strong> In der {{site.data.keyword.Bluemix_notm}}-Region 'Sydney' stehen keine Container zur Verfügung.</li>
 </ul>
 <li>Speichern Sie Ihre Änderungen auf der Seite 'Organisation verwalten', indem Sie auf <strong>Speichern</strong> klicken.</li>
@@ -2302,3 +2306,111 @@ cf ba
 Wenn Sie weitere Hilfe zu einem Befehl benötigen, verwenden Sie die Option `-help`.
 
 Weitere Informationen zur Arbeit mit dem {{site.data.keyword.Bluemix_notm}}-Administrator-CLI-Plug-in finden Sie unter [{{site.data.keyword.Bluemix_notm}}-Admin](../cli/plugins/bluemix_admin/index.html).
+
+
+## Zugriff auf Cloudsysteme in der Europäischen Union verwalten
+{: #oc_euaccess}
+
+Mitarbeiter von {{site.data.keyword.IBM_notm}} greifen regelmäßig für Wartungsaktivitäten, die als Reaktion auf Vorfälle oder für Wartungsaktualisierungen anfallen, auf Cloudsysteme zu. {{site.data.keyword.IBM_notm}} unternimmt vielfältige Anstrengungen, um Mitarbeiter aus der EU für Wartungsaktivitäten an {{site.data.keyword.Bluemix_dedicated_notm}}-Systemen innerhalb der EU zuzuteilen. In Fällen, in denen dies nicht möglich ist, werden von {{site.data.keyword.IBM_notm}} unter Umständen Mitarbeiter aus anderen Regionen für die Wartung von EU-Cloudsystemen zugeteilt. Sie können die erforderliche Genehmigungsebene steuern, bevor {{site.data.keyword.IBM_notm}} Mitarbeiter aus anderen Regionen auf Ihr EU-Cloudsystem zugreifen dürfen. Nachdem Zugriffe gemäß Ihren Zugriffssteuerungsrichtlinien genehmigt wurden, werden temporäre Berechtigungsnachweise von {{site.data.keyword.IBM_notm}} für die zugeteilten Mitarbeiter bereitgestellt. 
+
+Sie können den Zugriff über Richtlinienoptionen der Administrationskonsole steuern. Klicken Sie auf **Verwaltung &gt; EU - Systemzugriff**. Die Richtlinien legen die vom Kunden verlangte Genehmigungsebene fest, bevor {{site.data.keyword.IBM_notm}} Mitarbeiter aus anderen Regionen auf das EU-Cloudsystem zugreifen dürfen. Sie können die Zugriffsrichtlinie für Regionen außerhalb der EU einrichten, Zugriffsanforderungen, die sich aus der konfigurierten Richtlinie ergeben, genehmigen oder ablehnen und das Protokoll zu den Genehmigungsanforderungen anzeigen. Die Ansicht _EU - Systemzugriff_ enthält drei Registerkarten: 
+ 
+* Richtlinien
+* Anstehende Anforderungen
+* Anforderungsprotokoll
+
+**Hinweis**: Die Option 'EU - Systemzugriff' in der {{site.data.keyword.Bluemix_notm}}-Konsole ist nur verfügbar, wenn Ihre Umgebung als Cloudsystem mit EU-bezogener Verwaltung konfiguriert ist. 
+
+### Zugriffsrichtlinie einrichten 
+
+Klicken Sie zum Verwalten Ihrer Zugriffsrichtlinie für EU-Systeme auf **Verwaltung &gt; EU - Systemzugriff &gt; Richtlinie**. 
+
+Im Bereich **Richtlinie** können Sie die erforderliche Genehmigungsebene für den Zugriff auf Ihr System für IBM Mitarbeiter aus Regionen außerhalb der EU angeben. Sämtliche Zugriffe auf EU-Cloudsysteme durch Mitarbeiter außerhalb der EU erfordern eine Vorabgenehmigung von IBM. Die drei verfügbaren Richtlinienoptionen legen fest, ob und wann eine Genehmigung des Kunden einschließlich der Genehmigung von IBM erforderlich ist. 
+
+<ul>
+<li>Eine Genehmigung des Kunden ist nicht erforderlich. Von IBM genehmigte Mitarbeiter aus Regionen außerhalb der Europäischen Union können ohne Ihre Genehmigung auf das Cloudsystem zugreifen. </li>
+<li>Eine Genehmigung des Kunden ist immer erforderlich. IBM Mitarbeiter aus Regionen außerhalb der Europäischen Union können nur mit ausdrücklicher Genehmigung auf das Cloudsystem zugreifen. </li>
+<li>Angepasste Richtlinie. Ihre Genehmigung ist je nach Typ und Bedingungen der Wartungsaktivität, für die der Zugriff benötigt wird, erforderlich. </li>
+</ul>
+
+Wenn Ihre Richtlinie eine Kundengenehmigung anfordert, können Sie bei Bedarf einen Zeitraum für _automatische Genehmigung_ definieren, nach dessen Ablauf Zugriffsanforderungen automatisch genehmigt werden. 
+
+Im Folgenden werden die verschiedenen Typen von Aktivitäten und die zugehörigen Bedingungen für die angepasste Richtlinie aufgelistet und beschrieben: 
+
+{: #ld_table18}
+
+| **Aktivität** | **Bedingung** | **Beschreibung** |       
+|-----------------|-------------------|-------------------|
+| Vorfall | Blocker | Ein Zugriff auf die angegebene Komponente ist nicht möglich oder die Komponente wird nicht ordnungsgemäß ausgeführt. Dies hat erhebliche Auswirkungen auf die Umgebung. Es gibt keine Problemumgehung. |
+| Vorfall | Kein Blocker | Die angegebene Komponente weist sporadisch Probleme auf oder ein Teil der Komponente wird nicht ordnungsgemäß ausgeführt. Dies hat keine nennenswerten Auswirkungen auf die Umgebung oder es gibt eine Problemumgehung. |
+| Wartungsaktualisierung | Notfallbereitstellung| Die Aktualisierung wird benötigt, um eine Störung zu beheben oder zu verhindern. |  
+| Wartungsaktualisierung | Normale Bereitstellung| Die Aktualisierung ist Bestandteil einer turnusgemäßen Service- oder Komponentenaktualisierung zur Verbesserung von Funktionalität, Bedienungskomfort, Zuverlässigkeit oder Leistungsverhalten. |
+{: caption="Tabelle 18. EU - angepasste Richtlinie" caption-side="top"}
+
+### Anstehende Anforderungen verwalten 
+
+Zugriffsanforderungen, die Ihre Beachtung erfordern, können Sie anzeigen, indem Sie auf **Verwaltung &gt; EU - Systemzugriff &gt; Anstehende Anforderungen** klicken. 
+
+In der Tabelle **Anstehende Anforderungen** können Sie Anforderungen für Zugriffe von IBM Mitarbeitern aus Regionen außerhalb der EU auf Ihr EU-System genehmigen oder ablehnen. Verschiedene Informationen zu anstehenden Anforderungen werden in Form von Tabellenspalten angezeigt. Weitere Angaben werden angezeigt, wenn die Tabellenzeile für eine Anforderung erweitert wird.   
+
+Genehmigen Sie Anforderungen oder lehnen Sie sie ab, indem Sie Kontrollkästchen links neben einer Anforderung auswählen und danach auf die Schaltfläche **Genehmigen** oder **Ablehnen** klicken. Nach dem Genehmigen oder Ablehnen einer Zugriffsanforderung, das manuell vom Kunden übernommen oder automatisch über eine Richtlinie für automatische Genehmigung erfolgen kann, wird der zugehörige Datensatz von der Registerkarte **Anstehende Anforderungen** in die Registerkarte **Anforderungsprotokoll** verschoben. Wenn Sie eine Zugriffsanforderung genehmigt haben, können Sie anschließend Aufzeichnungen zu den verschiedenen IBM Mitarbeitern anzeigen, die auf das System zugreifen.  
+
+**Hinweis**: Eine Zugriffsanforderung bezieht sich auf eine bestimmte Wartungsaktivität. Die betreffende Wartungsaktivität kann von mehreren IBM Mitarbeitern übernommen werden. Mit Ihrer Genehmigung einer Zugriffsanforderung willigen Sie in Zugriffe auf das System ein, die möglicherweise von verschiedenen IBM Mitarbeitern ausgeführt werden. Jeder Mitarbeiter, der auf das Cloudsystem zugreift, benötigt nach wie vor eine Einzelgenehmigung und Berechtigungsnachweise von IBM, während Sie lediglich eine einmalige Genehmigung für alle erforderlichen Aktivitäten im Zusammenhang mit einer Aktualisierung oder einem Vorfall erteilen müssen.  
+
+Übersichtsinformationen zu den einzelnen Genehmigungsanforderungen werden in Form von Tabellenzeilen angezeigt. Weitere Angaben werden angezeigt, wenn eine Tabellenzeile erweitert wird: 
+
+<dl>
+<dt>Status</dt>
+<dd>Der Status der Zugriffsanforderung: 'Anstehend', 'Genehmigt' oder 'Abgelehnt'. </dd>
+<dt>Aktivitätstyp</dt>
+<dd>Der Typ der Aktivität, für die der Zugriff ausgeführt werden soll: Wartungsaktualisierung oder Vorfall. </dd>
+<dt>ID des Protokolleintrags</dt>
+<dd>Die ID des Datensatzes, über den die Aktivität, für die der Zugriff ausgeführt werden soll, verfolgt wird. Der Wert ist mit dem tatsächlichen Datensatz verknüpft, wenn es sich bei der Aktivität um eine Wartungsaktualisierung handelt. </dd>
+<dt>Anforderungsdatum</dt>
+<dd>Datum und Uhrzeit des Zeitpunkts, zu dem die Zugriffsgenehmigung beim Kunden angefordert wurde. </dd>
+<dt>Zeit bis zur automatischen Genehmigung</dt>
+<dd>Die Zeit, die bis zur automatischen Genehmigung der Anforderung verbleibt, sofern die automatische Genehmigung als Bestandteil der Zugriffsrichtlinie angegeben wurde. Beim Festlegen eines Zeitraums für die automatische Genehmigung ist zu beachten, dass die Zeit ab der Genehmigung der zugeteilten Mitarbeiter durch die IBM gemessen wird. Bei Genehmigungsanforderungen für Wartungsaktualisierungen wird möglicherweise kein Wert für die Zeit bis zur automatischen Genehmigung angewendet, auch wenn eine automatische Genehmigung als Bestandteil der Zugriffsrichtlinie angegeben wurde. Wenn es sich um eine Vorabgenehmigung handelt, enthalten die zusätzlichen Angaben einen Hinweis darauf, dass es sich um eine Genehmigung für eine bestimmte Zeit in der Zukunft handelt. </dd>
+<dt>Beschreibung</dt>
+<dd>Die Begründung für die Anforderung von Zugriff auf das Cloudsystem. </dd>
+<dt>Priorität</dt>
+<dd>Die Bewertung zu einem Vorfall. Diese Angabe wird nur für Vorfälle angezeigt. </dd>
+<dt>Notfallbereitstellung</dt>
+<dd>Gibt an, ob eine Notfallbereitstellung für eine Wartungsaktualisierung erforderlich ist. Diese Angabe wird nur für Wartungsaktualisierungen angezeigt. </dd>
+<dt>Hinweis</dt>
+<dd>Gibt an, ob es sich um eine Anforderung für eine Vorabgenehmigung im Rahmen einer Wartungsaktualisierung handelt, deren Bereitstellung für einen späteren Zeitpunkt geplant ist. Wenn Sie eine derartige Anforderung genehmigen, erteilen Sie vorab die Genehmigung für Zugriffe auf das Cloudsystem für den Zeitpunkt, für den die Bereitstellung der Wartungsaktualisierung geplant ist. Vorab genehmigte Anforderungen benötigen keine weitere Genehmigung, wenn tatsächlich auf das System zugegriffen wird. </dd>
+</dl>
+
+**Hinweis**: Wenn Sie beim Erstellen einer neuen Zugriffsanforderung eine E-Mail erhalten möchten oder ein Webhook aufgerufen werden soll, kann ein entsprechendes Benachrichtigungsabonnement konfiguriert werden. Weitere Informationen finden Sie unter **Benachrichtigungen und Benachrichtigungsabonnements** (/docs/hybrid/index.html#oc_eventsubscription). 
+
+### Anforderungsprotokoll anzeigen 
+
+Klicken Sie zum Anzeigen vorheriger Zugriffsanforderungen für Ihr System auf **Verwaltung&gt; EU - Systemzugriff &gt; Anforderungsprotokoll**. 
+
+Im Bereich **Anforderungsprotokoll** werden alle vorherigen Zugriffsanforderungen von IBM Mitarbeitern aus Regionen außerhalb der EU angezeigt. 
+
+Übersichtsinformationen zu den einzelnen archivierten Anforderungen werden in Form von Tabellenzeilen angezeigt. Weitere Angaben werden angezeigt, wenn eine Tabellenzeile erweitert wird: 
+
+<dl>
+<dt>Status</dt>
+<dd>Der Status der Zugriffsanforderung: 'Genehmigt' oder 'Abgelehnt'. </dd>
+<dt>Aktivitätstyp</dt>
+<dd>Der Typ der Aktivität, für der Zugriff benötigt wird: Wartungsaktualisierung oder Vorfall. </dd>
+<dt>ID des Protokolleintrags</dt>
+<dd>Die ID des Datensatzes, über den die auf eine Aktualisierung oder einen Vorfall bezogene Aktivität verfolgt wird. Der Wert ist mit dem tatsächlichen Datensatz verknüpft, wenn es sich bei der Aktivität um eine Wartungsaktualisierung handelt. </dd>
+<dt>Anforderungsdatum</dt>
+<dd>Datum und Uhrzeit des Zeitpunkts, zu dem die Zugriffsgenehmigung beim Kunden angefordert wurde. </dd>
+<dt>Aktionsdatum</dt>
+<dd>Datum und Uhrzeit der Genehmigung oder Ablehnung der Anforderung durch den Kunden. In diesem Feld wird __Automatische Genehmigung__ angezeigt, wenn die EU-Zugriffsrichtlinie ausschließlich für eine Genehmigung durch die IBM konfiguriert wurde. </dd>
+<dt>Beschreibung</dt>
+<dd>Der Grund, aus dem Zugriff auf das Cloudsystem angefordert wurde. </dd>
+<dt>Priorität</dt>
+<dd>Die Bewertung zu einem Vorfall. Diese Angabe wird nur für Vorfälle angezeigt. </dd>
+<dt>Notfallbereitstellung</dt>
+<dd>Gibt an, ob eine Notfallbereitstellung für eine Wartungsaktualisierung erforderlich ist. Diese Angabe wird nur für Wartungsaktualisierungen angezeigt. </dd>
+<dt>Hinweis</dt>
+<dd>Beschreibt zusätzliche relevante Bedingungen für die Anforderung. Dieses Feld wird z. B. verwendet, um anzugeben, dass es sich um eine Anforderung einer Vorabgenehmigung im Rahmen einer Wartungsaktualisierung handelt, deren Bereitstellung für einen späteren Zeitpunkt geplant ist. </dd>
+<dt>Zugriffsverlauf</dt>
+<dd>Für jeden Einzelnen, der auf das System zugreift, werden Datum und Uhrzeit der Genehmigung des Zugriffs durch IBM angezeigt sowie der Zeitpunkt der Zugriffsgenehmigung oder -ablehnung für den betreffenden Mitarbeiter. Die Mitarbeiter werden z. B. mit einer Angabe wie 'IBM Personnel 1' gekennzeichnet. </dd>
+</dl>
+
+**Hinweis**: Neue Zugriffsanforderungen gehen automatisch in den Status **Genehmigt** über und werden im Bereich **Anforderungsprotokoll** angezeigt, wenn die Konfiguration der Zugriffsrichtlinie lediglich eine Genehmigung durch IBM vorsieht. 

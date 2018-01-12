@@ -27,9 +27,12 @@ Berichtet Ereignisse im Zusammenhang mit Administratoranmeldungen an den Vyatta 
 <dt>Zeitpunkt in der Protokollquelle</dt>
 <dd>Das Datum, an dem das Ereignis aufgetreten ist.</dd>
 <dt>Ereignisname</dt>
-<dd>Ereignisart (fehlgeschlagene Benutzeranmeldung über SSH - falsches Kennwort, Authentifizierungsfehler, Sitzung abschlossen, akzeptiertes Kennwort für den Benutzer, Sitzung geöffnet für den Benutzer).</dd>
+<dd>Ereignisart (fehlgeschlagene Benutzeranmeldung über SSH - falsches Kennwort, Authentifizierungsfehler,
+Sitzung abschlossen, akzeptiertes Kennwort für den Benutzer, Sitzung geöffnet
+für den Benutzer).</dd>
 <dt>Untergeordnete Kategorie</dt>
-<dd>Ereignisdetails (SSH-Anmeldung fehlgeschlagen, Sitzung geschlossen, Hostanmeldung erfolgreich, Sitzung geöffnet).</dd>
+<dd>Ereignisdetails (SSH-Anmeldung fehlgeschlagen, Sitzung geschlossen,
+Hostanmeldung erfolgreich, Sitzung geöffnet).</dd>
 <dt>Der Benutzername.</dt> 
 <dd>Der Berechtigungsnachweis (Benutzername) des Benutzers, der die Sitzung gestartet hat.</dd>
 <dt>Quellen-IP</dt>
@@ -37,7 +40,8 @@ Berichtet Ereignisse im Zusammenhang mit Administratoranmeldungen an den Vyatta 
 <dt>Ziel-IP</dt>
 <dd>Das Ziel der Sitzung.</dd>
 <dt>Protokollquelle</dt>
-<dd>Die Quelle des Ereignisses (der Hostname der Firewall, die das Ereignis generiert hat).</dd>
+<dd>Die Quelle des Ereignisses (der Hostname der Firewall, die das Ereignis
+generiert hat).</dd>
 </dl>
 
 ## Zurückgewiesene Firewallanmeldungen
@@ -51,11 +55,14 @@ Die Berichte, die von Vyatta-Firewall-Geräten generiert werden, wenn eine Zugri
 <dt>Zeitpunkt in der Protokollquelle</dt>
 <dd>Der Zeitpunkt (Datum und Uhrzeit), zu dem das Ereignis aufgetreten ist.</dd>
 <dt>Ereignisname</dt>
-<dd>Ereignisart (fehlgeschlagene Benutzeranmeldung über SSH - falsches Kennwort, Authentifizierungsfehler, Sitzung abschlossen, akzeptiertes Kennwort für den Benutzer, Sitzung geöffnet für den Benutzer).</dd>
+<dd>Ereignisart (fehlgeschlagene Benutzeranmeldung über SSH - falsches Kennwort,
+Authentifizierungsfehler, Sitzung abschlossen, akzeptiertes Kennwort
+für den Benutzer, Sitzung geöffnet für den Benutzer).</dd>
 <dt>Untergeordnete Kategorie</dt>
 <dd>Details zum Ereignis der Firewall-Ablehnung</dd>
 <dt>Quellen-IP</dt> 
-<dd>Die Quellen-IP-Adresse, von der aus die Netzverbindung und/oder der Angriff gestartet wurde.</dd>
+<dd>Die Quellen-IP-Adresse, von der aus die Netzverbindung und/oder der Angriff
+gestartet wurde.</dd>
 <dt>Quellenport</dt>
 <dd>Der Protokoll-Zielport.
 <dt>Ziel-IP</dt>
@@ -103,7 +110,7 @@ Berichtet Ereignisse, die von der Bluemix-Plattform generiert werden, wenn ein B
 <dt>Zeitpunkt in der Protokollquelle</dt>
 <dd>Das Datum, an dem das Ereignis aufgetreten ist.</dd>
 <dt>Ereignisname</dt>
-<dd>Typ des Ereignisses (Benutzeradressbereichs-Authentifizierung, Fehlschlagen der Benutzeradressbereichs-Authentifizierung)/dd>
+<dd>Typ des Ereignisses (Benutzeradressbereichs-Authentifizierung, Fehlschlagen der Benutzeradressbereichs-Authentifizierung)</dd>
 <dt>Benutzer</dt> 
 <dd>Die Benutzer-ID des Benutzers, der den Authentifizierungsprozess gestartet hat.</dd>
 <dt>Bluemix_Platform_Component</dt>
@@ -180,7 +187,8 @@ Berichtet Benutzerverwaltungsaktivitäten, die für die Bluemix-Konsole ausgefü
 <ul>
 <li>Hinzufügen von Benutzer [Benutzer-ID]: Fügt einen Benutzer mit der angegebenen ID hinzu.
 <li>Löschen von Benutzer [Benutzer-ID]: Löscht einen Benutzer mit der angegebenen ID.
-<li>Hinzufügen von Berechtigung [Berechtigungen] für Benutzer [Benutzer-ID]: Fügt Benutzer zu den angegebenen Benutzern hinzu. Die Berechtigungen können folgende sein: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.user.write.
+<li>Hinzufügen von Berechtigung [Berechtigungen] für Benutzer [Benutzer-ID]: Fügt Benutzer zu den angegebenen Benutzern hinzu. Die Berechtigungen können folgende sein:
+ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read, and ops.user.write.
 <li>Entfernen von Berechtigung [Berechtigungen] für Benutzer [Benutzer- ID]: Entfernen von Berechtigung - Entfernen von Berechtigungen für die angegebenen Benutzer. Die Berechtigungen können folgende sein: ops.admin, ops.login, ops.reports.read, ops.reports.write, ops.catalog.read, ops.catalog.write, ops.users.read und ops.users.write.
 <li>Erstellen von Organisation [Name]: Erstellt eine Organisation mit dem angegebenen Namen.
 <li>Ändern von Organisationsmanager [IDs]: Konfiguriert die Manager einer Organisation als angegebene Benutzer.
@@ -344,7 +352,8 @@ Berichtet Ereignisse im Zusammenhang mit der Bluemix-Plattform bei Verwendung de
 <dd>Typ des Ereignisses (SECURITY_RUNTIME).
 <ul>
 <li>SECURITY_AUTH_CREDS_MODIFY: Ereignisse im Zusammenhang mit Änderungen an Berechtigungsnachweisen für eine bestimmte Benutzeridentität.
-<li>SECURITY_MGMT_RESOURCE: Ressourcenmanagementereignisse wie z. B. Erstellung, Löschung und Änderungen an den Attributen einer Ressource.
+<li>SECURITY_MGMT_RESOURCE: Ressourcenmanagementereignisse wie z. B. Erstellung, Löschung und Änderungen an den
+Attributen einer Ressource.
 <li>SECURITY_MGMT_POLICY: Ereignis im Zusammenhang mit der Verwaltung von Sicherheitsrichtlinien, z. B. der Erstellung von Zugriffskontrolllisten.
 <li>SECURITY_RUNTIME: Laufzeitereignisse wie z. B. das Starten und Stoppen von Sicherheitsservern.
 <li>SECURITY_RESOURCE_ACCESS: Ereignisse, die alle Zugriffe auf eine Ressource aufzeichnen. Beispiele sind alle Zugriffe auf eine Datei, alle HTTP-Anforderungen/-Antworten auf eine bestimmte Webseite sowie alle Zugriffe auf eine kritische Datenbanktabelle.
