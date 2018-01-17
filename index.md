@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-10"
+lastupdated: "2018-01-16"
 
 ---
 
@@ -27,7 +27,7 @@ If you have administrator access for {{site.data.keyword.Bluemix_local_notm}} or
 |Monitor system usage | Click **ADMINISTRATION &gt; USAGE**. View your system information, monitor CPU usage, and plan usage to make the best decisions for your business. See [Viewing usage information](/docs/hybrid/index.html#oc_resource).|
 |Manage your catalog | Click **ADMINISTRATION &gt; CATALOG MANAGEMENT** to manage which services are visible to your users and orgs. See [Managing your catalog](/docs/hybrid/index.html#oc_catalog).|
 |Administer orgs | Click **ADMINISTRATION &gt; ORGANIZATION ADMINISTRATION** to create organizations, monitor quotas for organizations, and make needs-based decisions quickly. See [Administering organizations](/docs/hybrid/index.html#oc_organizations).|
-|Create spaces and assign user roles | Click **Account** &gt; **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](/docs/hybrid/orgs_spaces.html). |
+|Create spaces and assign user roles | Click **Account** &gt; **Manage Organizations** to create spaces within your orgs. Add users and assign org and space roles to users. See [Managing your organizations](/docs/account/orgs_spaces.html). |
 |Manage administrative user permissions | Click **ADMINISTRATION &gt; USER ADMINISTRATION** to add users, remove users, and adjust user permissions. See [Managing users and permissions](/docs/hybrid/index.html#oc_useradmin). |
 |Review reports and logs | Click **ADMINISTRATION &gt; REPORTS AND LOGS** to view security reports and audit logs for you instance. See [Viewing reports](/docs/hybrid/index.html#oc_report). |
 |View system information | Click **ADMINISTRATION &gt; SYSTEM INFORMATION** to view system information such as pending maintenance updates, name and version of your instance, region, API URL, CLI URL, LDAP configuration details, group and user mappings, statistics, and shared domains. See [Viewing system information](/docs/hybrid/index.html#oc_system). |
@@ -37,12 +37,8 @@ If you have administrator access for {{site.data.keyword.Bluemix_local_notm}} or
 
 **Note**: The EU System Access option in the {{site.data.keyword.Bluemix_notm}} console is only available if your environment is configured to be an EU Managed Cloud.
 
-<!-- staging only for WoW start -->
-
 **Tip**: The Infrastructure dashboard in the {{site.data.keyword.Bluemix_notm}} console is available only in linked accounts in {{site.data.keyword.Bluemix_notm}} Public environments.
 
-
-<!-- staging only for WoW end -->
 
 
 ## Notifications and notification subscriptions
@@ -501,7 +497,7 @@ You can view status for the {{site.data.keyword.Bluemix_notm}} environment and f
 
 You can monitor status for your {{site.data.keyword.Bluemix_notm}} instance by using the {{site.data.keyword.Bluemix_notm}} Status page. Click **Support** &gt; **Status**.
 
-The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}. You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](../support/index.html#viewing-bluemix-status).
+The Status page is the central place to find notifications and announcements about key events that are affecting the {{site.data.keyword.Bluemix_notm}} platform and major services in {{site.data.keyword.Bluemix_notm}}. You can subscribe to an RSS feed for notifications so that you don't have to check for them. For more information about the Status page and setting up the RSS feed, see [Viewing {{site.data.keyword.Bluemix_notm}}](/docs/get-support/ViewStatus.html#viewing-bluemix-status).
 
 ### Administration console status
 
