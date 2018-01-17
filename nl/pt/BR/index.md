@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-09-07"
+lastupdated: "2017-12-19"
 
 ---
 
@@ -32,7 +32,10 @@ Se você tiver acesso de administrador para o {{site.data.keyword.Bluemix_local_
 |Revisar relatórios e logs | Clique em **ADMINISTRAÇÃO &gt; RELATÓRIOS E LOGS** para visualizar relatórios de segurança e logs de auditoria para sua instância. Consulte [Visualizando relatórios](/docs/admin/index.html#oc_report). |
 |Visualizar Informações do Sistema | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA** para visualizar informações do sistema, como atualizações de manutenção pendentes, nome e versão de sua instância, região, URL da API, URL da CLI, detalhes da configuração de LDAP, mapeamentos de grupos e de usuários, estatísticas e domínios compartilhados. Consulte [Visualizando informações do sistema](/docs/admin/index.html#oc_system). |
 |Estender notificações e configurar assinaturas de notificação | Clique em **ADMINISTRAÇÃO &gt; INFORMAÇÕES DO SISTEMA &gt; *Número* pendente**. É possível usar webhooks para integração com um serviço da web de sua opção para configurar uma assinatura de notificação de eventos para uma atualização ou um incidente. Consulte [Notificações e assinaturas de notificação](/docs/admin/index.html#oc_eventsubscription). |
+|Gerenciar acesso de sistema da União Europeia| Clique em **ADMINISTRAÇÃO &gt; Acesso de sistema da UE** para gerenciar sua política de Acesso de sistema da UE e visualizar solicitações de acesso. Veja [Gerenciando o acesso a sistemas em nuvem na União Europeia](/docs/admin/index.html#oc_euaccess). |
 {: caption="Tabela 1. Tarefas administrativas para gerenciar sua instância local ou dedicada do {{site.data.keyword.Bluemix_notm}}" caption-side="top"}
+
+**Nota**: a opção Acesso de sistema da UE no console do {{site.data.keyword.Bluemix_notm}} estará disponível somente se seu ambiente estiver configurado para ser uma nuvem gerenciada pela UE.
 
 <!-- staging only for WoW start -->
 
@@ -109,7 +112,7 @@ Para criar uma assinatura de e-mail ou webhook a partir da página **Assinaturas
 | Ativar | Selecione a opção para ativar as notificações por e-mail. Limpe a seleção para desativar a notificação por e-mail. As assinaturas são ativadas por padrão. |
 | Tipo | Selecione **E-mail**. |
 | Evento | Selecione **Limite**. |
-| Limite | Selecione o tipo de limite sobre o qual você deseja ser notificado: cota da organização, disco físico, memória física, disco reservado ou memória reservada. |
+| Limite | Selecione o tipo de limite sobre o qual deseja ser notificado: CPU média, Cota da organização, Disco físico, Memória física, Disco reservado ou Memória reservada. |
 | Direção do limite | Selecione a direção que você deseja que os dados sejam inseridos, crescente ou decrescente, ao passarem o valor Notificar ao cruzar que você configurar. Por exemplo, se o valor Notificar ao ultrapassar é 50% e a direção é decrescente, você será notificado apenas se a porcentagem de uso for de 50% ou mais para menos de 50%. Se você configurar a direção como crescente, você será notificado quando a porcentagem de uso for de menos de 50% para mais de 50%.   |
 | Notificar ao ultrapassar (%) | Insira a porcentagem de limite na qual você deseja ser notificado. Se você escolheu a propriedade Ascending no campo Direção do limite, a notificação por e-mail é enviada quando o limite sobe acima dessa porcentagem. |
 | Notificar ao ficar abaixo de (%) | Insira a porcentagem de limite na qual você deseja ser notificado. Se você escolheu a propriedade Descending no campo Direção do limite, a notificação por e-mail é enviada quando o limite cai abaixo dessa porcentagem. |
@@ -157,7 +160,7 @@ Uma notificação de limite de Cota da organização inclui somente as organiza�
 | Ativar | Selecione a opção para ativar a notificação. Limpe a seleção para desativar a notificação. As assinaturas são ativadas por padrão. |
 | Tipo | Selecione **Webhook**. |
 | Evento | Selecione **Limite**. |
-| Limite | Selecione o tipo de limite sobre o qual você deseja ser notificado: cota da organização, disco físico, memória física, disco reservado ou memória reservada.|
+| Limite | Selecione o tipo de limite sobre o qual deseja ser notificado: CPU média, Cota da organização, Disco físico, Memória física, Disco reservado ou Memória reservada.|
 | Direção do limite | Selecione se você deseja ver os dados de limite em ordem crescente ou decrescente.  |
 | Notificar ao ficar abaixo de (%) | Se você selecionou a **Direção de limite** **Decrescente**, insira a porcentagem de limite na qual você deseja ser notificado. Quando o limite cai abaixo dessa porcentagem, a notificação de webhook é enviada. |
 | Notificar ao ultrapassar (%) | Se você selecionou a **Direção de limite** **Crescente**, insira a porcentagem de limite na qual você deseja ser notificado. Quando o limite sobe acima dessa porcentagem, a notificação de webhook é enviada. |
@@ -198,6 +201,7 @@ Uma notificação de limite de Cota da organização inclui somente as organiza�
 
 | **Valor IBM** | **Descrição** | **Tipo de evento** |
 |----------------|----------------|------------------------|
+| {{content.average_cpu}} | Limite médio de CPU | Limite |
 | {{content.org_quota}} | Limite de cota da organização | Limite |
 | {{content.physical_disk}} | Limite de disco físico | Limite |
 | {{content.physical_memory}} | Limite de memória física | Limite |  
@@ -260,7 +264,7 @@ Para salvar suas mudanças, deve-se ainda cumprir o mínimo necessário de tempo
 4. Configure a sua janela de blecaute, selecionando a frequência, a duração e o horário de início para a janela.
 5. Clique em **Enviar**.
 
-As datas de blecaute irão requerer aprovação da IBM e o tempo que leva para obter aprovação irá variar. Quando as datas de blecaute solicitadas forem aprovadas, a IBM irá cancelar quaisquer atualizações existentes que estão atualmente planejadas durante a janela indisponível. A IBM também irá criar novos registros para essas atualizações e irá planejá-las fora das datas de blecaute aprovadas.
+As janelas de blecaute irão requerer aprovação da IBM e o tempo que leva para obter aprovação irá variar. As janelas de blecaute que se sobrepõem com uma implementação já planejada para ocorrer em 7 dias a partir do horário em que o blecaute é enviado podem levar mais tempo para aprovação. Quando o blecaute solicitado for aprovado, a IBM cancelará quaisquer atualizações existentes que estiverem planejadas atualmente durante a janela de blecaute. A IBM também irá criar novos registros para essas atualizações e irá planejá-las fora das datas de blecaute aprovadas.
 
 ### Planejando e aprovando atualizações
 {: #scheduleandapprove}
@@ -861,7 +865,7 @@ Uma cota representa os limites de recurso para as organizações em seu ambiente
 <dd>O número máximo de endereços IP públicos que podem ser alocados em todos os espaços de uma organização.</dd>
 </dl>
 <strong>Nota</strong>: se você ainda não tiver contêineres em seu ambiente ou se ainda não tiver os contêineres na configuração de seu ambiente, você receberá uma mensagem de erro.
-<p>Para obter mais informações sobre contêineres, veja [Sobre contêineres IBM](/docs/containers/container_ov.html). Para obter mais informações sobre cotas de contêiner, veja [Cota e contas do Bluemix](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
+<p>Para obter mais informações sobre contêineres, veja [Sobre contêineres IBM](/docs/containers/container_ov.html). Para obter mais informações sobre cotas de contêiner, veja [Cota e contas do {{site.data.keyword.Bluemix_notm}}](/docs/containers/container_planning_org_ov.html#container_planning_quota).</p>
 <strong>Nota:</strong> Os contêineres não estão disponíveis na região de Sydney do {{site.data.keyword.Bluemix_notm}}.</li>
 </ul>
 <li>Para salvar qualquer mudança feita na página Gerenciar organização, clique em <strong>SALVAR</strong>.</li>
@@ -916,8 +920,7 @@ Dependendo de seu acesso de **Leitura** ou **Gravação** para as permissões de
 
    A janela Administração de usuário mostra os filtros que você configura e os usuários que resultaram a partir dos filtros especificados. É possível, então, procurar um usuário na tabela filtrada. Também é possível modificar a lista de filtros especificados removendo uma opção de filtro da lista.
 
-* Incluir um único usuário. Se você tiver a permissão de **Super usuário** ou a permissão
-de **Usuários** com acesso de **Gravação**, será possível incluir usuários.
+* Incluir um único usuário. Se você tiver a permissão de **Super usuário** ou a permissão de **Usuários** com acesso de **Gravação**, será possível incluir usuários.
 
   1. Para incluir um único usuário a partir de seu diretório LDAP, clique em **Incluir usuário**.
   2. No campo de **Procura**, digite o endereço de e-mail para o usuário e, em seguida, selecione o usuário a partir da lista preenchida.
@@ -926,8 +929,7 @@ de **Usuários** com acesso de **Gravação**, será possível incluir usuários
 
   **Nota**: quando a operação de inclusão é bem-sucedida, o usuário é incluído na tabela para você visualizar e procurar. Quando os usuários são incluídos, eles não possuem permissões designadas.
 
-* Incluir um grupo de usuário a partir do seu diretório LDAP. Se você tiver a permissão de **Super usuário** ou a permissão
-de **Usuários** com acesso de **Gravação**, será possível incluir usuários.
+* Incluir um grupo de usuário a partir do seu diretório LDAP. Se você tiver a permissão de **Super usuário** ou a permissão de **Usuários** com acesso de **Gravação**, será possível incluir usuários.
 
   1. Clique em **Incluir grupo de usuários**.
   2. No campo de **Procura**digite um nome do grupo para procurar e selecione o nome do grupo na lista preenchida.
@@ -1023,8 +1025,7 @@ Para efetuar login no Console administrativo, execute o comando a seguir:
 <dd class="pd">Envia um cabeçalho Aceitar.</dd>
 </dl>
 
-O exemplo a seguir mostra a saída a partir deste
-comando:
+O exemplo a seguir mostra a saída a partir deste comando:
 ```
 {
     "message": "Logged in",
@@ -1301,8 +1302,7 @@ curl -v -b ./cookies.txt -X POST -H "Content-Type: application/json" -d @./user.
 POST para o servidor HTTP.</dd>
 </dl>
 
-O exemplo a seguir mostra a saída a partir deste
-comando:
+O exemplo a seguir mostra a saída a partir deste comando:
 
 ```
 * Conectado ao host local (127.0.0.1) porta 3000 (#0)
@@ -1342,8 +1342,7 @@ Para remover um usuário, deve-se fornecer o ID de usuário do usuário. Execute
 <dd class="pd">Especifica uma solicitação DELETE.</dd>
 </dl>
 
-O exemplo a seguir mostra a saída a partir deste
-comando:
+O exemplo a seguir mostra a saída a partir deste comando:
 
 ```
  * connect to ::1 port 3000 failed: Connection refused
@@ -2299,8 +2298,7 @@ Content-Type: application/json
 interface da linha de comandos do Cloud Foundry com o plug-in
 CLI admin do {{site.data.keyword.Bluemix_notm}}. Deve-se fazer download desse plug-in para a CLI do Cloud Foundry.
 
-Antes de iniciar, instale a interface de linha de comandos do cf. O plug-in da CLI
-Admin do {{site.data.keyword.Bluemix_notm}}
+Antes de iniciar, instale a interface de linha de comandos do cf. O plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}
 requer o cf versão 6.11.2 ou posterior. [Fazer download da interface da linha de comandos do Cloud Foundry ![Ícone de link externo](../icons/launch-glyph.svg)](https://github.com/cloudfoundry/cli/releases){: new_window}.
 
 **Restrição:** A interface de linha de
@@ -2351,3 +2349,111 @@ cf ba
 Para obter mais ajuda para um comando, use a opção `-help`.
 
 Para obter mais informações sobre como trabalhar com o plug-in da CLI Admin do {{site.data.keyword.Bluemix_notm}}, veja  [Admin do {{site.data.keyword.Bluemix_notm}}](../cli/plugins/bluemix_admin/index.html).
+
+
+## Gerenciando o acesso a sistemas em nuvem na União Europeia. 
+{: #oc_euaccess}
+
+A equipe da {{site.data.keyword.IBM_notm}} acessa regularmente os sistemas em nuvem para executar atividades de manutenção, seja em resposta a incidentes ou para implementar atualizações de manutenção. A {{site.data.keyword.IBM_notm}} faz todo o esforço para designar a equipe da União Europeia (UE) para executar atividades de manutenção em sistemas {{site.data.keyword.Bluemix_dedicated_notm}} localizados na UE. Quando isso não é possível, a {{site.data.keyword.IBM_notm}} pode designar a equipe de fora da UE para executar a manutenção em um sistema em nuvem da UE. Você tem controle sobre o nível de aprovação necessária antes que a equipe da {{site.data.keyword.IBM_notm}} de fora da UE possa acessar seu sistema em nuvem da UE. Depois que o acesso é aprovado de acordo com as políticas de controle de acesso, credenciais provisórias são fornecidas pela {{site.data.keyword.IBM_notm}} à equipe designada.
+
+Você controla o acesso por meio de opções de políticas disponíveis no Console de administração. Clique em **ADMINISTRAÇÃO &gt; Acesso de sistema da UE**. As políticas determinam o nível de aprovação necessária pelo cliente antes que a equipe da {{site.data.keyword.IBM_notm}} de fora da UE possa acessar o sistema em nuvem da UE. É possível configurar a política de acesso não da UE, aprovar ou rejeitar solicitações de acesso resultantes da política configurada e procurar o histórico de solicitações de aprovação. A visualização _Acesso de sistema da UE_ tem três guias:
+ 
+* Políticas
+* Solicitações pendentes
+* Histórico da solicitação
+
+**Nota:** a opção Acesso de sistema da UE no console do {{site.data.keyword.Bluemix_notm}} estará disponível somente se seu ambiente estiver configurado para ser um sistema em nuvem gerenciado pela UE.
+
+### Configurando uma política de acesso 
+
+Para gerenciar sua política de acesso de sistema da UE, clique em **ADMINISTRAÇÃO &gt; Acesso de sistema da UE &gt; Política**.
+
+Na seção **Política**, é possível especificar o nível de aprovação necessária para a equipe da IBM localizada fora da UE para acessar seu sistema. Qualquer acesso pela equipe não da UE a sistemas em nuvem da UE requer aprovação a priori da IBM. As três opções de política disponíveis determinam se e quando a aprovação do cliente é necessária, incluindo aprovação da IBM.
+
+<ul>
+<li>Nenhuma aprovação do cliente é necessária. A equipe aprovada pela IBM de fora da União Europeia pode acessar o sistema em nuvem sem sua aprovação.</li>
+<li>A aprovação do cliente é sempre necessária. A equipe da IBM de fora da UE pode acessar o sistema em nuvem somente com aprovação explícita.</li>
+<li>Política customizada. Sua aprovação é necessária dependendo do tipo e da condição da atividade de manutenção para a qual o acesso é requerido.</li>
+</ul>
+
+Quando sua política pede aprovação do cliente, é possível opcionalmente definir um período de _Aprovação automática_ no qual as solicitações de acesso são aprovadas automaticamente.
+
+Para a política customizada, a seguir são listados e descritos os vários tipos de atividades e suas condições associadas:
+
+{: #ld_table18}
+
+| **Atividade** | **Condição** | **Descrição** |       
+|-----------------|-------------------|-------------------|
+| Incidente | Bloqueador | O componente especificado é inacessível ou não está operando conforme o esperado. O ambiente é significativamente afetado. Não há solução alternativa. |
+| Incidente | Não bloqueador | O componente especificado está tendo problemas intermitentes ou uma parte do componente não está funcionando conforme o esperado. O ambiente não é significativamente afetado ou há uma solução alternativa. |
+| Atualização de Manutenção | Implementação de emergência | A atualização é necessária para resolver ou evitar um incidente. |  
+| Atualização de Manutenção | Implementação normal | A atualização é parte de um upgrade regular de um serviço ou componente para aprimorar sua funcionalidade, usabilidade, confiabilidade ou desempenho. |
+{: caption="Tabela 18. Política customizada da UE" caption-side="top"}
+
+### Direcionando solicitações pendentes 
+
+Para visualizar solicitações de acesso que requerem sua atenção, clique em **ADMINISTRAÇÃO &gt; Acesso de sistema da UE &gt; Solicitações pendentes**.
+
+Na tabela **Solicitações pendentes**, é possível aprovar ou rejeitar solicitações para acessar seu sistema da UE da equipe da IBM localizada fora da UE. Algumas informações sobre solicitações pendentes são exibidas como colunas da tabela. Detalhes adicionais são fornecidos quando a linha da tabela para uma determinada solicitação é expandida.  
+
+Para aprovar ou rejeitar uma ou mais solicitações, marque uma ou mais caixas de seleção à esquerda da solicitação e, em seguida, selecione o botão **Aprovar** ou **Rejeitar**. Quando uma solicitação de acesso é aprovada ou rejeitada, o que pode ser feito manualmente pelo cliente ou automaticamente por meio de uma política de aprovação automática, seu registro é movido da guia **Solicitações pendentes** para a guia **Histórico da solicitação**. Quando aprovar uma solicitação de acesso, você será capaz de ver um registro das várias equipes da IBM acessando o sistema. 
+
+**Nota**: uma solicitação de acesso está associada a uma atividade de manutenção específica. Essa atividade de manutenção pode ser realizada por múltiplas equipes da IBM. Ao aprovar uma solicitação de acesso, você está potencialmente aprovando o acesso de múltiplas equipes da IBM ao sistema. Cada pessoa que acessa o sistema em nuvem ainda requer aprovação individual e credenciais pela IBM, mas você precisa conceder aprovação somente uma vez para todas as atividades necessárias associadas à atualização ou ao incidente. 
+
+As informações de resumo para cada solicitação de aprovação são fornecidas em linhas da tabela. Informações adicionais são exibidas quando uma linha da tabela é expandida:
+
+<dl>
+<dt>Barra de Status</dt>
+<dd>O status da solicitação de acesso: pendente, aprovado ou rejeitado.</dd>
+<dt>Tipo de atividade</dt>
+<dd>O tipo de atividade para a qual o acesso é necessário: atualização de manutenção ou incidente.</dd>
+<dt>ID de registro</dt>
+<dd>O ID do registro usado para rastrear a atividade para a qual o acesso é necessário. O valor é vinculado ao registro real se a atividade é uma Atualização de manutenção.</dd>
+<dt>Data da solicitação</dt>
+<dd>A aprovação de acesso de data e hora foi solicitada pelo cliente.</dd>
+<dt>Tempo para aprovação automática</dt>
+<dd>O tempo restante antes de a solicitação ser aprovada automaticamente. Aplicável somente se uma aprovação automática foi especificada como parte da política de acesso. Observe que quando você configura um período de aprovação automática, a contagem regressiva para essa Aprovação automática inicia quando a equipe designada é aprovada pela IBM. As solicitações de aprovação para atualizações de manutenção podem não ter um Tempo para aprovação automática, mesmo se uma Aprovação automática foi especificada como parte da política de acesso. Se esta for uma solicitação de pré-aprovação, o detalhe conterá uma nota, indicando que é para um horário específico no futuro.</dd>
+<dt>Descrição</dt>
+<dd>A justificação para solicitar acesso ao sistema em nuvem.</dd>
+<dt>Severidade</dt>
+<dd>Indica a severidade de um incidente. Ela é exibida somente para incidentes. </dd>
+<dt>Implementação de emergência</dt>
+<dd>Indica de uma atualização de manutenção precisa de uma implementação de emergência.  Ela é exibida somente para atualizações de manutenção.</dd>
+<dt>Nota</dt>
+<dd>Indica quando uma solicitação é para pré-aprovação como parte de uma atualização de manutenção que está planejada para ser implementada no futuro. Ao aprovar essa solicitação, você está pré-aprovando o acesso ao sistema em nuvem quando a Atualização de manutenção está planejada para implementação. Quando você pré-aprova uma solicitação, nenhuma aprovação adicional é necessária quando o sistema é realmente acessado.</dd>
+</dl>
+
+**Nota**: uma assinatura de notificação poderá ser configurada para enviar a você um e-mail ou chamar um webhook quando uma nova solicitação de acesso tiver sido criada. Veja a seção sobre **Notificações e assinaturas de notificação** para obter mais informações (/docs/hybrid/index.html#oc_eventsubscription).
+
+### Visualizando o histórico da solicitação 
+
+Para visualizar solicitações de acesso anteriores para seu sistema, clique em **ADMINISTRAÇÃO &gt; Acesso de sistema da UE &gt; Histórico da solicitação**
+
+Na seção **Histórico da solicitação**, é possível visualizar todas as solicitações de acesso anteriores da equipe da IBM localizada fora da UE.
+
+As informações de resumo para cada solicitação histórica são fornecidas em linhas da tabela. Informações adicionais são exibidas quando uma linha da tabela é expandida:
+
+<dl>
+<dt>Barra de Status</dt>
+<dd>O status da solicitação de acesso: aprovado ou rejeitado.</dd>
+<dt>Tipo de atividade</dt>
+<dd>O tipo de atividade para a qual o acesso é necessário: atualização de manutenção ou incidente.</dd>
+<dt>ID de registro</dt>
+<dd>O ID do registro usado para rastrear a atividade de atualização ou incidente. O valor será vinculado ao registro real se a atividade for uma atualização de manutenção.</dd>
+<dt>Data da solicitação</dt>
+<dd>A aprovação de acesso de data e hora foi solicitada pelo cliente.</dd>
+<dt>Data da ação</dt>
+<dd>A data e hora em que a solicitação foi aprovada ou rejeitada pelo cliente. O campo exibirá __Aprovação automática__ se a política de Acesso da UE foi configurada somente para aprovação da IBM.</dd>
+<dt>Descrição</dt>
+<dd>A razão para solicitar acesso ao sistema em nuvem.</dd>
+<dt>Severidade</dt>
+<dd>Indica a severidade de um incidente. Ela é exibida somente para incidentes. </dd>
+<dt>Implementação de emergência</dt>
+<dd>Indica de uma atualização de manutenção precisa de uma implementação de emergência. Ela é exibida somente para atualizações de manutenção.</dd>
+<dt>Nota</dt>
+<dd>Descreve quaisquer condições relevantes adicionais na solicitação. Por exemplo, esse campo será usado para indicar quando uma solicitação é para pré-aprovação como parte de uma atualização de manutenção que está planejada para ser implementado no futuro.</dd>
+<dt>Histórico de acesso</dt>
+<dd>Para cada pessoa que acessa o sistema, ele mostra a data e hora em que o acesso foi aprovado pela IBM e quando o acesso para essa pessoa foi concedido e revogado. Os indivíduos são identificados como Equipe 1 da IBM, por exemplo.</dd>
+</dl>
+
+**Nota**: as novas solicitações de acesso executarão a transição automaticamente para o estado **Aprovado** e serão exibidas na seção **Histórico da solicitação** se a política de acesso tiver sido configurada para requerer somente aprovação da IBM.
